@@ -2,6 +2,19 @@
 
 # GitHub Pages Deployment Verification Script
 # This script checks if the GitHub Pages site is accessible
+#
+# Usage: ./verify-deployment.sh
+# If you get a permission error, run: chmod +x verify-deployment.sh
+
+# Check if curl is available
+if ! command -v curl >/dev/null 2>&1; then
+    echo "❌ Error: curl is not installed"
+    echo "Please install curl first:"
+    echo "  - Ubuntu/Debian: sudo apt-get install curl"
+    echo "  - macOS: curl is pre-installed"
+    echo "  - Windows: Install from https://curl.se/windows/"
+    exit 1
+fi
 
 SITE_URL="https://ucumotionlab.github.io/labwebsite/"
 
