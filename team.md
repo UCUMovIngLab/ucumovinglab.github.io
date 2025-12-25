@@ -1,7 +1,8 @@
 ---
-layout: page
 title: Equipo
-permalink: /team/
+nav:
+  order: 2
+  tooltip: Nuestro equipo
 ---
 
 ## Investigadores Principales

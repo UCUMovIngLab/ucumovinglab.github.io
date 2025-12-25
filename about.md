@@ -1,7 +1,8 @@
 ---
-layout: page
-title: Acerca del Laboratorio
-permalink: /about/
+title: Acerca de
+nav:
+  order: 3
+  tooltip: Acerca del laboratorio
 ---
 
 El Laboratorio de Movimiento Humano de la Universidad Católica del Uruguay es un centro de investigación dedicado al estudio científico del movimiento humano desde una perspectiva multidisciplinaria que integra neurociencia, ingeniería y ciencias del movimiento.

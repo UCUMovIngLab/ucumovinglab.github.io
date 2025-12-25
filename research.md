@@ -1,7 +1,8 @@
 ---
-layout: page
-title: Líneas de Investigación
-permalink: /research/
+title: Investigación
+nav:
+  order: 1
+  tooltip: Líneas de investigación
 ---
 
 El Laboratorio de Movimiento Humano desarrolla investigación en tres líneas principales:

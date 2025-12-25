@@ -1,24 +1,57 @@
 # Site settings
-title: Motion Lab - Universidad Católica del Uruguay
-email: 
+title: Motion Lab
+subtitle: Universidad Católica del Uruguay
 description: >-
   Laboratorio de Movimiento Humano de la Universidad Católica del Uruguay.
-  El laboratorio cuenta con dos investigadores principales (Dr. Ing. Enrique Ferreira 
+  El laboratorio cuenta con dos investigadores principales (Dr. Ing. Enrique Ferreira
   y Dr. Ing. Pablo Iturralde), y colaboradores en otros grupos de investigación.
 # Note: baseurl is empty here for local development.
 # GitHub Actions workflow overrides this with --baseurl flag during deployment.
 baseurl: ""
 url: "https://ucumotionlab.github.io"
+header: images/background.jpg
+footer: images/background.jpg
+
+# Site social media and other links
+links:
+  email:
+  github: UCUmotionlab
+
+### jekyll settings
+
+# front matter defaults
+defaults:
+  # all markdown files
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 # Build settings
-theme: minima
+theme: null
 plugins:
   - jekyll-feed
+  - jekyll-spaceship
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-last-modified-at
 
 markdown: kramdown
 
 kramdown:
   math_engine: mathjax
+
+# sass settings
+sass:
+  sass_dir: _styles
+
+# force jekyll to include certain files/folders
+include:
+  - _styles
+  - _scripts
+
+# code block syntax highlighting
+highlighter: rouge
 
 # Other options
 permalink: blog/:year/:month/:title
