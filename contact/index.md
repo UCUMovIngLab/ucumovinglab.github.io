@@ -10,14 +10,17 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
-We would love to hear from you!
+For more information about our research, to explore collaboration opportunities, or to inquire about joining our group as a student or researcher, please reach out to:
 
+**Dr. Pablo Iturralde**
 {%
   include button.html
   type="email"
   text="pablo.iturralde@ucu.edu.uy"
   link="pablo.iturralde@ucu.edu.uy"
 %}
+
+**Dr. Enrique Ferreira**
 {%
   include button.html
   type="email"

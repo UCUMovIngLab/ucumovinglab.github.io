@@ -10,14 +10,17 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contacto
 
-¡Nos encantaría saber de usted!
+Para más información sobre nuestra investigación, para explorar oportunidades de colaboración, o para consultar sobre cómo unirse a nuestro grupo como estudiante o investigador, puede contactar a:
 
+**Dr. Pablo Iturralde**
 {%
   include button.html
   type="email"
   text="pablo.iturralde@ucu.edu.uy"
   link="pablo.iturralde@ucu.edu.uy"
 %}
+
+**Dr. Enrique Ferreira**
 {%
   include button.html
   type="email"
