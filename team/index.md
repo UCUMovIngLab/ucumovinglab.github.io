@@ -38,11 +38,24 @@ The Movement Engineering Lab has two principal investigators and collaborators f
 
 {% include section.html %}
 
-## Collaborators
+## Collaborating Groups
 
 We collaborate closely with these UCU research groups:
 
 {% include collaborators.html type="internal" %}
+
+{% include section.html %}
+
+## External Collaborators
+
+- **Hamlet Suárez** - SNI Emeritus Researcher
+
+{% include section.html %}
+
+## Former Students
+
+- **Juan Gandolfo**
+- **Melissa Imbert**
 
 {% include section.html %}
 

@@ -38,11 +38,24 @@ El grupo de Ingeniería del Movimiento cuenta con dos investigadores principales
 
 {% include section.html %}
 
-## Colaboradores
+## Grupos Colaboradores
 
 Colaboramos estrechamente con estos grupos de investigación de la UCU:
 
 {% include collaborators.html type="internal" %}
+
+{% include section.html %}
+
+## Colaboradores Externos
+
+- **Hamlet Suárez** - Investigador Emérito SNI
+
+{% include section.html %}
+
+## Ex-Estudiantes
+
+- **Juan Gandolfo**
+- **Melissa Imbert**
 
 {% include section.html %}
 
