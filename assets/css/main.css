@@ -156,6 +156,22 @@ nav a.active {
   gap: 1rem;
 }
 
+.ucu-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.ucu-logo {
+  height: 36px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.ucu-logo-link:hover .ucu-logo {
+  opacity: 1;
+}
+
 /* Language Switcher */
 .lang-switcher {
   display: flex;
@@ -679,6 +695,10 @@ figcaption {
 
   .menu-toggle {
     display: block;
+  }
+
+  .ucu-logo {
+    height: 28px;
   }
 
   .list-card,
