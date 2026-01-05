@@ -4,11 +4,13 @@ lang: es
 ref: home
 ---
 
-# Laboratorio de Ingeniería del Movimiento
-
-El grupo de Ingeniería del Movimiento de la [Universidad Católica del Uruguay](https://ucu.edu.uy) desarrolla investigación en biomecánica, control motor, rehabilitación del movimiento, y tecnologías innovadoras para la digitalización del movimiento humano.
-
-{% include section.html %}
+<div class="hero">
+  <h1>Laboratorio de Ingeniería del Movimiento</h1>
+  <p>Desarrollamos investigación en biomecánica, control motor, rehabilitación del movimiento, y tecnologías innovadoras para la digitalización del movimiento humano en la Universidad Católica del Uruguay.</p>
+  <a class="button" href="/es/contact">
+    <i class="fa-solid fa-envelope"></i> Contáctenos
+  </a>
+</div>
 
 ## Líneas de Investigación
 
@@ -29,7 +31,3 @@ El grupo de Ingeniería del Movimiento de la [Universidad Católica del Uruguay]
 {% include list.html data="members" component="portrait" %}
 
 {% include section.html %}
-
-<a class="button" href="/es/contact">
-  Contáctenos
-</a>

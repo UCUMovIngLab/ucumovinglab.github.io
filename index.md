@@ -4,11 +4,13 @@ lang: en
 ref: home
 ---
 
-# Movement Engineering Lab
-
-The Movement Engineering Lab at [Universidad Católica del Uruguay](https://ucu.edu.uy) conducts research in biomechanics, motor control, movement rehabilitation, and innovative technologies for human movement digitalization.
-
-{% include section.html %}
+<div class="hero">
+  <h1>Movement Engineering Lab</h1>
+  <p>Conducting research in biomechanics, motor control, movement rehabilitation, and innovative technologies for human movement digitalization at Universidad Católica del Uruguay.</p>
+  <a class="button" href="contact">
+    <i class="fa-solid fa-envelope"></i> Contact Us
+  </a>
+</div>
 
 ## Research Lines
 
@@ -29,7 +31,3 @@ The Movement Engineering Lab at [Universidad Católica del Uruguay](https://ucu.
 {% include list.html data="members" component="portrait" %}
 
 {% include section.html %}
-
-<a class="button" href="contact">
-  Contact Us
-</a>
