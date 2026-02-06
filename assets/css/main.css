@@ -272,10 +272,10 @@ footer {
 }
 
 .footer-section .logo {
-  height: 116px;
+  height: 86px;
   width: auto;
   margin-bottom: 0.8rem;
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 .footer-bottom {
@@ -844,6 +844,21 @@ figcaption {
   margin: 2rem 0;
 }
 
+.home-research-card .card-title {
+  font-size: clamp(1.35rem, 2.2vw, 1.62rem);
+  line-height: 1.25;
+}
+
+.home-research-card .card-subtitle {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.home-research-card .card-description {
+  font-size: 1rem;
+}
+
 .section-header {
   display: flex;
   align-items: flex-end;
@@ -1108,7 +1123,7 @@ th {
   }
 
   .footer-section .logo {
-    height: 92px;
+    height: 70px;
   }
 
   .hero {

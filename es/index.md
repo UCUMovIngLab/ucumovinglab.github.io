@@ -49,7 +49,7 @@ ref: home
     <p class="impact-value">
       {% if publication_count > 0 %}{{ publication_count }}{% else %}Auto{% endif %}
     </p>
-    <p class="impact-label">Feed de Publicaciones</p>
+    <p class="impact-label">Publicaciones</p>
   </div>
   <div class="impact-card">
     <p class="impact-value">{{ internal_collab_count }}</p>
@@ -77,7 +77,7 @@ ref: home
       {% include citation.html item=featured_pub style="rich featured" %}
     {% else %}
       <div class="publication-empty">
-        <h3>El feed de publicaciones se esta actualizando</h3>
+        <h3>Las publicaciones se estan actualizando</h3>
         <p>Conecte fuentes ORCID y vuelva a ejecutar la sincronizacion para mostrar automaticamente las publicaciones mas recientes.</p>
       </div>
     {% endif %}
