@@ -272,9 +272,10 @@ footer {
 }
 
 .footer-section .logo {
-  height: 70px;
-  margin-bottom: 1rem;
-  filter: brightness(0) invert(1);
+  height: 116px;
+  width: auto;
+  margin-bottom: 0.8rem;
+  filter: none;
 }
 
 .footer-bottom {
@@ -1104,6 +1105,10 @@ th {
 
   .ucu-logo {
     height: 27px;
+  }
+
+  .footer-section .logo {
+    height: 92px;
   }
 
   .hero {

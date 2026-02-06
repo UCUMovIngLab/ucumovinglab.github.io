@@ -1,8 +1,21 @@
 <footer>
   <div class="footer-content">
+    {% assign lang = page.lang | default: "en" %}
+    {% assign t = site.data.i18n[lang] %}
+    {% assign home_url = "/" %}
+    {% assign research_url = "/research" %}
+    {% assign team_url = "/team" %}
+    {% assign contact_url = "/contact" %}
+    {% if lang == "es" %}
+      {% assign home_url = "/es/" %}
+      {% assign research_url = "/es/research" %}
+      {% assign team_url = "/es/team" %}
+      {% assign contact_url = "/es/contact" %}
+    {% endif %}
+
     <div class="footer-section">
-      <a href="{{ '/' | relative_url }}" class="logo-link">
-        <img src="{{ '/images/logo.svg' | relative_url }}" alt="{{ site.title }}" class="logo">
+      <a href="{{ home_url | relative_url }}" class="logo-link">
+        <img src="{{ '/images/logo-icon-white.svg' | relative_url }}" alt="{{ site.title }}" class="logo">
       </a>
       <p>{{ site.title }}</p>
       <p>{{ site.subtitle }}</p>
@@ -32,10 +45,10 @@
 
     <div class="footer-section">
       <h4>Navigation</h4>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/research' | relative_url }}">Research</a>
-      <a href="{{ '/team' | relative_url }}">Team</a>
-      <a href="{{ '/contact' | relative_url }}">Contact</a>
+      <a href="{{ home_url | relative_url }}">{{ t.nav.home }}</a>
+      <a href="{{ research_url | relative_url }}">{{ t.nav.research }}</a>
+      <a href="{{ team_url | relative_url }}">{{ t.nav.team }}</a>
+      <a href="{{ contact_url | relative_url }}">{{ t.nav.contact }}</a>
     </div>
   </div>
 

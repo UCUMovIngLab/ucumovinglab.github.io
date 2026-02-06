@@ -9,10 +9,21 @@ ref: home
 {% assign publication_count = site.data.citations | size %}
 {% assign internal_collab_count = site.data.collaborators | where: "type", "internal" | size %}
 {% assign news_count = site.posts | size %}
-{% assign featured_pub = site.data.citations | first %}
+{% assign citations_sorted = site.data.citations | sort: "date" | reverse %}
+{% assign featured_pub = nil %}
+{% for citation in citations_sorted %}
+  {% assign searchable = citation.title | append: " " | append: citation.description | downcase %}
+  {% if searchable contains "movement" or searchable contains "walking" or searchable contains "gait" or searchable contains "locomotion" or searchable contains "motor" or searchable contains "muscular" %}
+    {% assign featured_pub = citation %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if featured_pub == nil %}
+  {% assign featured_pub = citations_sorted | first %}
+{% endif %}
 
 <div class="hero hero-home">
-  <p class="hero-eyebrow">Movement Science at Universidad Catolica del Uruguay</p>
+  <p class="hero-eyebrow">Movement Science at UCU</p>
   <h1>Engineering Better Human Movement</h1>
   <p>We combine biomechanics, control, rehabilitation, and digital technologies to understand and improve how people move.</p>
   <div class="hero-actions">
