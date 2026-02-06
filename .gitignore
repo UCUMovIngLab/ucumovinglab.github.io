@@ -38,3 +38,6 @@ Thumbs.db
 
 # Cache
 .cache/
+
+# Local image selection candidates
+source_info/cand-*.jpg
