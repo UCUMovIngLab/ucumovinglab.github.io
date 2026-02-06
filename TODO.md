@@ -1,6 +1,7 @@
 # TODO
 
 ## Completed
+- [x] phase 2 homepage redesign (hero, impact strip, highlights, featured publication/news, PI spotlight, CTA)
 - [x] make sure this builds at ucumovinglab.github.io - Updated all references
 - [x] logo in footer is too small, barely visible - Increased from 40px to 70px
 - [x] need pictures for team members - Downloaded from UCU investigadores portal
