@@ -24,11 +24,11 @@ ref: home
 
 <div class="hero hero-home">
   <p class="hero-eyebrow">Ciencia del Movimiento en UCU</p>
-  <h1>Ingenieria para Mejorar el Movimiento Humano</h1>
-  <p>Integramos biomecanica, control, rehabilitacion y tecnologias digitales para comprender y mejorar como se mueve la gente.</p>
+  <h1>Ingeniería para Mejorar el Movimiento Humano</h1>
+  <p>Integramos biomecánica, control, rehabilitación y tecnologías digitales para comprender y mejorar cómo se mueve la gente.</p>
   <div class="hero-actions">
     <a class="button" href="research">
-      <i class="fa-solid fa-microscope"></i> Explorar Investigacion
+      <i class="fa-solid fa-microscope"></i> Explorar Investigación
     </a>
     <a class="button button-light" href="contact">
       <i class="fa-regular fa-envelope"></i> Contactar al Laboratorio
@@ -39,7 +39,7 @@ ref: home
 <section class="home-impact" aria-label="Resumen del Laboratorio">
   <div class="impact-card">
     <p class="impact-value">{{ project_count }}</p>
-    <p class="impact-label">Lineas de Investigacion</p>
+    <p class="impact-label">Líneas de Investigación</p>
   </div>
   <div class="impact-card">
     <p class="impact-value">{{ member_count }}</p>
@@ -59,8 +59,8 @@ ref: home
 
 <section class="home-section">
   <div class="section-header">
-    <h2>Destacados de Investigacion</h2>
-    <a href="research" class="section-link">Ver toda la investigacion <i class="fa-solid fa-arrow-right"></i></a>
+    <h2>Destacados de Investigación</h2>
+    <a href="research" class="section-link">Ver toda la investigación <i class="fa-solid fa-arrow-right"></i></a>
   </div>
   {% include list.html data="projects" component="card" style="home-research-card" %}
 </section>
@@ -70,32 +70,32 @@ ref: home
 <section class="home-grid">
   <div class="home-panel">
     <div class="section-header">
-      <h2>Publicacion Destacada</h2>
+      <h2>Publicación Destacada</h2>
       <a href="publications" class="section-link">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     {% if featured_pub %}
       {% include citation.html item=featured_pub style="rich featured" %}
     {% else %}
       <div class="publication-empty">
-        <h3>Las publicaciones se estan actualizando</h3>
-        <p>Conecte fuentes ORCID y vuelva a ejecutar la sincronizacion para mostrar automaticamente las publicaciones mas recientes.</p>
+        <h3>Las publicaciones se están actualizando</h3>
+        <p>Conecte fuentes ORCID y vuelva a ejecutar la sincronización para mostrar automáticamente las publicaciones más recientes.</p>
       </div>
     {% endif %}
   </div>
 
   <div class="home-panel">
     <div class="section-header">
-      <h2>Ultimas Novedades</h2>
+      <h2>Últimas Novedades</h2>
       {% if news_count > 0 %}
-      <a href="{{ site.posts.first.url | relative_url }}" class="section-link">Mas reciente <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="{{ site.posts.first.url | relative_url }}" class="section-link">Más reciente <i class="fa-solid fa-arrow-right"></i></a>
       {% endif %}
     </div>
     {% if news_count > 0 %}
       {% include list.html data="posts" component="post-excerpt" limit=2 style="home-news-item" %}
     {% else %}
       <div class="publication-empty">
-        <h3>Todavia no hay noticias</h3>
-        <p>Publique una breve actualizacion para destacar fondos, articulos o actividades del laboratorio.</p>
+        <h3>Todavía no hay noticias</h3>
+        <p>Publique una breve actualización para destacar fondos, artículos o actividades del laboratorio.</p>
       </div>
     {% endif %}
   </div>
@@ -113,11 +113,11 @@ ref: home
 
 <section class="home-cta">
   <div>
-    <h2>Le interesa colaborar o sumarse al laboratorio?</h2>
-    <p>Recibimos estudiantes, clinicos e investigadores interesados en biomecanica, control motor y tecnologia para rehabilitacion.</p>
+    <h2>¿Le interesa colaborar o sumarse al laboratorio?</h2>
+    <p>Recibimos estudiantes, clínicos e investigadores interesados en biomecánica, control motor y tecnología para rehabilitación.</p>
   </div>
   <div class="home-cta-actions">
-    <a class="button" href="contact"><i class="fa-solid fa-paper-plane"></i> Iniciar Conversacion</a>
+    <a class="button" href="contact"><i class="fa-solid fa-paper-plane"></i> Iniciar Conversación</a>
     <a class="button button-light" href="team"><i class="fa-solid fa-users"></i> Ver Equipo</a>
   </div>
 </section>
