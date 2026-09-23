@@ -1,0 +1,84 @@
+<svg class="figure-svg" viewBox="0 0 360 200" role="img" aria-label="{{ include.label | escape }}" preserveAspectRatio="xMidYMid meet">
+<text x="32" y="23.7" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">TA</text>
+<rect x="41.0" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.87"/>
+<rect x="67.7" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.69"/>
+<rect x="94.3" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.29"/>
+<rect x="121.0" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="147.7" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="174.3" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="201.0" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.33"/>
+<rect x="227.7" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="254.3" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.69"/>
+<rect x="281.0" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.56"/>
+<rect x="307.7" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="334.3" y="7.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.82"/>
+<text x="32" y="52.0" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">MG</text>
+<rect x="41.0" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="67.7" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.24"/>
+<rect x="94.3" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.47"/>
+<rect x="121.0" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.69"/>
+<rect x="147.7" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.87"/>
+<rect x="174.3" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="201.0" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="227.7" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="254.3" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="281.0" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="307.7" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="334.3" y="35.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<text x="32" y="80.3" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">SOL</text>
+<rect x="41.0" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="67.7" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.38"/>
+<rect x="94.3" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="121.0" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.78"/>
+<rect x="147.7" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.82"/>
+<rect x="174.3" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.51"/>
+<rect x="201.0" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="227.7" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="254.3" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="281.0" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="307.7" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="334.3" y="63.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<text x="32" y="108.7" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">VL</text>
+<rect x="41.0" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.78"/>
+<rect x="67.7" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.87"/>
+<rect x="94.3" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.51"/>
+<rect x="121.0" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.24"/>
+<rect x="147.7" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="174.3" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="201.0" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="227.7" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="254.3" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="281.0" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="307.7" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.38"/>
+<rect x="334.3" y="92.0" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<text x="32" y="137.0" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">RF</text>
+<rect x="41.0" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.33"/>
+<rect x="67.7" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.38"/>
+<rect x="94.3" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="121.0" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="147.7" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="174.3" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.33"/>
+<rect x="201.0" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="227.7" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.42"/>
+<rect x="254.3" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="281.0" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="307.7" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="334.3" y="120.3" width="24.7" height="26.3" fill="#005492" fill-opacity="0.24"/>
+<text x="32" y="165.3" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="#5A6574">BF</text>
+<rect x="41.0" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.60"/>
+<rect x="67.7" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.42"/>
+<rect x="94.3" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.20"/>
+<rect x="121.0" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="147.7" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="174.3" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="201.0" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.11"/>
+<rect x="227.7" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.15"/>
+<rect x="254.3" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.24"/>
+<rect x="281.0" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.42"/>
+<rect x="307.7" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.78"/>
+<rect x="334.3" y="148.7" width="24.7" height="26.3" fill="#005492" fill-opacity="0.87"/>
+<rect x="226.7" y="6.0" width="106.7" height="28.3" fill="none" stroke="#D9601A" stroke-width="2"/>
+<text x="40.0" y="192" text-anchor="start" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#5A6574">0%</text>
+<text x="200.0" y="192" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#5A6574">50%</text>
+<text x="360.0" y="192" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#5A6574">100%</text>
+</svg>

@@ -1,0 +1,11 @@
+{%- assign links = include.member.links -%}
+{%- if links -%}
+<div class="link-row">
+  {%- if links.orcid %}<a href="https://orcid.org/{{ links.orcid }}">ORCID</a>{% endif -%}
+  {%- if links.google-scholar %}<a href="https://scholar.google.com/citations?user={{ links.google-scholar }}">Google Scholar</a>{% endif -%}
+  {%- if links.github %}<a href="https://github.com/{{ links.github }}">GitHub</a>{% endif -%}
+  {%- if links.researchgate %}<a href="https://www.researchgate.net/profile/{{ links.researchgate }}">ResearchGate</a>{% endif -%}
+  {%- if links.home-page %}<a href="{{ links.home-page }}">UCU</a>{% endif -%}
+  {%- if links.email %}<a href="mailto:{{ links.email }}">Email</a>{% endif -%}
+</div>
+{%- endif -%}

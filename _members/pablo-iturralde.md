@@ -11,10 +11,12 @@ links:
   github: pabloi
   email: pablo.iturralde@ucu.edu.uy
   researchgate: Pablo-Iturralde
+author_match: Iturralde
+lines: [motor-control, rehabilitation]
+interests_en: Motor control, sensorimotor adaptation, EMG
+interests_es: Control motor, adaptación sensoriomotora, EMG
+bio_en: >-
+  Principal Investigator at the Movement Engineering Lab, Universidad Católica del Uruguay. His research focuses on motor control, biomechanics, and technologies for movement rehabilitation.
+bio_es: >-
+  Investigador Principal en el grupo de Ingeniería del Movimiento de la Universidad Católica del Uruguay. Su investigación se centra en el control motor, biomecánica y tecnologías para la rehabilitación del movimiento.
 ---
-
-<!-- TODO: Add bio in Spanish/English -->
-
-Dr. Pablo Iturralde es Investigador Principal en el grupo de Ingeniería del Movimiento de la Universidad Católica del Uruguay. Su investigación se centra en el control motor, biomecánica y tecnologías para la rehabilitación del movimiento.
-
-Dr. Pablo Iturralde is a Principal Investigator at the Movement Engineering Lab at Universidad Católica del Uruguay. His research focuses on motor control, biomechanics, and technologies for movement rehabilitation.

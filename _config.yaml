@@ -4,8 +4,6 @@ subtitle: Universidad Católica del Uruguay
 description: |-
   El grupo de Ingeniería del Movimiento desarrolla investigación en biomecánica, control motor,
   rehabilitación del movimiento, y tecnologías innovadoras para la digitalización del movimiento humano.
-header: images/background.jpg
-footer: images/background.jpg
 proofer: false
 
 # site social media and other links
@@ -67,6 +65,10 @@ exclude:
   - "node_modules"
   - "package.json"
   - "package-lock.json"
+  - "TODO.md"
+  - "source_info"
+  - "Gemfile"
+  - "Gemfile.lock"
 
 # site url for building
 url: https://ucumovinglab.github.io

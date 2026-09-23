@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign k_body = "body_" | append: lang -%}
+{%- assign k_methods = "methods_" | append: lang -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+<section class="page-head">
+  <span class="label">{{ page.title }}</span>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ t.research.lede }}</p>
+</section>
+
+<div class="container with-toc">
+  <nav class="toc" aria-label="{{ t.ui.research_lines }}">
+    <span class="label label--sm">{{ t.ui.on_this_page }}</span>
+    {%- for line in site.data.projects %}
+    <a href="#{{ line.id }}"><span class="index mono">{{ line.number }}</span><span>{{ line[k_title] }}</span></a>
+    {%- endfor %}
+  </nav>
+
+  <div class="research-lines">
+    {%- for line in site.data.projects %}
+    <section class="research-line" id="{{ line.id }}">
+      <div class="research-line__head">
+        <span class="index mono">{{ line.number }}</span>
+        <h2>{{ line[k_title] }}</h2>
+      </div>
+      <div class="research-line__grid">
+        <div class="research-line__text">
+          <div class="prose">{{ line[k_body] | markdownify }}</div>
+          {%- if line.publications %}
+          <div class="selected">
+            <span class="label label--sm">{{ t.ui.selected_publications }}</span>
+            {%- for doi in line.publications %}
+              {%- assign want = doi | downcase -%}
+              {%- for c in site.data.citations -%}
+                {%- assign have = c.id | remove_first: "doi:" | downcase -%}
+                {%- if have == want %}{% include pub.html item=c compact=true %}{% break %}{% endif -%}
+              {%- endfor -%}
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </div>
+        <aside class="research-line__aside">
+          {% include figure-panel.html line=line %}
+          <div class="aside-block">
+            <span class="label label--sm">{{ t.ui.methods }}</span>
+            <p>{{ line[k_methods] }}</p>
+          </div>
+          {%- if line.collaborators %}
+          <div class="aside-block">
+            <span class="label label--sm">{{ t.ui.collaborators }}</span>
+            {%- for cid in line.collaborators %}
+            {%- assign c = site.data.collaborators | where: "id", cid | first %}
+            <p>{% if c.link %}<a href="{{ c.link }}">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}{% if c.type == "external" %} <span class="mono muted">{{ t.ui.external }}</span>{% endif %}</p>
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </aside>
+      </div>
+    </section>
+    {%- endfor %}
+  </div>
+</div>

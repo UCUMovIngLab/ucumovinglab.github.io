@@ -1,15 +1,5 @@
 # Image Credits
 
-Project card images are sourced from Pexels and used under the Pexels License.
+The stock photos previously used on the project cards were removed in the 2026 redesign. Research-line imagery is now schematic SVG in `_includes/figures/`, drawn from normative gait curves.
 
-- `images/projects/motor-control.jpg`
-  - Photo by Julia Larson
-  - Source: https://www.pexels.com/photo/athletes-running-on-track-5961800/
-
-- `images/projects/rehabilitation.jpg`
-  - Photo by Kampus Production
-  - Source: https://www.pexels.com/photo/a-woman-guiding-a-man-on-his-physical-therapy-6111585/
-
-- `images/projects/digitalization.jpg`
-  - Photo by Artem Podrez
-  - Source: https://www.pexels.com/photo/grayscale-photo-of-a-man-wearing-vr-glasses-7773391/
+Team portraits come from the UCU investigadores portal.

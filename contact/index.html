@@ -1,0 +1,42 @@
+---
+layout: default
+title: Contact
+nav_title: Contact
+lang: en
+ref: contact
+nav:
+  order: 4
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign pis = site.members | where: "role", "pi" -%}
+<section class="page-head">
+  <span class="label">{{ page.title }}</span>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ t.contact.lede }}</p>
+</section>
+
+<div class="container contact">
+  <section class="contact__people">
+    <h2 class="label">{{ t.contact.people_title }}</h2>
+    {%- for m in pis %}
+    <div class="contact-card">
+      <img src="{{ m.image | relative_url }}" alt="{{ t.ui.portrait_of }} {{ m.name }}" loading="lazy">
+      <div>
+        <a class="person__name" href="{{ m.url | relative_url }}">{{ m.name }}</a>
+        <span class="label label--sm">{{ t.roles[m.role] }}</span>
+        <a class="mono" href="mailto:{{ m.links.email }}">{{ m.links.email }}</a>
+      </div>
+    </div>
+    {%- endfor %}
+  </section>
+  <section class="contact__place">
+    <h2 class="label">{{ t.contact.location_title }}</h2>
+    <address>
+      Universidad Católica del Uruguay<br>
+      Facultad de Ingeniería y Tecnologías<br>
+      Av. 8 de Octubre 2738<br>
+      Montevideo, Uruguay
+    </address>
+    <a class="text-link" href="https://www.openstreetmap.org/search?query=Av.%208%20de%20Octubre%202738%2C%20Montevideo">OpenStreetMap {% include icons/ext.html %}</a>
+  </section>
+</div>

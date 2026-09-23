@@ -1,39 +1,28 @@
-# Collaborating research groups and institutions
+# Collaborating groups and people. `id` is referenced from _data/projects.yaml.
 
-# UCU Internal Collaborators
-- name: Departamento de Informática e Inteligencia Artificial
-  name_en: Computer Science and Artificial Intelligence Department
-  institution: Universidad Católica del Uruguay
+- id: informatica-ia
   type: internal
-  description: Computer vision and machine learning
+  name: Departamento de Informática e Inteligencia Artificial
+  description_en: Computer vision and machine learning
   description_es: Visión por computadora y aprendizaje automático
   link: https://www.ucu.edu.uy/categoria/Informatica-e-Inteligencia-Artificial-384
-  logo: images/collaborators/ucu-logo.svg
 
-- name: μDIE - Grupo de Microelectrónica
-  name_en: μDIE - Microelectronics Group
-  institution: Universidad Católica del Uruguay
+- id: microelectronica
   type: internal
-  description: Electronic device development and IoT
+  name: μDIE — Grupo de Microelectrónica
+  description_en: Electronic device development and IoT
   description_es: Desarrollo de dispositivos electrónicos e IoT
   link: https://die.ucu.edu.uy/
-  logo: images/collaborators/ucu-logo.svg
 
-- name: Departamento de Bienestar y Salud - Fisioterapia
-  name_en: Department of Wellness and Health - Physical Therapy
-  institution: Universidad Católica del Uruguay
+- id: fisioterapia
   type: internal
-  description: Clinical rehabilitation and physical therapy
+  name: Departamento de Bienestar y Salud — Fisioterapia
+  description_en: Clinical rehabilitation and physical therapy
   description_es: Rehabilitación clínica y terapia física
   link: https://www.ucu.edu.uy/categoria/Facultad-de-Ciencias-de-la-Salud-355
-  logo: images/collaborators/ucu-logo.svg
 
-# External Collaborators (placeholder - add as needed)
-# - name: Example External Lab
-#   name_en: Example External Lab
-#   institution: Example University
-#   type: external
-#   description: Brief description
-#   description_es: Descripción breve
-#   link: https://example.edu/lab
-#   logo: images/collaborators/example-logo.png
+- id: hamlet-suarez
+  type: external
+  name: Hamlet Suárez
+  description_en: SNI Emeritus Researcher; long-standing co-author on balance and postural control
+  description_es: Investigador Emérito SNI; coautor de larga data en equilibrio y control postural

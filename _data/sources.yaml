@@ -1,10 +1,68 @@
-# Manual publication sources
-# Add DOIs here to include specific publications with custom metadata
-# Publications from ORCID profiles are auto-fetched (see orcid.yaml)
+# Publications that belong to the lab's research lines.
+#
+# Everything the ORCID sync finds is still listed under "All member work" on the
+# Publications page. Entries here are what "Lab research" shows by default, and what
+# the homepage, research pages and member pages draw from.
+#
+#   line: motor-control | rehabilitation | digitalization   (ids from _data/projects.yaml)
+#   hide: true   drops an item everywhere (e.g. a preprint superseded by its published version)
+#
+# Crossref metadata is fetched for each DOI; any field set here overrides it.
 
-# Example:
-# - id: doi:10.1234/example
-#   image: images/publications/example.png
-#   tags:
-#     - motor control
-#     - rehabilitation
+# --- 01 Human movement and motor control ---
+- id: doi:10.1038/s41598-026-54948-5
+  line: motor-control
+- id: doi:10.1523/ENEURO.0343-23.2025
+  line: motor-control
+- id: doi:10.1080/14670100.2020.1813996
+  line: motor-control
+- id: doi:10.1152/JN.00509.2019
+  line: motor-control
+- id: doi:10.1523/ENEURO.0493-19.2020
+  line: motor-control
+- id: doi:10.1101/2020.10.28.359281
+  line: motor-control
+- id: doi:10.1523/ENEURO.0358-18.2019
+  line: motor-control
+- id: doi:10.1080/00016489.2018.1549750
+  line: motor-control
+- id: doi:10.25184/ANFAMED2019V6N2A10
+  line: motor-control
+- id: doi:10.1080/00016489.2016.1247496
+  line: motor-control
+- id: doi:10.3109/00016489.2015.1113558
+  line: motor-control
+- id: doi:10.3109/00016489.2014.974287
+  line: motor-control
+- id: doi:10.3109/00016489.2012.739731
+  line: motor-control
+- id: doi:10.3109/00016489.2011.629631
+  line: motor-control
+- id: doi:10.1590/S1808-86942011000500019
+  line: motor-control
+- id: doi:10.3233/VES-2010-0384
+  line: motor-control
+- id: doi:10.1109/IEMBS.2010.5626015
+  line: motor-control
+- id: doi:10.1109/IEMBS.2010.5626509
+  line: motor-control
+
+# --- 02 Movement rehabilitation ---
+- id: doi:10.1109/URUCON63440.2024.10850101
+  line: rehabilitation
+
+# --- 03 Movement digitalization ---
+- id: doi:10.1109/URUCON.2017.8171879
+  line: digitalization
+- id: doi:10.1109/LASCAS.2015.7250474
+  line: digitalization
+- id: doi:10.1109/I2MTC.2014.6860729
+  line: digitalization
+- id: doi:10.1007/978-3-642-33275-3_68
+  line: digitalization
+
+# --- Preprints superseded by a published version ---
+- id: doi:10.1101/686980
+  hide: true
+- id: doi:10.1101/470930
+  hide: true

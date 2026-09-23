@@ -1,33 +1,98 @@
-# UI translations for multilingual support
+# UI strings, one block per language. Layouts look these up with page.lang (default en).
 
 en:
   lang_name: "English"
   lang_code: "en"
+  home_url: "/"
 
-  # Navigation
   nav:
     home: "Home"
     research: "Research"
     publications: "Publications"
     team: "Team"
     contact: "Contact"
-    blog: "News"
 
-  # Common UI
   ui:
+    open_menu: "Open menu"
+    main_nav: "Main"
+    all_research: "All research"
+    all_publications: "All publications"
+    full_team: "Full team"
     read_more: "Read more"
-    contact_us: "Contact Us"
-    join_us: "Join Us"
-    publications: "Publications"
-    search: "Search..."
-    results_found: "results found"
-    principal_investigators: "Principal Investigators"
-    graduate_students: "Graduate Students"
-    undergraduate_students: "Undergraduate Students"
-    alumni: "Alumni"
+    website: "Website"
+    paper: "Paper"
+    on_this_page: "On this page"
+    selected_publications: "Selected publications"
+    methods: "Methods"
     collaborators: "Collaborators"
+    external: "External"
+    profile_link: "Profile and publications"
+    write_to_lab: "Write to the lab"
+    meet_team: "Meet the team"
+    interests: "Interests"
+    research_lines: "Research lines"
+    all_on_orcid: "All on ORCID"
+    lab: "Lab"
+    profiles: "Profiles"
+    faculty: "Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay"
+    preprint: "Preprint"
+    undated: "Undated"
+    jump_to: "Jump to"
+    scope: "Scope"
+    scope_lab: "Lab research"
+    scope_all: "All member work"
+    line_filter: "Research line"
+    all_lines: "All lines"
+    search_label: "Search titles and authors"
+    search_placeholder: "e.g. split-belt, EMG, Suárez"
+    no_results: "No publications match."
+    portrait_of: "Portrait of"
 
-  # Roles
+  home:
+    eyebrow: "Biomechanics · Motor control · Rehabilitation · Digitalization"
+    title: "We study human movement and build the tools to measure and restore it."
+    lede: "We combine biomechanics, control, rehabilitation, and digital technologies to understand and improve how people move. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
+    cta_research: "Our research"
+    cta_join: "Work with us"
+    figure_label: "Frames of one walking gait cycle with motion-capture markers, above the knee and hip flexion angles across the cycle"
+    figure_caption: "Fig. 1 — One gait cycle of the right leg, sagittal plane. Markers at hip, knee, ankle, toe and shoulder; knee and hip flexion angles (normative shape, schematic)."
+    research_label: "Research"
+    research_title: "Three lines of research"
+    pubs_label: "Publications"
+    pubs_title: "Recent publications"
+    team_label: "Team"
+    team_title: "People"
+    groups: "Collaborating groups at UCU"
+    external: "External collaborator"
+    alumni: "Alumni"
+    join_label: "Join"
+    join_title: "Students, clinicians and researchers: work with us."
+    join_text: "We welcome students, clinicians, and researchers interested in biomechanics, motor control, and rehabilitation technology. Write to either principal investigator with a short note on your background and interests."
+
+  research:
+    lede: "Three connected lines: how the nervous system controls movement, tools that help people recover it after injury, and technology that makes movement easier to capture and analyse."
+
+  publications:
+    lede: "Peer-reviewed work and preprints from the lab’s three research lines, updated monthly from members’ ORCID records. Lab members in bold."
+
+  team:
+    lede: "Two principal investigators, graduate and undergraduate students, and collaborators from UCU’s Artificial Intelligence, Microelectronics and Physical Therapy groups."
+    leads_label: "Leads"
+    leads_title: "Principal investigators"
+    students_label: "Students"
+    students_title: "Students"
+    alumni_label: "Alumni"
+    alumni_title: "Alumni"
+    network_label: "Network"
+    network_title: "Collaborators"
+    join_title: "Looking for a thesis or research project?"
+    join_text: "We are always looking for motivated students and researchers interested in movement science, biomedical engineering, and rehabilitation technologies."
+
+  contact:
+    lede: "For more information about our research, to explore collaboration opportunities, or to ask about joining the group as a student or researcher, write to either principal investigator."
+    people_title: "Principal investigators"
+    location_title: "Location"
+
   roles:
     pi: "Principal Investigator"
     phd: "PhD Student"
@@ -39,31 +104,96 @@ en:
 es:
   lang_name: "Español"
   lang_code: "es"
+  home_url: "/es/"
 
-  # Navigation
   nav:
     home: "Inicio"
     research: "Investigación"
     publications: "Publicaciones"
     team: "Equipo"
     contact: "Contacto"
-    blog: "Noticias"
 
-  # Common UI
   ui:
+    open_menu: "Abrir menú"
+    main_nav: "Principal"
+    all_research: "Toda la investigación"
+    all_publications: "Todas las publicaciones"
+    full_team: "Equipo completo"
     read_more: "Leer más"
-    contact_us: "Contáctenos"
-    join_us: "Únase al equipo"
-    publications: "Publicaciones"
-    search: "Buscar..."
-    results_found: "resultados encontrados"
-    principal_investigators: "Investigadores Principales"
-    graduate_students: "Estudiantes de Posgrado"
-    undergraduate_students: "Estudiantes de Grado"
-    alumni: "Egresados"
+    website: "Sitio web"
+    paper: "Artículo"
+    on_this_page: "En esta página"
+    selected_publications: "Publicaciones seleccionadas"
+    methods: "Métodos"
     collaborators: "Colaboradores"
+    external: "Externo"
+    profile_link: "Perfil y publicaciones"
+    write_to_lab: "Escribir al laboratorio"
+    meet_team: "Conocer al equipo"
+    interests: "Intereses"
+    research_lines: "Líneas de investigación"
+    all_on_orcid: "Todas en ORCID"
+    lab: "Laboratorio"
+    profiles: "Perfiles"
+    faculty: "Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay"
+    preprint: "Preprint"
+    undated: "Sin fecha"
+    jump_to: "Ir a"
+    scope: "Alcance"
+    scope_lab: "Investigación del grupo"
+    scope_all: "Toda la obra de los integrantes"
+    line_filter: "Línea de investigación"
+    all_lines: "Todas las líneas"
+    search_label: "Buscar por título o autor"
+    search_placeholder: "p. ej. cinta dividida, EMG, Suárez"
+    no_results: "Ninguna publicación coincide."
+    portrait_of: "Retrato de"
 
-  # Roles
+  home:
+    eyebrow: "Biomecánica · Control motor · Rehabilitación · Digitalización"
+    title: "Estudiamos el movimiento humano y desarrollamos tecnología para medirlo y recuperarlo."
+    lede: "Integramos biomecánica, control, rehabilitación y tecnologías digitales para comprender y mejorar cómo se mueve la gente. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
+    cta_research: "Nuestra investigación"
+    cta_join: "Trabajar con nosotros"
+    figure_label: "Fotogramas de un ciclo de marcha con marcadores de captura de movimiento, sobre los ángulos de flexión de rodilla y cadera a lo largo del ciclo"
+    figure_caption: "Fig. 1 — Un ciclo de marcha de la pierna derecha, plano sagital. Marcadores en cadera, rodilla, tobillo, punta del pie y hombro; flexión de rodilla y cadera (forma normativa, esquema)."
+    research_label: "Investigación"
+    research_title: "Tres líneas de investigación"
+    pubs_label: "Publicaciones"
+    pubs_title: "Publicaciones recientes"
+    team_label: "Equipo"
+    team_title: "Equipo"
+    groups: "Grupos colaboradores en la UCU"
+    external: "Colaborador externo"
+    alumni: "Egresados"
+    join_label: "Sumarse"
+    join_title: "¿Le interesa colaborar o sumarse al laboratorio?"
+    join_text: "Recibimos estudiantes, clínicos e investigadores interesados en biomecánica, control motor y tecnología para rehabilitación. Escriba a cualquiera de los investigadores principales con una breve nota sobre su formación e intereses."
+
+  research:
+    lede: "Tres líneas conectadas: cómo el sistema nervioso controla el movimiento, herramientas para recuperarlo después de una lesión, y tecnología que facilita capturarlo y analizarlo."
+
+  publications:
+    lede: "Artículos revisados por pares y preprints de las tres líneas de investigación del grupo, actualizados mensualmente desde los perfiles ORCID de sus integrantes. Integrantes del grupo en negrita."
+
+  team:
+    lede: "Dos investigadores principales, estudiantes de grado y posgrado, y colaboradores de los grupos de Inteligencia Artificial, Microelectrónica y Fisioterapia de la UCU."
+    leads_label: "Dirección"
+    leads_title: "Investigadores principales"
+    students_label: "Estudiantes"
+    students_title: "Estudiantes"
+    alumni_label: "Egresados"
+    alumni_title: "Egresados"
+    network_label: "Red"
+    network_title: "Colaboradores"
+    join_title: "¿Busca un proyecto de tesis o de investigación?"
+    join_text: "Siempre estamos buscando estudiantes e investigadores motivados interesados en ciencias del movimiento, ingeniería biomédica y tecnologías de rehabilitación."
+
+  contact:
+    lede: "Para más información sobre nuestra investigación, para explorar oportunidades de colaboración, o para consultar sobre cómo unirse al grupo como estudiante o investigador, escriba a cualquiera de los investigadores principales."
+    people_title: "Investigadores principales"
+    location_title: "Ubicación"
+
   roles:
     pi: "Investigador Principal"
     phd: "Estudiante de Doctorado"
