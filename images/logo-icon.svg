@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg height="100" width="100" viewBox="150 300 250 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      
+      .stroke-blue { stroke: #005492; }
+    </style>
+  </defs>
+  <!-- Running figure with motion signals - white version for dark backgrounds -->
+  <path class="stroke-blue" style="fill-opacity: 0; stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round;" d="M 390 480 L 341 453 L 306 404 L 287 397 A 30 30 0 0 0 260 402 L 220 450  A 30 30 0 0 0 215 460 L 205 490 A 10 10 0 0 0 234 500 L 243 472 L 270 442 L 264 500 C 261 500 269 518 269 523 L 207 633 A 10 10 0 0 0 235 650 L 291 551 L 314 577 L 343 655 A 10 10 0 0 0 372 640 L 342 555 L 300 515 L 307 465" />
+  <!-- Head -->
+  <ellipse class="stroke-blue" style="stroke-width: 18px; fill-opacity: 0; stroke-linecap: round; stroke-linejoin: round;" cx="316" cy="347" rx="30" ry="30"/>
+  <!-- Small signal wave -->
+  <path class="stroke-blue" style="stroke-width: 20px; fill-opacity: 0; stroke-linejoin: round; stroke-linecap: round;" d="M 190 550 A 100 100 0 0 1 190 420" />
+  <!-- Large signal wave -->
+  <path class="stroke-blue" style="stroke-width: 20px; fill-opacity: 0; stroke-linejoin: round; stroke-linecap: round;" d="M 160 575 A 150 150 0 0 1 160 400" />
+</svg>

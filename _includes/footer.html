@@ -1,58 +1,42 @@
-<footer>
-  <div class="footer-content">
-    {% assign lang = page.lang | default: "en" %}
-    {% assign t = site.data.i18n[lang] %}
-    {% assign home_url = "/" %}
-    {% assign research_url = "/research" %}
-    {% assign team_url = "/team" %}
-    {% assign contact_url = "/contact" %}
-    {% if lang == "es" %}
-      {% assign home_url = "/es/" %}
-      {% assign research_url = "/es/research" %}
-      {% assign team_url = "/es/team" %}
-      {% assign contact_url = "/es/contact" %}
-    {% endif %}
-
-    <div class="footer-section">
-      <a href="{{ home_url | relative_url }}" class="logo-link">
-        <img src="{{ '/images/logo.svg' | relative_url }}" alt="{{ site.title }}" class="logo">
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign nav_pages = site.pages | where: "lang", lang | where_exp: "p", "p.nav.order" | sort: "nav.order" -%}
+<footer class="site-footer" id="contact-info">
+  <div class="site-footer__grid">
+    <div class="site-footer__about">
+      <a href="{{ t.home_url | relative_url }}" class="wordmark wordmark--inverse">
+        {% include icons/mark.html %}
+        <span class="wordmark__name">{{ site.title }}</span>
       </a>
-      <p>{{ site.title }}</p>
-      <p>{{ site.subtitle }}</p>
+      <p>{{ t.ui.faculty }}</p>
+      <p class="mono">Av. 8 de Octubre 2738<br>Montevideo, Uruguay</p>
+      <a class="mono" href="mailto:{{ site.links.email }}">{{ site.links.email }}</a>
     </div>
-
-    <div class="footer-section">
-      <h4>Links</h4>
-      {% if site.links.email %}
-      <a href="mailto:{{ site.links.email }}"><i class="fa-solid fa-envelope"></i> Email</a>
-      {% endif %}
-      {% if site.links.github %}
-      <a href="https://github.com/{{ site.links.github }}" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      {% endif %}
-      {% if site.links.twitter %}
-      <a href="https://twitter.com/{{ site.links.twitter }}" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
-      {% endif %}
-      {% if site.links.orcid %}
-      <a href="https://orcid.org/{{ site.links.orcid }}" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
-      {% endif %}
-      {% if site.links.google-scholar %}
-      <a href="https://scholar.google.com/citations?user={{ site.links.google-scholar }}" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-      {% endif %}
-      {% if site.links.youtube %}
-      <a href="https://youtube.com/{{ site.links.youtube }}" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
-      {% endif %}
+    <div class="site-footer__col">
+      <span class="label">{{ t.ui.lab }}</span>
+      {%- for p in nav_pages %}
+      <a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a>
+      {%- endfor %}
     </div>
-
-    <div class="footer-section">
-      <h4>Navigation</h4>
-      <a href="{{ home_url | relative_url }}">{{ t.nav.home }}</a>
-      <a href="{{ research_url | relative_url }}">{{ t.nav.research }}</a>
-      <a href="{{ team_url | relative_url }}">{{ t.nav.team }}</a>
-      <a href="{{ contact_url | relative_url }}">{{ t.nav.contact }}</a>
+    <div class="site-footer__col">
+      <span class="label">{{ t.ui.profiles }}</span>
+      {%- if site.links.github %}
+      <a href="https://github.com/{{ site.links.github }}">GitHub {% include icons/ext.html %}</a>
+      {%- endif %}
+      {%- assign pis = site.members | where: "role", "pi" -%}
+      {%- for m in pis %}{% if m.links.orcid %}
+      <a href="https://orcid.org/{{ m.links.orcid }}">ORCID · {{ m.name | split: " " | first | slice: 0 }}. {{ m.name | split: " " | last }} {% include icons/ext.html %}</a>
+      {%- endif %}{% endfor %}
+      {%- if site.links.google-scholar %}
+      <a href="https://scholar.google.com/citations?user={{ site.links.google-scholar }}">Google Scholar {% include icons/ext.html %}</a>
+      {%- endif %}
+    </div>
+    <div class="site-footer__logo">
+      <img src="{{ '/images/ucu-logo-white.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="110" height="40">
     </div>
   </div>
-
-  <div class="footer-bottom">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with <a href="https://github.com/greenelab/lab-website-template" target="_blank">Lab Website Template</a>.</p>
+  <div class="site-footer__bottom">
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} · Universidad Católica del Uruguay</span>
+    {% include lang-switcher.html %}
   </div>
 </footer>

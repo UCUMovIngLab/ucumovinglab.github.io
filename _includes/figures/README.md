@@ -1,0 +1,1 @@
+Schematic figures used as the site's imagery. Generated from normative gait curves (not lab data) by a small Python script; each caption says "schematic". Replace with real lab figures as they are published, keeping the 360×200 (research lines) and 1200-wide (homepage) frames.

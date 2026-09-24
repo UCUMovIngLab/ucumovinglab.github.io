@@ -1,0 +1,8 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign k_caption = "caption_" | append: lang -%}
+{%- assign line = include.line -%}
+{%- assign caption = line[k_caption] -%}
+<figure class="fig-panel">
+  <div class="fig-panel__frame">{% include figures/{{ line.figure }}.svg label=caption %}</div>
+  <figcaption class="caption">{{ caption }}</figcaption>
+</figure>

@@ -1,0 +1,83 @@
+<svg class="figure-svg" viewBox="0 0 360 200" role="img" aria-label="{{ include.label | escape }}" preserveAspectRatio="xMidYMid meet">
+<line x1="0" y1="0" x2="0" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="12" y1="0" x2="12" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="24" y1="0" x2="24" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="36" y1="0" x2="36" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="48" y1="0" x2="48" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="60" y1="0" x2="60" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="72" y1="0" x2="72" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="84" y1="0" x2="84" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="96" y1="0" x2="96" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="108" y1="0" x2="108" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="120" y1="0" x2="120" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="132" y1="0" x2="132" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="144" y1="0" x2="144" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="156" y1="0" x2="156" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="168" y1="0" x2="168" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="180" y1="0" x2="180" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="192" y1="0" x2="192" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="204" y1="0" x2="204" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="216" y1="0" x2="216" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="228" y1="0" x2="228" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="240" y1="0" x2="240" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="252" y1="0" x2="252" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="264" y1="0" x2="264" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="276" y1="0" x2="276" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="288" y1="0" x2="288" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="300" y1="0" x2="300" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="312" y1="0" x2="312" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="324" y1="0" x2="324" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="336" y1="0" x2="336" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="348" y1="0" x2="348" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="360" y1="0" x2="360" y2="172" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="0" x2="360" y2="0" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="12" x2="360" y2="12" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="24" x2="360" y2="24" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="36" x2="360" y2="36" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="48" x2="360" y2="48" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="60" x2="360" y2="60" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="72" x2="360" y2="72" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="84" x2="360" y2="84" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="96" x2="360" y2="96" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="108" x2="360" y2="108" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="120" x2="360" y2="120" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="132" x2="360" y2="132" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="144" x2="360" y2="144" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="156" x2="360" y2="156" stroke="#D8D5CC" stroke-width="0.6"/>
+<line x1="0" y1="168" x2="360" y2="168" stroke="#D8D5CC" stroke-width="0.6"/>
+<path d="M74.4,4.8 L62.4,4.8 L62.4,16.8" fill="none" stroke="#005492" stroke-width="2"/>
+<path d="M148.8,4.8 L160.8,4.8 L160.8,16.8" fill="none" stroke="#005492" stroke-width="2"/>
+<path d="M74.4,174.0 L62.4,174.0 L62.4,162.0" fill="none" stroke="#005492" stroke-width="2"/>
+<path d="M148.8,174.0 L160.8,174.0 L160.8,162.0" fill="none" stroke="#005492" stroke-width="2"/>
+<text x="68.4" y="18.8" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#005492">person 0.97</text>
+<line x1="96.0" y1="86.2" x2="98.5" y2="42.5" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="98.5" y1="42.5" x2="94.4" y2="66.5" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="94.4" y1="66.5" x2="99.1" y2="87.8" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="98.5" y1="42.5" x2="105.4" y2="65.9" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="105.4" y1="65.9" x2="119.0" y2="82.9" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="96.0" y1="86.2" x2="114.5" y2="119.1" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="114.5" y1="119.1" x2="130.1" y2="151.7" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="130.1" y1="151.7" x2="144.8" y2="149.6" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="96.0" y1="86.2" x2="90.7" y2="123.6" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.7" y1="123.6" x2="78.4" y2="157.5" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="78.4" y1="157.5" x2="90.6" y2="166.0" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<line x1="98.5" y1="42.5" x2="99.8" y2="30.8" stroke="#005492" stroke-width="2" stroke-linecap="round"/>
+<circle cx="98.5" cy="42.5" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="94.4" cy="66.5" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="99.1" cy="87.8" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="105.4" cy="65.9" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="119.0" cy="82.9" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="96.0" cy="86.2" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="114.5" cy="119.1" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="130.1" cy="151.7" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="144.8" cy="149.6" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="90.7" cy="123.6" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="78.4" cy="157.5" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="90.6" cy="166.0" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<circle cx="99.8" cy="30.8" r="3.3" fill="#D9601A" stroke="#FFFFFF" stroke-width="1.3"/>
+<rect x="202" y="8" width="158" height="96" fill="#FFFFFF" stroke="#D8D5CC"/>
+<text x="210" y="24" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#5A6574">IMU · SHANK GYRO</text>
+<line x1="210" y1="66" x2="356" y2="66" stroke="#D8D5CC"/>
+<path d="M210.0,66.4 L211.2,71.0 L212.4,74.5 L213.7,76.9 L214.9,78.2 L216.1,78.3 L217.3,77.3 L218.5,75.2 L219.7,73.6 L220.9,73.4 L222.2,73.1 L223.4,72.5 L224.6,71.9 L225.8,71.1 L227.0,70.1 L228.2,69.0 L229.5,67.4 L230.7,66.2 L231.9,65.4 L233.1,65.0 L234.3,65.0 L235.6,65.4 L236.8,66.3 L238.0,66.7 L239.2,66.7 L240.4,66.8 L241.6,67.1 L242.8,67.6 L244.1,68.3 L245.3,69.1 L246.5,70.1 L247.7,70.7 L248.9,71.4 L250.2,72.0 L251.4,72.7 L252.6,73.4 L253.8,74.2 L255.0,75.0 L256.2,76.5 L257.4,78.3 L258.7,79.4 L259.9,79.7 L261.1,79.4 L262.3,78.4 L263.5,76.7 L264.8,74.5 L266.0,74.1 L267.2,73.5 L268.4,72.5 L269.6,71.0 L270.8,69.1 L272.1,66.8 L273.3,64.0 L274.5,60.9 L275.7,58.2 L276.9,55.8 L278.1,53.9 L279.4,52.4 L280.6,51.3 L281.8,50.6 L283.0,50.0 L284.2,47.2 L285.4,45.1 L286.6,44.0 L287.9,43.9 L289.1,44.8 L290.3,46.8 L291.5,49.8 L292.7,52.0 L293.9,52.9 L295.2,54.2 L296.4,55.8 L297.6,57.9 L298.8,60.3 L300.0,63.1 L301.2,66.4 L302.5,71.0 L303.7,74.5 L304.9,76.9 L306.1,78.2 L307.3,78.3 L308.6,77.3 L309.8,75.2 L311.0,73.6 L312.2,73.4 L313.4,73.1 L314.6,72.5 L315.9,71.9 L317.1,71.1 L318.3,70.1 L319.5,69.0 L320.7,67.4 L321.9,66.2 L323.1,65.4 L324.4,65.0 L325.6,65.0 L326.8,65.4 L328.0,66.3 L329.2,66.7 L330.4,66.7 L331.7,66.8 L332.9,67.1 L334.1,67.6 L335.3,68.3 L336.5,69.1 L337.8,70.1 L339.0,70.7 L340.2,71.4 L341.4,72.0 L342.6,72.7 L343.8,73.4 L345.1,74.2 L346.3,75.0 L347.5,76.5 L348.7,78.3 L349.9,79.4 L351.1,79.7 L352.4,79.4 L353.6,78.4 L354.8,76.7 L356.0,74.5" fill="none" stroke="#D9601A" stroke-width="1.6"/>
+<text x="0" y="192" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="#5A6574">2D KEYPOINTS · 13 JOINTS</text>
+</svg>

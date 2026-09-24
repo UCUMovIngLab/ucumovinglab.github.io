@@ -8,6 +8,7 @@ import os
 import sys
 import yaml
 import json
+import html
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -77,9 +78,25 @@ def parse_crossref_authors(authors):
     return result
 
 
+VENUE_NAMES = {
+    "eneuro": "eNeuro",
+}
+
+
+def clean_text(text):
+    """Unescape HTML entities and collapse whitespace."""
+    return " ".join(html.unescape(text or "").split())
+
+
+def clean_title(title):
+    """Drop funding/acknowledgment footnotes that Crossref appends after '**'."""
+    return clean_text(title.split("**")[0])
+
+
 def create_citation_from_crossref(doi, metadata):
     """Create a citation entry from CrossRef metadata."""
     title = metadata.get("title", [""])[0] if metadata.get("title") else ""
+    title = clean_title(title)
 
     # Parse date
     date_parts = metadata.get("published", {}).get("date-parts", [[None]])
@@ -94,8 +111,10 @@ def create_citation_from_crossref(doi, metadata):
     authors = parse_crossref_authors(metadata.get("author", []))
 
     publisher = metadata.get("container-title", [""])[0] if metadata.get("container-title") else ""
+    publisher = clean_text(publisher)
+    publisher = VENUE_NAMES.get(publisher.lower(), publisher)
 
-    return {
+    citation = {
         "id": f"doi:{doi}",
         "title": title,
         "authors": authors,
@@ -103,6 +122,14 @@ def create_citation_from_crossref(doi, metadata):
         "date": date,
         "link": f"https://doi.org/{doi}",
     }
+
+    # bioRxiv/medRxiv preprints share the 10.1101 prefix
+    if doi.lower().startswith("10.1101/"):
+        citation["preprint"] = True
+        if not citation["publisher"]:
+            citation["publisher"] = "bioRxiv"
+
+    return citation
 
 
 def load_orcid_config():
@@ -131,14 +158,14 @@ def main():
         source_id = source.get("id", "")
         if source_id.startswith("doi:"):
             doi = source_id[4:]
-            if doi not in seen_dois:
+            if doi.lower() not in seen_dois:
                 metadata = fetch_crossref_metadata(doi)
                 if metadata:
                     citation = create_citation_from_crossref(doi, metadata)
                     # Merge with source overrides
                     citation.update({k: v for k, v in source.items() if v})
                     citations.append(citation)
-                    seen_dois.add(doi)
+                    seen_dois.add(doi.lower())
         else:
             # Non-DOI source, include as-is
             citations.append(source)
@@ -160,12 +187,24 @@ def main():
             work = work_summaries[0]  # Take first summary
             doi = extract_doi_from_work(work)
 
-            if doi and doi not in seen_dois:
+            if doi and doi.lower() not in seen_dois:
                 metadata = fetch_crossref_metadata(doi)
                 if metadata:
                     citation = create_citation_from_crossref(doi, metadata)
                     citations.append(citation)
-                    seen_dois.add(doi)
+                    seen_dois.add(doi.lower())
+
+    # Apply sources.yaml fields (line, hide, ...) to every matching DOI, including works that
+    # arrived via ORCID because the Crossref lookup for the source entry failed.
+    overrides = {
+        source["id"][4:].lower(): {k: v for k, v in source.items() if k != "id" and v}
+        for source in sources
+        if source.get("id", "").startswith("doi:")
+    }
+    for citation in citations:
+        cid = citation.get("id", "")
+        if cid.startswith("doi:"):
+            citation.update(overrides.get(cid[4:].lower(), {}))
 
     # Sort by date (newest first)
     citations.sort(key=lambda x: x.get("date", ""), reverse=True)

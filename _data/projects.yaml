@@ -1,44 +1,105 @@
-# Research projects
-# TODO: Add specific projects as they are developed
+# Research lines. Order here is the order everywhere on the site.
+# `figure` names an SVG in _includes/figures/. `publications` lists DOIs shown on the research page.
 
-- title: Movimiento humano y control motor
-  subtitle: Human Movement and Motor Control
-  group: research
-  image: images/projects/motor-control.jpg
-  link: research
-  description: |-
-    Estudio del movimiento humano con foco en locomoción y movimientos deportivos,
-    utilizando EMG, IMUs y sistemas de captura de movimiento.
-  tags:
-    - motor control
-    - biomechanics
-    - EMG
-    - motion capture
+- id: motor-control
+  tag_en: Motor control
+  tag_es: Control motor
+  number: "01"
+  figure: split
+  title_en: Human movement and motor control
+  title_es: Movimiento humano y control motor
+  short_en: >-
+    Locomotion and sports movements, measured with EMG, IMUs and motion capture, and how the
+    nervous system uses visual, vestibular and proprioceptive information to control and adapt them.
+  short_es: >-
+    Estudio del movimiento humano con foco en locomoción y movimientos deportivos, utilizando EMG,
+    IMUs y sistemas de captura de movimiento, y de cómo el sistema nervioso lo controla y adapta.
+  methods_en: EMG · IMU · Motion capture
+  methods_es: EMG · IMU · Captura de movimiento
+  caption_en: "Fig. 2 — Split-belt adaptation: step-length asymmetry by stride (schematic)"
+  caption_es: "Fig. 2 — Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
+  body_en: |-
+    We study human movement, focusing on locomotion and sports-relevant movements, to characterize nominal behaviour and to detect patterns that may indicate functional anomalies. We record muscle activity with electromyography (EMG), and use portable systems based on inertial measurement units (IMUs) and motion capture (MoCap) for kinematic and dynamic characterization.
 
-- title: Rehabilitación del movimiento
-  subtitle: Movement Rehabilitation
-  group: research
-  image: images/projects/rehabilitation.jpg
-  link: research
-  description: |-
-    Desarrollo de herramientas para la recuperación del movimiento tras lesiones
-    del sistema nervioso central, incluyendo dispositivos ortésicos y sistemas de biofeedback.
-  tags:
-    - rehabilitation
-    - stroke
-    - biofeedback
-    - orthotics
+    We also study how the nervous system controls movement: the role of visual, vestibular and proprioceptive information, and how muscle activity is coordinated and adapts.
+  body_es: |-
+    Estudiamos el movimiento humano, con foco en la locomoción y movimientos de relevancia deportiva, utilizando diversas herramientas para caracterizar comportamientos nominales o analizando patrones que puedan inferir anomalías funcionales. Empleamos electromiografía (EMG) para registrar la actividad muscular, sistemas portátiles basados en unidades de medición inercial (IMUs), y sistemas de captura de movimiento (MoCap) para la caracterización cinemática y dinámica.
 
-- title: Digitalización del movimiento
-  subtitle: Movement Digitalization
-  group: research
-  image: images/projects/digitalization.jpg
-  link: research
-  description: |-
-    Tecnologías innovadoras para la captura, registro y análisis del movimiento,
-    incluyendo visión por computadora y procesamiento avanzado de señales.
-  tags:
-    - computer vision
-    - signal processing
-    - AI
-    - electronics
+    Buscamos también comprender aspectos del control del movimiento por parte del sistema nervioso, investigando el papel de la información sensorial (visual, vestibular, propioceptiva) y las características de la actividad muscular, su coordinación, y adaptación.
+  collaborators: [hamlet-suarez]
+  publications:
+    - 10.1038/s41598-026-54948-5
+    - 10.1523/ENEURO.0343-23.2025
+    - 10.1523/ENEURO.0358-18.2019
+
+- id: rehabilitation
+  tag_en: Rehabilitation
+  tag_es: Rehabilitación
+  number: "02"
+  figure: emg
+  title_en: Movement rehabilitation
+  title_es: Rehabilitación del movimiento
+  short_en: >-
+    Tools for recovering movement after central nervous system injury such as stroke: biofeedback
+    of patients’ own muscle activity, and actuated orthoses that support motor learning.
+  short_es: >-
+    Herramientas para la recuperación del movimiento tras lesiones del sistema nervioso central,
+    incluyendo sistemas de biofeedback y dispositivos ortésicos.
+  methods_en: Biofeedback · Orthoses · Stroke
+  methods_es: Biofeedback · Órtesis · ACV
+  caption_en: "Fig. 3 — EMG by gait phase, with a biofeedback target on TA (schematic)"
+  caption_es: "Fig. 3 — EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
+  body_en: |-
+    We develop solutions for recovering movement impaired by central nervous system injuries such as stroke, through two complementary strategies.
+
+    **Interactive tools** that induce plasticity in neuromuscular control by giving patients relevant feedback about their own muscle activity, and encourage the recruitment of non-normotypical coordination patterns.
+
+    **Advanced orthotic devices** whose controlled actuation helps accelerate rehabilitation or supports learning coordinated movements.
+  body_es: |-
+    Buscamos desarrollar soluciones para la recuperación del movimiento deteriorado a causa de lesiones en el sistema nervioso central, como los accidentes cerebro-vasculares (ACVs), mediante dos estrategias complementarias.
+
+    **Herramientas interactivas** para inducir plasticidad en el control neuromuscular proveyendo feedback relevante acerca de la actividad muscular propia a los pacientes, y fomentando el reclutamiento de patrones de coordinación muscular no normotípicos.
+
+    **Dispositivos ortésicos avanzados** que, mediante sistemas de actuación controlada, ayudan a acelerar la rehabilitación o a facilitar el aprendizaje de movimientos coordinados.
+  collaborators: [fisioterapia]
+  publications:
+    - 10.1109/URUCON63440.2024.10850101
+
+- id: digitalization
+  tag_en: Digitalization
+  tag_es: Digitalización
+  number: "03"
+  figure: pose
+  title_en: Movement digitalization
+  title_es: Digitalización del movimiento
+  short_en: >-
+    Making movement capture accessible: vision-based motion capture with edge computing,
+    purpose-built electronics, and Bayesian and time-frequency analysis of movement signals.
+  short_es: >-
+    Tecnologías para la captura, registro y análisis del movimiento, incluyendo visión por
+    computadora, electrónica propia y procesamiento avanzado de señales.
+  methods_en: Computer vision · Electronics · Signal processing
+  methods_es: Visión por computadora · Electrónica · Procesamiento de señales
+  caption_en: "Fig. 4 — Pose keypoints and shank gyroscope (schematic)"
+  caption_es: "Fig. 4 — Puntos clave de pose y giroscopio de pierna (esquema)"
+  body_en: |-
+    We develop technologies to capture, record and analyse movement, both to widen access and to improve what can be measured.
+
+    **Vision-based motion capture** using automatic vision techniques and edge computing, with the Artificial Intelligence group.
+
+    **Electronic devices** with enhanced capabilities for movement digitalization, with the Microelectronics and IoT group.
+
+    **Signal processing** for multi-modal movement data: Bayesian models, time-frequency analysis and machine learning.
+  body_es: |-
+    Desarrollamos tecnologías para la captura, registro y análisis del movimiento, con el objetivo dual de facilitar el acceso a las mismas y mejorar sus capacidades.
+
+    **Captura de movimiento basada en visión por computadora**, empleando técnicas de visión automática y computación en el borde, junto al grupo de Inteligencia Artificial.
+
+    **Dispositivos electrónicos** con capacidades mejoradas para la digitalización del movimiento, junto al grupo de Microelectrónica e IoT.
+
+    **Procesamiento avanzado de datos** de señales de movimiento de diversas modalidades mediante modelos bayesianos, análisis en tiempo y frecuencia, e inteligencia artificial.
+  collaborators: [informatica-ia, microelectronica]
+  publications:
+    - 10.1109/LASCAS.2015.7250474
+    - 10.1109/I2MTC.2014.6860729
+    - 10.1109/URUCON.2017.8171879

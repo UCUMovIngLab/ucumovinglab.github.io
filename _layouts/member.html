@@ -1,41 +1,48 @@
 ---
 layout: default
+nav_parent: team
 ---
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign k_bio = "bio_" | append: lang -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign team_page = site.pages | where: "ref", "team" | where: "lang", lang | first -%}
+{%- assign pubs = site.data.citations | where_exp: "c", "c.hide != true" | where_exp: "c", "c.line" | sort: "date" | reverse -%}
+<div class="container crumbs mono"><a href="{{ team_page.url | relative_url }}">{{ team_page.title }}</a><span aria-hidden="true">/</span><span>{{ page.name }}</span></div>
 
-<div class="member-page">
-  <div class="member-header">
-    {% if page.image %}
-    <img src="{{ page.image | relative_url }}" alt="{{ page.name }}" class="member-photo">
-    {% else %}
-    <img src="{{ '/images/placeholder.jpg' | relative_url }}" alt="{{ page.name }}" class="member-photo">
-    {% endif %}
-
-    <div class="member-info">
-      <h1>{{ page.name }}</h1>
-      {% if page.role %}
-      <p class="role">{{ page.role | capitalize }}</p>
-      {% endif %}
-
-      {% if page.links %}
-      <div class="member-links">
-        {% for link in page.links %}
-          {% assign link_type = link[0] %}
-          {% assign link_value = link[1] %}
-          {% include link-button.html type=link_type link=link_value %}
-        {% endfor %}
-      </div>
-      {% endif %}
+<section class="container profile">
+  <img class="profile__photo" src="{{ page.image | default: 'images/placeholder.jpg' | relative_url }}" alt="{{ t.ui.portrait_of }} {{ page.name }}">
+  <div class="profile__text">
+    {%- if page.role %}<span class="label">{{ t.roles[page.role] | default: page.role }}</span>{% endif %}
+    <h1>{{ page.name }}</h1>
+    {%- if page[k_bio] %}<p class="lede">{{ page[k_bio] }}</p>{% endif %}
+    {%- if content != "" %}<div class="prose">{{ content }}</div>{% endif %}
+    {% include member-links.html member=page %}
+    {%- if page.lines %}
+    <div class="profile__lines">
+      <span class="label label--sm">{{ t.ui.research_lines }}</span>
+      {%- for lid in page.lines %}
+      {%- assign line = site.data.projects | where: "id", lid | first %}
+      <a href="{{ t.home_url | append: 'research/' | relative_url }}#{{ line.id }}"><span class="index mono">{{ line.number }}</span> {{ line[k_title] }}</a>
+      {%- endfor %}
     </div>
+    {%- endif %}
   </div>
+</section>
 
-  <div class="member-content">
-    {{ content }}
+{%- if page.author_match %}
+<section class="section container">
+  {%- capture orcid_url %}https://orcid.org/{{ page.links.orcid }}{% endcapture -%}
+  {% include sec-head.html label=t.nav.publications title=t.ui.selected_publications link=t.ui.all_on_orcid href=orcid_url %}
+  <div class="pub-list">
+    {%- assign shown = 0 -%}
+    {%- for item in pubs -%}
+      {%- assign authors = item.authors | join: "|" -%}
+      {%- if authors contains page.author_match and shown < 8 %}
+      {% include pub.html item=item year=true %}
+      {%- assign shown = shown | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor %}
   </div>
-
-  {% if page.links.orcid %}
-  <section>
-    <h2>Publications</h2>
-    {% include list.html data="citations" component="citation" filters="authors: " %}
-  </section>
-  {% endif %}
-</div>
+</section>
+{%- endif %}

@@ -1,0 +1,11 @@
+{%- comment -%} Section header: include.num, include.label, include.title, include.link, include.href, include.tag (h2 default) {%- endcomment -%}
+{%- assign tag = include.tag | default: "h2" -%}
+<div class="sec-head">
+  <div class="sec-head__text">
+    <span class="label">{% if include.num %}<span class="index">{{ include.num }}</span> · {% endif %}{{ include.label }}</span>
+    <{{ tag }} class="sec-head__title">{{ include.title }}</{{ tag }}>
+  </div>
+  {%- if include.link %}
+  <a class="text-link" href="{{ include.href }}">{{ include.link }} {% include icons/arrow.html %}</a>
+  {%- endif %}
+</div>

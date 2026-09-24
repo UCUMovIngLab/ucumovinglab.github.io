@@ -1,36 +1,26 @@
-<header>
-  <div class="header-content">
-    {% assign lang = page.lang | default: "en" %}
-    {% assign t = site.data.i18n[lang] %}
-    {% assign home_url = "/" %}
-    {% if lang == "es" %}{% assign home_url = "/es/" %}{% endif %}
-
-    <a href="{{ home_url | relative_url }}" class="logo-link">
-      <img src="{{ '/images/logo-icon-white.svg' | relative_url }}" alt="{{ site.title }}" class="logo">
-      <div class="site-title">
-        <span class="title">{{ site.title }}</span>
-        <span class="subtitle">{{ site.subtitle }}</span>
-      </div>
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="{{ t.home_url | relative_url }}" class="wordmark">
+      {% include icons/mark.html %}
+      <span class="wordmark__text">
+        <span class="wordmark__name">{{ site.title }}</span>
+        <span class="wordmark__sub">{{ site.subtitle }}</span>
+      </span>
     </a>
 
-    <nav>
-      <a href="{{ home_url | relative_url }}" {% if page.ref == 'home' %}class="active"{% endif %}>{{ t.nav.home }}</a>
-      {% assign nav_pages = site.pages | where: "lang", lang | where_exp: "p", "p.nav.order" | sort: "nav.order" %}
-      {% for p in nav_pages %}
-      <a href="{{ p.url | relative_url }}" {% if page.ref == p.ref %}class="active"{% endif %} {% if p.nav.tooltip %}title="{{ p.nav.tooltip }}"{% endif %}>
-        {{ p.nav_title | default: p.title }}
-      </a>
-      {% endfor %}
-    </nav>
-
-    <div class="header-right">
-      <a href="https://ucu.edu.uy" target="_blank" rel="noopener" class="ucu-logo-link" title="Universidad Católica del Uruguay">
-        <img src="{{ '/images/ucu-logo-white.svg' | relative_url }}" alt="UCU" class="ucu-logo">
-      </a>
+    <div class="site-header__right">
+      <nav class="site-nav" id="site-nav" aria-label="{{ t.ui.main_nav }}">
+        {%- assign nav_pages = site.pages | where: "lang", lang | where_exp: "p", "p.nav.order" | sort: "nav.order" -%}
+        {%- for p in nav_pages %}
+        <a href="{{ p.url | relative_url }}"{% if page.ref == p.ref or layout.nav_parent == p.ref %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
+        {%- endfor %}
+      </nav>
       {% include lang-switcher.html %}
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <span class="site-header__rule" aria-hidden="true"></span>
+      <a href="https://ucu.edu.uy" class="site-header__ucu"><img src="{{ '/images/ucu-logo.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="72" height="26"></a>
+      <button class="menu-toggle" type="button" aria-label="{{ t.ui.open_menu }}" aria-expanded="false" aria-controls="site-nav">{% include icons/menu.html %}</button>
     </div>
   </div>
 </header>
