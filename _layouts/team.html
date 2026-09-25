@@ -8,7 +8,7 @@ layout: default
 {%- assign phd = students | where: "role", "phd" -%}{%- assign ms = students | where: "role", "masters" -%}{%- assign ug = students | where: "role", "undergrad" -%}{%- assign pd = students | where: "role", "postdoc" -%}
 {%- assign students = pd | concat: phd | concat: ms | concat: ug -%}
 {%- assign staff = site.members | where: "role", "staff" | where: "status", "current" -%}
-{%- assign collaborators = site.members | where: "role", "collaborator" -%}
+{%- assign collaborators = site.data.collaborators -%}
 {%- assign alumni = site.members | where: "role", "alum" -%}
 <section class="page-head band--light">
   <div class="container">
@@ -41,16 +41,16 @@ layout: default
     <div class="person-grid">{% for m in ug %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
   {%- endif %}
-  {%- if collaborators.size > 0 %}
-  <section class="team-group">
-    <h2>{{ t.team.collaborators }}</h2>
-    <div class="person-grid">{% for m in collaborators %}{% include person-card.html member=m %}{% endfor %}</div>
-  </section>
-  {%- endif %}
   {%- if alumni.size > 0 %}
   <section class="team-group">
     <h2>{{ t.team.alumni }}</h2>
     <div class="person-grid">{% for m in alumni %}{% include person-card.html member=m %}{% endfor %}</div>
+  </section>
+  {%- endif %}
+  {%- if collaborators.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.collaborators }}</h2>
+    <p class="name-list">{% for c in collaborators %}{% if c.url %}<a href="{{ c.url }}">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
   </section>
   {%- endif %}
   <section class="callout" id="join">

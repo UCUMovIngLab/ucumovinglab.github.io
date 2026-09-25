@@ -21,7 +21,7 @@ nav_parent: team
   <span class="profile__photo profile__photo--initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
   {%- endif %}
   <div class="profile__text">
-    <span class="kicker">{{ page[k_pos] | default: t.roles[page.role] | default: page.role }}{% if page.years and page.role != "pi" %}{% unless page.years contains "TODO" %} · {{ page.years }}{% endunless %}{% endif %}</span>
+    <span class="kicker">{% if page.gender == "f" and t.roles_f[page.role] %}{% assign role_label = t.roles_f[page.role] %}{% else %}{% assign role_label = t.roles[page.role] %}{% endif %}{{ page[k_pos] | default: role_label | default: page.role }}{% if page.years and page.role != "pi" %}{% unless page.years contains "TODO" %} · {{ page.years }}{% endunless %}{% endif %}</span>
     <h1>{{ page.name }}</h1>
     {%- if page[k_aff] %}{% unless page[k_aff] contains "TODO" %}<p class="meta">{{ page[k_aff] }}</p>{% endunless %}{% endif %}
     {%- if page[k_prog] %}{% unless page[k_prog] contains "TODO" %}<p class="meta">{{ page[k_prog] }}</p>{% endunless %}{% endif %}
@@ -29,7 +29,7 @@ nav_parent: team
     {%- if page[k_interests] %}<p class="profile__interests"><span class="muted">{{ t.ui.interests }}</span> {{ page[k_interests] }}</p>{% endif %}
     {%- if page.supervisors %}
     <p class="profile__interests"><span class="muted">{{ t.ui.supervisors }}</span>
-      {%- for s in page.supervisors %}{% assign sup = site.members | where_exp: "x", "x.slug == s" | first %}{% if sup %} <a href="{{ sup.url | relative_url }}">{{ sup.name }}</a>{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+      {%- for s in page.supervisors %}{% assign sup = site.members | where_exp: "x", "x.slug == s" | first %}{% assign ext = site.data.collaborators | where: "id", s | first %}{% if sup %} <a href="{{ sup.url | relative_url }}">{{ sup.name }}</a>{% elsif ext %} {% if ext.url %}<a href="{{ ext.url }}">{{ ext.name }}</a>{% else %}{{ ext.name }}{% endif %}{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}
     </p>
     {%- endif %}
     {% include member-links.html member=page %}

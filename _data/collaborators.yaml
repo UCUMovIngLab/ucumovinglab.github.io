@@ -1,0 +1,25 @@
+# External collaborators: people outside the lab who work with us on projects.
+# They are not lab members, so they get no card or page: the Team page lists their names,
+# linked to their own or their group's page, and project pages list them under Collaborators.
+# Project entries in research_projects.yaml refer to them by id.
+
+- id: alfredo-arnaud
+  name: Alfredo Arnaud
+  url: https://investigadores.ucu.edu.uy/es/persons/alfredo-arnaud-maceira/
+- id: matias-di-martino
+  name: J. Matías Di Martino
+  url: https://matiasdm.github.io/
+- id: marcela-gonzalez-rubio
+  name: Marcela Gonzalez-Rubio
+  url: https://www.engineering.pitt.edu/subsites/Labs/sml/profiles/team/marcela-gonzalez-rubio/
+- id: matias-miguez
+  name: Matías Míguez
+  url: https://die.ucu.edu.uy/
+- id: angel-peterchev
+  name: Angel V. Peterchev
+  url: https://scholars.duke.edu/person/angel.peterchev
+- id: hamlet-suarez
+  name: Hamlet Suárez
+- id: gelsy-torres-oviedo
+  name: Gelsy Torres-Oviedo
+  url: https://www.engineering.pitt.edu/people/faculty/gelsy-torres-oviedo/
