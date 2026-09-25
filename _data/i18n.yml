@@ -105,6 +105,7 @@ en:
 
   team:
     pis: "Principal investigators"
+    staff: "Lab coordination"
     graduate: "Graduate students"
     undergrad: "Undergraduate research interns"
     collaborators: "Collaborators"
@@ -220,6 +221,7 @@ es:
 
   team:
     pis: "Investigadores principales"
+    staff: "Coordinación del laboratorio"
     graduate: "Estudiantes de posgrado"
     undergrad: "Estudiantes de grado en iniciación a la investigación"
     collaborators: "Colaboradores"
