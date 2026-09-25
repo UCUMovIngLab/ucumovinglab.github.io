@@ -3,98 +3,54 @@ layout: default
 ---
 {%- assign lang = page.lang | default: "en" -%}
 {%- assign t = site.data.i18n[lang] -%}
-{%- assign k_bio = "bio_" | append: lang -%}
-{%- assign k_interests = "interests_" | append: lang -%}
-{%- assign k_description = "description_" | append: lang -%}
-{%- assign k_note = "note_" | append: lang -%}
 {%- assign pis = site.members | where: "role", "pi" -%}
-{%- assign students = site.members | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'undergrad' or m.role == 'postdoc'" -%}
-<section class="page-head">
-  <span class="label">{{ page.title }}</span>
-  <h1>{{ page.title }}</h1>
-  <p class="lede">{{ t.team.lede }}</p>
+{%- assign students = site.members | where: "status", "current" | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'undergrad' or m.role == 'postdoc'" -%}
+{%- assign phd = students | where: "role", "phd" -%}{%- assign ms = students | where: "role", "masters" -%}{%- assign ug = students | where: "role", "undergrad" -%}{%- assign pd = students | where: "role", "postdoc" -%}
+{%- assign students = pd | concat: phd | concat: ms | concat: ug -%}
+{%- assign collaborators = site.members | where: "role", "collaborator" -%}
+{%- assign alumni = site.members | where: "role", "alum" -%}
+<section class="page-head band--light">
+  <div class="container">
+    <span class="rule" aria-hidden="true"></span>
+    <h1>{{ page.title }}</h1>
+  </div>
 </section>
 
 <div class="container team">
-  <section class="team-sec">
-    <span class="label"><span class="index">01</span> · {{ t.team.leads_label }}</span>
-    <div class="team-sec__body">
-      <h2>{{ t.team.leads_title }}</h2>
-      <div class="pi-grid">
-        {%- for m in pis %}
-        <article class="pi">
-          <img src="{{ m.image | default: 'images/placeholder.jpg' | relative_url }}" alt="{{ t.ui.portrait_of }} {{ m.name }}" loading="lazy">
-          <div class="pi__text">
-            <span class="label label--sm">{{ t.roles[m.role] }}</span>
-            <h3>{{ m.name }}</h3>
-            <p>{{ m[k_bio] }}</p>
-            {%- if m[k_interests] %}<p class="pi__interests"><span class="mono muted">{{ t.ui.interests }}</span> {{ m[k_interests] }}</p>{% endif %}
-            {% include member-links.html member=m %}
-            <a class="text-link" href="{{ m.url | relative_url }}">{{ t.ui.profile_link }} {% include icons/arrow.html %}</a>
-          </div>
-        </article>
-        {%- endfor %}
-      </div>
-    </div>
+  <section class="team-group">
+    <h2>{{ t.team.pis }}</h2>
+    <div class="person-grid">{% for m in pis %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
-
-  {%- if students.size > 0 %}
-  <section class="team-sec">
-    <span class="label"><span class="index">02</span> · {{ t.team.students_label }}</span>
-    <div class="team-sec__body">
-      <h2>{{ t.team.students_title }}</h2>
-      <div class="rows">
-        {%- for m in students %}
-        <div class="row row--person">
-          <img src="{{ m.image | default: 'images/placeholder.jpg' | relative_url }}" alt="" loading="lazy">
-          <div><a href="{{ m.url | relative_url }}" class="row__name">{{ m.name }}</a><p>{{ t.roles[m.role] }}{% if m[k_interests] %} · {{ m[k_interests] }}{% endif %}</p></div>
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
+  {%- assign graduate = pd | concat: phd | concat: ms -%}
+  {%- if graduate.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.graduate }}</h2>
+    <div class="person-grid">{% for m in graduate %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
   {%- endif %}
-
-  {%- if site.data.alumni.size > 0 %}
-  <section class="team-sec">
-    <span class="label"><span class="index">{% if students.size > 0 %}03{% else %}02{% endif %}</span> · {{ t.team.alumni_label }}</span>
-    <div class="team-sec__body">
-      <h2>{{ t.team.alumni_title }}</h2>
-      <div class="rows">
-        {%- for a in site.data.alumni %}
-        <div class="row">
-          <span class="row__name">{{ a.name }}</span>
-          <span class="row__desc">{{ a[k_note] }}</span>
-          <span class="row__end">{% if a.doi %}<a class="mono" href="https://doi.org/{{ a.doi }}">{{ t.ui.paper }} {% include icons/ext.html %}</a>{% endif %}</span>
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
+  {%- if ug.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.undergrad }}</h2>
+    <div class="person-grid">{% for m in ug %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
   {%- endif %}
-
-  <section class="team-sec">
-    <span class="label"><span class="index">{% if students.size > 0 %}04{% else %}03{% endif %}</span> · {{ t.team.network_label }}</span>
-    <div class="team-sec__body">
-      <h2>{{ t.team.network_title }}</h2>
-      <div class="rows">
-        {%- for c in site.data.collaborators %}
-        <div class="row">
-          <span class="row__name">{{ c.name }}</span>
-          <span class="row__desc">{{ c[k_description] }}</span>
-          <span class="row__end">{% if c.link %}<a href="{{ c.link }}">{{ t.ui.website }} {% include icons/ext.html %}</a>{% else %}<span class="mono muted">{{ t.ui.external }}</span>{% endif %}</span>
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
+  {%- if collaborators.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.collaborators }}</h2>
+    <div class="person-grid">{% for m in collaborators %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
-
+  {%- endif %}
+  {%- if alumni.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.alumni }}</h2>
+    <div class="person-grid">{% for m in alumni %}{% include person-card.html member=m %}{% endfor %}</div>
+  </section>
+  {%- endif %}
   <section class="callout" id="join">
     <div>
-      <span class="label">{{ t.home.join_label }}</span>
       <h2>{{ t.team.join_title }}</h2>
       <p>{{ t.team.join_text }}</p>
     </div>
-    <a class="button" href="mailto:{{ site.links.email }}">{{ t.ui.write_to_lab }} {% include icons/arrow.html %}</a>
+    <a class="button button--navy" href="mailto:{{ site.links.email }}">{{ t.ui.write_to_lab }} {% include icons/arrow.html %}</a>
   </section>
 </div>

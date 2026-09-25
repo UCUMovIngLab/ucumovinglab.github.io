@@ -9,31 +9,29 @@ nav:
 ---
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- assign pis = site.members | where: "role", "pi" -%}
-<section class="page-head">
-  <span class="label">{{ page.title }}</span>
-  <h1>{{ page.title }}</h1>
-  <p class="lede">{{ t.contact.lede }}</p>
+<section class="page-head band--light">
+  <div class="container">
+    <span class="rule" aria-hidden="true"></span>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ t.contact.lede }}</p>
+  </div>
 </section>
 
 <div class="container contact">
   <section class="contact__people">
-    <h2 class="label">{{ t.contact.people_title }}</h2>
+    <h2 class="small-head">{{ t.contact.people_title }}</h2>
     {%- for m in pis %}
-    <div class="contact-card">
+    <div class="person-row person-row--large">
       <img src="{{ m.image | relative_url }}" alt="{{ t.ui.portrait_of }} {{ m.name }}" loading="lazy">
-      <div>
-        <a class="person__name" href="{{ m.url | relative_url }}">{{ m.name }}</a>
-        <span class="label label--sm">{{ t.roles[m.role] }}</span>
-        <a class="mono" href="mailto:{{ m.links.email }}">{{ m.links.email }}</a>
-      </div>
+      <span><a href="{{ m.url | relative_url }}"><strong>{{ m.name }}</strong></a><span class="meta">{{ t.roles[m.role] }}</span><a href="mailto:{{ m.links.email }}">{{ m.links.email }}</a></span>
     </div>
     {%- endfor %}
   </section>
   <section class="contact__place">
-    <h2 class="label">{{ t.contact.location_title }}</h2>
+    <h2 class="small-head">{{ t.contact.location_title }}</h2>
     <address>
       Universidad Católica del Uruguay<br>
-      Facultad de Ingeniería y Tecnologías<br>
+      {{ t.ui.faculty }}<br>
       Av. 8 de Octubre 2738<br>
       Montevideo, Uruguay
     </address>

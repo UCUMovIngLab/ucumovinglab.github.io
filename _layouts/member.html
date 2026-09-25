@@ -5,44 +5,67 @@ nav_parent: team
 {%- assign lang = page.lang | default: "en" -%}
 {%- assign t = site.data.i18n[lang] -%}
 {%- assign k_bio = "bio_" | append: lang -%}
-{%- assign k_title = "title_" | append: lang -%}
+{%- assign k_aff = "affiliation_" | append: lang -%}
+{%- assign k_prog = "program_" | append: lang -%}
+{%- assign k_interests = "interests_" | append: lang -%}
 {%- assign team_page = site.pages | where: "ref", "team" | where: "lang", lang | first -%}
 {%- assign pubs = site.data.citations | where_exp: "c", "c.hide != true" | where_exp: "c", "c.line" | sort: "date" | reverse -%}
-<div class="container crumbs mono"><a href="{{ team_page.url | relative_url }}">{{ team_page.title }}</a><span aria-hidden="true">/</span><span>{{ page.name }}</span></div>
+<div class="container crumbs"><a href="{{ team_page.url | relative_url }}">{{ team_page.title }}</a><span aria-hidden="true">/</span><span>{{ page.name }}</span></div>
 
 <section class="container profile">
-  <img class="profile__photo" src="{{ page.image | default: 'images/placeholder.jpg' | relative_url }}" alt="{{ t.ui.portrait_of }} {{ page.name }}">
+  {%- if page.image %}
+  <img class="profile__photo" src="{{ page.image | relative_url }}" alt="{{ t.ui.portrait_of }} {{ page.name }}">
+  {%- else %}
+  {%- assign parts = page.name | remove: "." | split: " " %}
+  <span class="profile__photo profile__photo--initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+  {%- endif %}
   <div class="profile__text">
-    {%- if page.role %}<span class="label">{{ t.roles[page.role] | default: page.role }}</span>{% endif %}
+    <span class="kicker">{{ t.roles[page.role] | default: page.role }}{% if page.years and page.role != "pi" %}{% unless page.years contains "TODO" %} · {{ page.years }}{% endunless %}{% endif %}</span>
     <h1>{{ page.name }}</h1>
+    {%- if page[k_aff] %}{% unless page[k_aff] contains "TODO" %}<p class="meta">{{ page[k_aff] }}</p>{% endunless %}{% endif %}
+    {%- if page[k_prog] %}{% unless page[k_prog] contains "TODO" %}<p class="meta">{{ page[k_prog] }}</p>{% endunless %}{% endif %}
     {%- if page[k_bio] %}<p class="lede">{{ page[k_bio] }}</p>{% endif %}
-    {%- if content != "" %}<div class="prose">{{ content }}</div>{% endif %}
-    {% include member-links.html member=page %}
-    {%- if page.lines %}
-    <div class="profile__lines">
-      <span class="label label--sm">{{ t.ui.research_lines }}</span>
-      {%- for lid in page.lines %}
-      {%- assign line = site.data.projects | where: "id", lid | first %}
-      <a href="{{ t.home_url | append: 'research/' | relative_url }}#{{ line.id }}"><span class="index mono">{{ line.number }}</span> {{ line[k_title] }}</a>
-      {%- endfor %}
-    </div>
+    {%- if page[k_interests] %}<p class="profile__interests"><span class="muted">{{ t.ui.interests }}</span> {{ page[k_interests] }}</p>{% endif %}
+    {%- if page.supervisors %}
+    <p class="profile__interests"><span class="muted">{{ t.ui.supervisors }}</span>
+      {%- for s in page.supervisors %}{% assign sup = site.members | where_exp: "x", "x.slug == s" | first %}{% if sup %} <a href="{{ sup.url | relative_url }}">{{ sup.name }}</a>{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+    </p>
     {%- endif %}
+    {% include member-links.html member=page %}
   </div>
 </section>
 
+{%- if page.projects %}
+<section class="band band--light">
+  <div class="container">
+    {% include sec-title.html title=t.ui.projects %}
+    <div class="project-grid">
+      {%- for pid in page.projects %}
+      {%- assign proj = site.data.research_projects | where: "id", pid | first -%}
+      {%- if proj %}{% include project-card.html project=proj %}{% endif -%}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
 {%- if page.author_match %}
+{%- capture shown %}{% for item in pubs %}{% assign authors = item.authors | join: "|" %}{% if authors contains page.author_match %}x{% endif %}{% endfor %}{% endcapture -%}
+{%- if shown != "" %}
 <section class="section container">
-  {%- capture orcid_url %}https://orcid.org/{{ page.links.orcid }}{% endcapture -%}
-  {% include sec-head.html label=t.nav.publications title=t.ui.selected_publications link=t.ui.all_on_orcid href=orcid_url %}
+  {%- if page.links.orcid %}{% capture orcid_url %}https://orcid.org/{{ page.links.orcid }}{% endcapture %}{% endif -%}
+  {% include sec-title.html title=t.ui.selected_publications link=t.ui.all_on_orcid href=orcid_url %}
   <div class="pub-list">
-    {%- assign shown = 0 -%}
+    {%- assign n = 0 -%}
     {%- for item in pubs -%}
       {%- assign authors = item.authors | join: "|" -%}
-      {%- if authors contains page.author_match and shown < 8 %}
+      {%- if authors contains page.author_match and n < 8 %}
       {% include pub.html item=item year=true %}
-      {%- assign shown = shown | plus: 1 -%}
+      {%- assign n = n | plus: 1 -%}
       {%- endif -%}
     {%- endfor %}
   </div>
 </section>
 {%- endif %}
+{%- endif %}
+<div class="section"></div>

@@ -10,6 +10,11 @@
 # Crossref metadata is fetched for each DOI; any field set here overrides it.
 
 # --- 01 Human movement and motor control ---
+# bioRxiv's new DOI prefix (10.64898) is not flagged as a preprint by _cite/cite.py, so set it here.
+- id: doi:10.64898/2026.08.01.742204
+  line: motor-control
+  publisher: bioRxiv
+  preprint: true
 - id: doi:10.1038/s41598-026-54948-5
   line: motor-control
 - id: doi:10.1523/ENEURO.0343-23.2025
@@ -19,8 +24,6 @@
 - id: doi:10.1152/JN.00509.2019
   line: motor-control
 - id: doi:10.1523/ENEURO.0493-19.2020
-  line: motor-control
-- id: doi:10.1101/2020.10.28.359281
   line: motor-control
 - id: doi:10.1523/ENEURO.0358-18.2019
   line: motor-control
@@ -52,6 +55,25 @@
   line: rehabilitation
 
 # --- 03 Movement digitalization ---
+# arXiv items are not resolved through Crossref; give them in full.
+- id: arxiv:2602.07052
+  title: Toward Accurate and Accessible Markerless Neuronavigation
+  authors:
+    - Ziye Xie
+    - Oded Schlesinger
+    - Raj Kundu
+    - Jessica Y. Choi
+    - Pablo Iturralde
+    - Dennis A. Turner
+    - Stefan M. Goetz
+    - Guillermo Sapiro
+    - Angel V. Peterchev
+    - J. Matias Di Martino
+  publisher: arXiv
+  date: "2026-02-04"
+  link: https://arxiv.org/abs/2602.07052
+  preprint: true
+  line: digitalization
 - id: doi:10.1109/URUCON.2017.8171879
   line: digitalization
 - id: doi:10.1109/LASCAS.2015.7250474
@@ -62,6 +84,9 @@
   line: digitalization
 
 # --- Preprints superseded by a published version ---
+# Published as doi:10.1038/s41598-026-54948-5 (Scientific Reports, 2026)
+- id: doi:10.1101/2020.10.28.359281
+  hide: true
 - id: doi:10.1101/686980
   hide: true
 - id: doi:10.1101/470930

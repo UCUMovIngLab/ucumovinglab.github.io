@@ -102,7 +102,7 @@ The site automatically builds and deploys via GitHub Actions when you push to th
 ## TODO
 
 - [ ] Retouched portrait for Pablo Iturralde (replace `images/team/pablo-iturralde.jpg`, same filename)
-- [ ] Add current students to `_members/`
+- [x] Add current students to `_members/`
 - [ ] Replace schematic figures with lab figures or photos
 
 ## Based On

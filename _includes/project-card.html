@@ -1,0 +1,33 @@
+{%- comment -%} Project card. include.project {%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign k_summary = "summary_" | append: lang -%}
+{%- assign k_tag = "tag_" | append: lang -%}
+{%- assign line = site.data.projects | where: "id", p.line | first -%}
+{%- assign prefix = t.home_url | append: "research/" -%}
+<article class="project-card">
+  <div class="project-card__meta">
+    {%- if p.status == "active" %}<span class="badge badge--status">{{ t.ui.status_active }}</span>{% else %}<span class="badge badge--muted">{{ t.ui.status_finished }}</span>{% endif -%}
+    {%- if line %}<span class="badge">{{ line[k_tag] }}</span>{% endif -%}
+    {%- capture years %}{% unless p.start contains "TODO" %}{{ p.start }}{% endunless %}{% if p.end %}–{{ p.end }}{% elsif p.start and p.start != "" %}{% unless p.start contains "TODO" %}–{% endunless %}{% endif %}{% endcapture -%}
+    {%- if years != "" %}<span class="meta">{{ years }}</span>{% endif %}
+  </div>
+  <a class="project-card__title" href="{{ prefix | append: p.id | append: '/' | relative_url }}">{{ p[k_title] }}</a>
+  <p>{{ p[k_summary] }}</p>
+  {%- if p.people %}
+  <p class="project-card__people">
+    {%- for entry in p.people -%}
+      {%- assign m = site.members | where_exp: "x", "x.slug == entry.person" | first -%}
+      {%- if m %}{{ m.name }}{% if entry.role == "pi" or entry.role == "co-pi" %} <span class="muted">({{ t.project_roles[entry.role] }})</span>{% endif %}{% unless forloop.last %}, {% endunless %}{% endif -%}
+    {%- endfor -%}
+  </p>
+  {%- endif %}
+  {%- if p.partners or p.funding %}
+  <p class="project-card__extra">
+    {%- if p.partners %}<span><span class="muted">{{ t.ui.partners }}</span> {% for x in p.partners %}{{ x.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif -%}
+    {%- if p.funding %}<span><span class="muted">{{ t.ui.funding }}</span> {% for f in p.funding %}{{ f.funder }}{% if f.program %} · {{ f.program }}{% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}</span>{% endif -%}
+  </p>
+  {%- endif %}
+</article>

@@ -16,8 +16,8 @@
     la marcha, el equilibrio y los movimientos deportivos, y cómo se adapta cuando cambian las condiciones.
   methods_en: EMG · IMU · Motion capture
   methods_es: EMG · IMU · Captura de movimiento
-  caption_en: "Fig. 2 — Split-belt adaptation: step-length asymmetry by stride (schematic)"
-  caption_es: "Fig. 2 — Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
+  caption_en: "Split-belt adaptation: step-length asymmetry by stride (schematic)"
+  caption_es: "Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
   body_en: |-
     We study walking, balance and sports movements, to describe how they normally work and to recognise the changes that signal a problem. Two questions run through this line: how the nervous system uses visual, vestibular and proprioceptive information to control movement, and how it adapts when the body or the environment changes.
 
@@ -51,8 +51,8 @@
     biofeedback de la propia actividad muscular y órtesis actuadas que apoyan el aprendizaje motor.
   methods_en: Biofeedback · Orthoses · Stroke
   methods_es: Biofeedback · Órtesis · ACV
-  caption_en: "Fig. 3 — EMG by gait phase, with a biofeedback target on TA (schematic)"
-  caption_es: "Fig. 3 — EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
+  caption_en: "EMG by gait phase, with a biofeedback target on TA (schematic)"
+  caption_es: "EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
   body_en: |-
     This line applies what we learn about typical movement to people whose movement has been impaired by an injury to the central nervous system, such as a stroke. We work on two kinds of tools.
 
@@ -84,8 +84,8 @@
     computación en el borde, electrónica propia y análisis bayesiano y en tiempo-frecuencia de señales.
   methods_en: Computer vision · Electronics · Signal processing
   methods_es: Visión por computadora · Electrónica · Procesamiento de señales
-  caption_en: "Fig. 4 — Pose keypoints and shank gyroscope (schematic)"
-  caption_es: "Fig. 4 — Puntos clave de pose y giroscopio de pierna (esquema)"
+  caption_en: "Pose keypoints and shank gyroscope (schematic)"
+  caption_es: "Puntos clave de pose y giroscopio de pierna (esquema)"
   body_en: |-
     Measuring movement in detail usually means a specialised lab: optical motion capture, force plates, multi-channel EMG. We build alternatives that are cheap and portable enough to use outside the lab, and aim to extend what can be measured along the way.
 
