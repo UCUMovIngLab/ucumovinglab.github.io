@@ -11,6 +11,8 @@ nav_parent: research
 {%- assign k_unit = "unit_" | append: lang -%}
 {%- assign k_caption = "caption_" | append: lang -%}
 {%- assign k_aff = "affiliation_" | append: lang -%}
+{%- assign k_country = "country_" | append: lang -%}
+{%- assign n_ug = 0 -%}
 {%- assign line = site.data.projects | where: "id", p.line | first -%}
 {%- assign research_url = t.home_url | append: 'research/' | relative_url -%}
 <div class="container crumbs"><a href="{{ research_url }}">{{ t.ui.research }}</a><span aria-hidden="true">/</span>{% if line %}<a href="{{ research_url }}#{{ line.id }}">{{ line[k_title] }}</a>{% endif %}</div>
@@ -51,18 +53,23 @@ nav_parent: research
       {%- for entry in p.people %}
       {%- assign m = site.members | where_exp: "x", "x.slug == entry.person" | first -%}
       {%- if m %}
+      {%- assign named = true -%}{%- if entry.role == "student" -%}{%- assign named = false -%}{%- if m.role == "phd" or m.role == "masters" or m.role == "postdoc" or m.role == "staff" -%}{%- assign named = true -%}{%- endif -%}{%- endif -%}
+      {%- unless named %}{% assign n_ug = n_ug | plus: 1 %}{% endunless -%}
+      {%- endif %}
+      {%- if m and named %}
       <a class="person-row" href="{{ m.url | relative_url }}">
         {%- if m.image %}<img src="{{ m.image | relative_url }}" alt="" loading="lazy">{% else %}{% assign parts = m.name | remove: "." | split: " " %}<span class="person-row__initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>{% endif %}
         <span><strong>{{ m.name }}</strong><span class="meta">{{ t.project_roles[entry.role] }}{% if m.role == "collaborator" and m[k_aff] %} · {{ m[k_aff] | split: "," | first }}{% endif %}</span></span>
       </a>
       {%- endif %}
       {%- endfor %}
+      {%- if n_ug == 1 %}<p class="meta">{{ t.ui.undergrad_one }}</p>{% elsif n_ug > 1 %}<p class="meta">{{ t.ui.undergrad_many | replace: "NUM", n_ug }}</p>{% endif %}
     </div>
     {%- if p.partners %}
     <div class="aside-block">
       <h2 class="small-head">{{ t.ui.partners }}</h2>
       {%- for x in p.partners %}
-      <p>{% if x.url %}<a href="{{ x.url }}">{{ x.name }}</a>{% else %}{{ x.name }}{% endif %}{% if x[k_unit] %}{% unless x[k_unit] contains "TODO" %}<br><span class="meta">{{ x[k_unit] }}</span>{% endunless %}{% endif %}</p>
+      <p>{% if x.url %}<a href="{{ x.url }}">{{ x.name }}</a>{% else %}{{ x.name }}{% endif %}{% if x[k_country] %} ({{ x[k_country] }}){% endif %}{% if x[k_unit] %}{% unless x[k_unit] contains "TODO" %}<br><span class="meta">{{ x[k_unit] }}</span>{% endunless %}{% endif %}</p>
       {%- endfor %}
     </div>
     {%- endif %}
@@ -70,7 +77,7 @@ nav_parent: research
     <div class="aside-block">
       <h2 class="small-head">{{ t.ui.funding }}</h2>
       {%- for f in p.funding %}
-      <p>{{ f.funder }}{% if f.program %} · {{ f.program }}{% endif %}{% if f.code %}<br><span class="meta">{{ f.code }}</span>{% endif %}</p>
+      <p>{{ f.funder }}{% if f[k_country] %} ({{ f[k_country] }}){% endif %}{% if f.program %} · {{ f.program }}{% endif %}{% if f.code %}<br><span class="meta">{{ f.code }}</span>{% endif %}</p>
       {%- endfor %}
     </div>
     {%- endif %}
