@@ -100,7 +100,11 @@ h3 { font-size: 23px; line-height: 30px; }
 .site-nav a { font-size: 16px; line-height: 22px; font-weight: 500; color: var(--ink-2); padding: 30px 0 28px; border-bottom: 3px solid transparent; }
 .site-nav a:hover { color: var(--navy); text-decoration: none; border-bottom-color: var(--rule-strong); }
 .site-nav a[aria-current="page"] { color: var(--navy); font-weight: 600; border-bottom-color: var(--teal); }
-.lang-link { font-size: 15px; font-weight: 600; color: var(--ink-2); }
+.lang-switch { display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; letter-spacing: 0.04em; color: var(--ink-3); }
+.lang-switch [aria-current] { color: var(--navy); font-weight: 700; }
+.lang-switch a { color: var(--ink-3); font-weight: 500; }
+.lang-switch a:hover { color: var(--navy); }
+.lang-switch__sep { color: var(--rule-strong); }
 .site-header__rule { width: 1px; height: 32px; background: var(--rule); }
 .site-header__ucu img { width: 88px; height: 32px; }
 .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 0; color: var(--navy); cursor: pointer; }
@@ -320,7 +324,9 @@ h3 { font-size: 23px; line-height: 30px; }
 .site-footer__logo img { width: 99px; height: 36px; }
 .site-footer__bottom { max-width: calc(var(--content) + 2 * var(--margin)); margin: 48px auto 0; padding: 20px var(--margin) 28px; display: flex; justify-content: space-between; gap: 16px; font-size: 13px; line-height: 20px; color: var(--footer-2); position: relative; }
 .site-footer__bottom::before { content: ""; position: absolute; top: 0; left: var(--margin); right: var(--margin); border-top: 1px solid rgba(255, 255, 255, 0.16); }
-.site-footer .lang-link { color: #FFFFFF; font-size: 13px; }
+.site-footer .lang-switch [aria-current] { color: #FFFFFF; }
+.site-footer .lang-switch a { color: var(--footer-2); }
+.site-footer .lang-switch__sep { color: var(--footer-2); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1280px) {
@@ -356,7 +362,8 @@ h3 { font-size: 23px; line-height: 30px; }
   .wordmark__name { font-size: 16px; line-height: 19px; }
   .wordmark__sub, .site-header__rule, .site-header__ucu { display: none; }
   .site-header__right { gap: 4px; }
-  .lang-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; font-size: 14px; }
+  .lang-switch { min-height: 44px; padding: 0 8px; }
+  .lang-switch a { display: inline-flex; align-items: center; min-height: 44px; }
   .menu-toggle { display: inline-flex; }
   .site-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 8px 16px 16px; }
   .site-nav.is-open { display: flex; }

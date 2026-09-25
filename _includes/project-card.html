@@ -20,7 +20,7 @@
   <p class="project-card__people">
     {%- for entry in p.people -%}
       {%- assign m = site.members | where_exp: "x", "x.slug == entry.person" | first -%}
-      {%- if m %}{{ m.name }}{% if entry.role == "director" or entry.role == "co-director" %} <span class="muted">({{ t.roles[entry.role] | downcase }})</span>{% endif %}{% unless forloop.last %}, {% endunless %}{% endif -%}
+      {%- if m %}{{ m.name }}{% if entry.role == "pi" or entry.role == "co-pi" %} <span class="muted">({{ t.project_roles[entry.role] }})</span>{% endif %}{% unless forloop.last %}, {% endunless %}{% endif -%}
     {%- endfor -%}
   </p>
   {%- endif %}
