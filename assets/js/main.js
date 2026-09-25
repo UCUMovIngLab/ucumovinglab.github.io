@@ -12,23 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Publications: scope (lab / all), research line, free-text search
+  // Publications: one pill group (lab scope, one per research line, or all member work) + search
   var filters = document.querySelector('[data-pub-filters]');
   var list = document.querySelector('[data-pub-list]');
   if (!filters || !list) return;
 
   var state = { scope: 'lab', line: '', query: '' };
   var pubs = Array.prototype.slice.call(list.querySelectorAll('.pub'));
-  var years = Array.prototype.slice.call(list.querySelectorAll('.pub-year'));
+  var groups = Array.prototype.slice.call(list.querySelectorAll('[data-group]'));
   var empty = list.querySelector('[data-pub-empty]');
   var search = document.getElementById('pub-search');
   var texts = pubs.map(function (el) { return el.textContent.toLowerCase(); });
-
-  function press(group, attr, value) {
-    filters.querySelectorAll('[' + attr + ']').forEach(function (b) {
-      b.setAttribute('aria-pressed', b.getAttribute(attr) === value ? 'true' : 'false');
-    });
-  }
 
   function apply() {
     var shown = 0;
@@ -40,25 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
       el.hidden = !ok;
       if (ok) shown++;
     });
-    years.forEach(function (sec) {
-      var any = sec.querySelector('.pub:not([hidden])');
-      sec.hidden = !any;
-      var link = document.querySelector('[data-year-link="' + sec.getAttribute('data-year') + '"]');
-      if (link) link.hidden = !any;
-    });
+    groups.forEach(function (g) { g.hidden = !g.querySelector('.pub:not([hidden])'); });
     if (empty) empty.hidden = shown > 0;
   }
 
   filters.addEventListener('click', function (e) {
-    var b = e.target.closest('button');
+    var b = e.target.closest('button[data-scope]');
     if (!b) return;
-    if (b.hasAttribute('data-scope')) {
-      state.scope = b.getAttribute('data-scope');
-      press(filters, 'data-scope', state.scope);
-    } else if (b.hasAttribute('data-line')) {
-      state.line = b.getAttribute('data-line');
-      press(filters, 'data-line', state.line);
-    }
+    state.scope = b.getAttribute('data-scope');
+    state.line = b.getAttribute('data-line') || '';
+    filters.querySelectorAll('button[data-scope]').forEach(function (x) {
+      x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+    });
     apply();
   });
 

@@ -5,21 +5,20 @@
     <a href="{{ t.home_url | relative_url }}" class="wordmark">
       {% include icons/mark.html %}
       <span class="wordmark__text">
-        <span class="wordmark__name">{{ site.title }}</span>
-        <span class="wordmark__sub">{{ site.subtitle }}</span>
+        <span class="wordmark__name">{{ t.name }}</span>
+        <span class="wordmark__sub">Universidad Católica del Uruguay</span>
       </span>
     </a>
-
     <div class="site-header__right">
       <nav class="site-nav" id="site-nav" aria-label="{{ t.ui.main_nav }}">
         {%- assign nav_pages = site.pages | where: "lang", lang | where_exp: "p", "p.nav.order" | sort: "nav.order" -%}
         {%- for p in nav_pages %}
-        <a href="{{ p.url | relative_url }}"{% if page.ref == p.ref or layout.nav_parent == p.ref %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
+        <a href="{{ p.url | relative_url }}"{% if page.ref == p.ref or page.nav_parent == p.ref or layout.nav_parent == p.ref %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
         {%- endfor %}
       </nav>
       {% include lang-switcher.html %}
       <span class="site-header__rule" aria-hidden="true"></span>
-      <a href="https://ucu.edu.uy" class="site-header__ucu"><img src="{{ '/images/ucu-logo.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="72" height="26"></a>
+      <a href="https://ucu.edu.uy" class="site-header__ucu"><img src="{{ '/images/ucu-logo.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="88" height="32"></a>
       <button class="menu-toggle" type="button" aria-label="{{ t.ui.open_menu }}" aria-expanded="false" aria-controls="site-nav">{% include icons/menu.html %}</button>
     </div>
   </div>

@@ -1,16 +1,9 @@
-{%- comment -%} Links to the same page in the other language. Hidden when the page has no translation. {%- endcomment -%}
+{%- comment -%} Link to this page in the other language; nothing if there is no translation. {%- endcomment -%}
 {%- if page.ref -%}
-{%- assign versions = site.pages | where: "ref", page.ref | sort: "lang" -%}
-{%- if versions.size > 1 -%}
-<div class="lang-switch">
-  {%- for p in versions -%}
-    {%- if p.lang == page.lang -%}
-      <span aria-current="true">{{ p.lang | upcase }}</span>
-    {%- else -%}
-      <a href="{{ p.url | relative_url }}" lang="{{ p.lang }}" hreflang="{{ p.lang }}" title="{{ site.data.i18n[p.lang].lang_name }}">{{ p.lang | upcase }}</a>
-    {%- endif -%}
-    {%- unless forloop.last %}<span class="lang-switch__sep" aria-hidden="true">/</span>{% endunless -%}
-  {%- endfor -%}
-</div>
+{%- assign versions = site.pages | where: "ref", page.ref -%}
+{%- for p in versions -%}
+{%- if p.lang != page.lang -%}
+<a class="lang-link" href="{{ p.url | relative_url }}" lang="{{ p.lang }}" hreflang="{{ p.lang }}">{{ site.data.i18n[p.lang].lang_name }}</a>
 {%- endif -%}
+{%- endfor -%}
 {%- endif -%}

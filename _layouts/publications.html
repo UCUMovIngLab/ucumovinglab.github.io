@@ -4,52 +4,46 @@ layout: default
 {%- assign lang = page.lang | default: "en" -%}
 {%- assign t = site.data.i18n[lang] -%}
 {%- assign k_tag = "tag_" | append: lang -%}
-{%- assign items = site.data.citations | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
-{%- assign years = items | group_by_exp: "c", "c.date | slice: 0, 4" -%}
-<section class="page-head">
-  <span class="label">{{ page.title }}</span>
-  <h1>{{ page.title }}</h1>
-  <p class="lede">{{ t.publications.lede }}</p>
+{%- assign visible = site.data.citations | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
+{%- assign preprints = visible | where: "preprint", true -%}
+{%- assign published = visible | where_exp: "c", "c.preprint != true" -%}
+{%- assign years = published | group_by_exp: "c", "c.date | slice: 0, 4" -%}
+<section class="page-head band--light">
+  <div class="container">
+    <span class="rule" aria-hidden="true"></span>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ t.publications.lede }}</p>
+    <div class="pub-filters" hidden data-pub-filters>
+      <div class="pills" role="group" aria-label="{{ t.ui.filter }}">
+        <button type="button" class="pill" aria-pressed="true" data-scope="lab" data-line="">{{ t.ui.scope_lab }}</button>
+        {%- for line in site.data.projects %}
+        <button type="button" class="pill" aria-pressed="false" data-scope="lab" data-line="{{ line.id }}">{{ line[k_tag] }}</button>
+        {%- endfor %}
+        <button type="button" class="pill" aria-pressed="false" data-scope="all" data-line="">{{ t.ui.scope_all }}</button>
+      </div>
+      <div class="field">
+        <label for="pub-search">{{ t.ui.search_label }}</label>
+        <div class="field__input">{% include icons/search.html %}<input id="pub-search" type="search" placeholder="{{ t.ui.search_placeholder }}" autocomplete="off"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-  <section class="pub-filters" aria-label="Filters" hidden data-pub-filters>
-    <div class="pub-filters__groups">
-      <div class="segmented" role="group" aria-label="{{ t.ui.scope }}">
-        <button type="button" aria-pressed="true" data-scope="lab">{{ t.ui.scope_lab }}</button>
-        <button type="button" aria-pressed="false" data-scope="all">{{ t.ui.scope_all }}</button>
-      </div>
-      <div class="chips" role="group" aria-label="{{ t.ui.line_filter }}">
-        <button type="button" class="chip" aria-pressed="true" data-line="">{{ t.ui.all_lines }}</button>
-        {%- for line in site.data.projects %}
-        <button type="button" class="chip" aria-pressed="false" data-line="{{ line.id }}">{{ line[k_tag] }}</button>
-        {%- endfor %}
-      </div>
-    </div>
-    <div class="field">
-      <label for="pub-search" class="label label--sm">{{ t.ui.search_label }}</label>
-      <div class="field__input">{% include icons/search.html %}<input id="pub-search" type="search" placeholder="{{ t.ui.search_placeholder }}" autocomplete="off"></div>
-    </div>
+<div class="container pubs-page" data-pub-list>
+  {%- if preprints.size > 0 %}
+  <section class="pub-section" data-group>
+    {% include sec-title.html title=t.ui.preprints sub=t.ui.preprints_sub %}
+    <div class="pub-list">{% for item in preprints %}{% include pub.html item=item year=true %}{% endfor %}</div>
   </section>
-
-  <nav class="year-index" aria-label="{{ t.ui.jump_to }}">
-    <span class="label label--sm">{{ t.ui.jump_to }}</span>
+  {%- endif %}
+  <section class="pub-section">
+    {% include sec-title.html title=t.ui.published %}
     {%- for y in years %}
-    <a href="#y{{ y.name | default: 'nd' }}" data-year-link="{{ y.name | default: 'nd' }}">{{ y.name | default: t.ui.undated }}</a>
-    {%- endfor %}
-  </nav>
-
-  <div class="pub-years" data-pub-list>
-    {%- for y in years %}
-    <section class="pub-year" id="y{{ y.name | default: 'nd' }}" data-year="{{ y.name | default: 'nd' }}">
-      <h2 class="pub-year__label">{{ y.name | default: t.ui.undated }}</h2>
-      <div class="pub-year__items">
-        {%- for item in y.items %}
-        {% include pub.html item=item %}
-        {%- endfor %}
-      </div>
+    <section class="pub-year" id="y{{ y.name | default: 'nd' }}" data-group>
+      <h3 class="pub-year__label">{{ y.name | default: t.ui.undated }}</h3>
+      <div class="pub-year__items">{% for item in y.items %}{% include pub.html item=item %}{% endfor %}</div>
     </section>
     {%- endfor %}
-    <p class="pub-empty" hidden data-pub-empty>{{ t.ui.no_results }}</p>
-  </div>
+  </section>
+  <p class="pub-empty" hidden data-pub-empty>{{ t.ui.no_results }}</p>
 </div>

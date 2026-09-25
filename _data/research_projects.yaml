@@ -1,0 +1,155 @@
+# Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
+#
+#   people:   slugs of files in _members/, with role: director | co-director | student | researcher
+#   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
+#   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
+
+- id: tms-neuronavigation
+  title_en: Markerless neuronavigation for transcranial magnetic stimulation
+  title_es: Neuronavegación sin marcadores para estimulación magnética transcraneal
+  summary_en: >-
+    Head and coil tracking for transcranial magnetic stimulation (TMS) with low-cost visible and
+    infrared cameras and a model of facial geometry, instead of markers fixed to the patient. The aim
+    is to lower the cost and setup time of neuronavigation and make it more comfortable for patients.
+  summary_es: >-
+    Seguimiento de la cabeza y la bobina durante la estimulación magnética transcraneal (EMT) con
+    cámaras de luz visible e infrarroja de bajo costo y un modelo de la geometría facial, sin marcadores
+    fijados al paciente. El objetivo es reducir el costo y el tiempo de preparación de la
+    neuronavegación, y hacerla más cómoda para el paciente.
+  line: digitalization
+  status: active
+  start: 2022
+  people:
+    - { person: matias-di-martino, role: director }
+    - { person: angel-peterchev, role: director }
+    - { person: pablo-iturralde, role: co-director }
+    - { person: nicolas-rondan, role: student }
+  partners:
+    - name: Duke University
+      unit_en: Department of Psychiatry and Behavioral Sciences
+      unit_es: Departamento de Psiquiatría y Ciencias del Comportamiento
+      url: https://duke.edu
+  funding:
+    - funder: National Institutes of Health (NIMH)
+      program: R01
+      code: R01MH129733
+  outputs:
+    - arxiv:2602.07052
+  # No figure: the arXiv preprint is under the arXiv non-exclusive licence, which does not allow reuse.
+
+- id: knee-exoskeleton
+  title_en: Knee exoskeleton for rehabilitation
+  title_es: Exoesqueleto de rodilla para rehabilitación
+  summary_en: >-
+    An actuated knee orthosis for rehabilitation and the design and evaluation of its control,
+    including a hybrid control scheme.
+  summary_es: >-
+    Una órtesis de rodilla actuada para rehabilitación, y el diseño y la evaluación de su control,
+    incluido un esquema de control híbrido.
+  line: rehabilitation
+  status: active
+  start: "TODO: start year of the knee exoskeleton project"
+  people:
+    - { person: enrique-ferreira, role: director }
+    - { person: lucas-handalian, role: student }
+  partners:
+    - name: Universidad Iberoamericana
+      unit_en: "TODO: department (co-authors of the URUCON 2026 paper)"
+      unit_es: "TODO: departamento (coautores del trabajo en URUCON 2026)"
+      url: https://ibero.mx
+  # outputs: "Hybrid Control of a Knee Rehabilitation Device: Implementation and Evaluation", accepted at
+  # IEEE URUCON 2026 (EDAS #1571335340). Add its DOI once published.
+
+- id: markerless-mocap
+  title_en: Real-time markerless motion capture
+  title_es: Captura de movimiento sin marcadores en tiempo real
+  summary_en: >-
+    Pose estimation from video with computer vision, run in real time on edge devices, as an
+    accessible alternative to marker-based motion capture for movement analysis.
+  summary_es: >-
+    Estimación de pose a partir de video mediante visión por computadora, ejecutada en tiempo real en
+    dispositivos de borde, como alternativa accesible a la captura de movimiento con marcadores para el
+    análisis del movimiento.
+  line: digitalization
+  status: active
+  start: 2025
+  people:
+    - { person: pablo-iturralde, role: director }
+    - { person: juan-ottonelli, role: student }
+    - { person: sofia-ibarra, role: student }
+    - { person: matihas-sastre, role: student }
+    - { person: facundo-diaz, role: student }
+    - { person: lucas-handalian, role: researcher }
+  # outputs: poster at IEEE URUCON 2026 (J. Ottonelli), not indexed.
+
+- id: imu-ranging
+  title_en: Wearable inertial and ultrasonic ranging sensors for gait analysis
+  title_es: Sensores vestibles inerciales y de distancia por ultrasonido para análisis de la marcha
+  summary_en: >-
+    Ankle-worn devices that combine inertial measurement units (IMUs) with ultrasonic time-of-flight
+    ranging between the legs, to estimate step length and step width outside the laboratory.
+  summary_es: >-
+    Dispositivos colocados en los tobillos que combinan unidades de medición inercial (IMU) con
+    medición de distancia entre las piernas por tiempo de vuelo de ultrasonido, para estimar el largo y
+    el ancho del paso fuera del laboratorio.
+  line: digitalization
+  status: active
+  start: 2023
+  people:
+    - { person: pablo-iturralde, role: director }
+    - { person: diego-barboza, role: student }
+    - { person: nicole-imbert, role: student }
+    - { person: mathias-ferreira, role: student }
+  # outputs: poster at 3DAHM 2024 (no DOI); two papers at IEEE URUCON 2026 (#1571336082 accepted,
+  # #1571336230 pending). Add their DOIs once published.
+
+- id: imov-cattle-monitoring
+  title_en: "iMov: cattle monitoring through sensors"
+  title_es: "iMov: monitoreo de ganado vacuno mediante sensores"
+  summary_en: >-
+    A multidisciplinary project, led by the μDIE microelectronics group at UCU, on monitoring cattle
+    with sensors. The lab contributes experience in movement measurement and analysis.
+  summary_es: >-
+    Proyecto multidisciplinario, liderado por el grupo de microelectrónica μDIE de la UCU, sobre el
+    monitoreo de ganado vacuno mediante sensores. El laboratorio aporta su experiencia en la medición y
+    el análisis del movimiento.
+  line: digitalization
+  status: active
+  start: 2026
+  people:
+    - { person: alfredo-arnaud, role: director }
+    - { person: pablo-iturralde, role: researcher }
+  funding:
+    - funder: ANII
+      program: Fondo Ida Holz (2025)
+      code: FIH_X_2025_1_190595
+      url: https://www.anii.org.uy
+  # TODO: other team members (A. Pardo, M. F. Correa, J. Gak, J. Velazco, N. Calarco, M. Carriquiry,
+  # A. Casal, M. Miguez) are not listed until their member files and roles are confirmed.
+
+- id: emg-synergy-training
+  title_en: Interactive tool for the visualization and training of muscle synergies
+  title_es: Herramienta interactiva para la visualización y el entrenamiento de sinergias musculares
+  summary_en: >-
+    A human-computer interface in which surface EMG controls an on-screen cursor only when the muscles
+    are recruited in a specific coordination pattern, to train muscle synergies for motor rehabilitation.
+  summary_es: >-
+    Una interfaz humano-computadora en la que la EMG de superficie controla un cursor en pantalla solo
+    cuando los músculos se reclutan con un patrón de coordinación específico, para entrenar sinergias
+    musculares con fines de rehabilitación motora.
+  line: rehabilitation
+  status: finished
+  start: 2022
+  end: 2025
+  people:
+    - { person: pablo-iturralde, role: director }
+    - { person: enrique-ferreira, role: researcher }
+    - { person: juan-gandolfo, role: student }
+    - { person: melissa-imbert, role: student }
+  funding:
+    - funder: ANII
+      program: Fondo María Viñas
+      code: FMV_3_2022_1_172858
+      url: https://www.anii.org.uy
+  outputs:
+    - doi:10.1109/URUCON63440.2024.10850101

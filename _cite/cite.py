@@ -123,8 +123,8 @@ def create_citation_from_crossref(doi, metadata):
         "link": f"https://doi.org/{doi}",
     }
 
-    # bioRxiv/medRxiv preprints share the 10.1101 prefix
-    if doi.lower().startswith("10.1101/"):
+    # bioRxiv/medRxiv preprints: 10.1101 prefix, and 10.64898 for bioRxiv since 2025
+    if doi.lower().startswith(("10.1101/", "10.64898/")):
         citation["preprint"] = True
         if not citation["publisher"]:
             citation["publisher"] = "bioRxiv"
