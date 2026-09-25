@@ -9,23 +9,27 @@
   title_en: Human movement and motor control
   title_es: Movimiento humano y control motor
   short_en: >-
-    Locomotion and sports movements, measured with EMG, IMUs and motion capture, and how the
-    nervous system uses visual, vestibular and proprioceptive information to control and adapt them.
+    How the nervous system uses visual, vestibular and proprioceptive information to control
+    walking, balance and sports movements, and how it adapts when conditions change.
   short_es: >-
-    Estudio del movimiento humano con foco en locomoción y movimientos deportivos, utilizando EMG,
-    IMUs y sistemas de captura de movimiento, y de cómo el sistema nervioso lo controla y adapta.
+    Cómo el sistema nervioso usa la información visual, vestibular y propioceptiva para controlar
+    la marcha, el equilibrio y los movimientos deportivos, y cómo se adapta cuando cambian las condiciones.
   methods_en: EMG · IMU · Motion capture
   methods_es: EMG · IMU · Captura de movimiento
   caption_en: "Split-belt adaptation: step-length asymmetry by stride (schematic)"
   caption_es: "Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
   body_en: |-
-    We study human movement, focusing on locomotion and sports-relevant movements, to characterize nominal behaviour and to detect patterns that may indicate functional anomalies. We record muscle activity with electromyography (EMG), and use portable systems based on inertial measurement units (IMUs) and motion capture (MoCap) for kinematic and dynamic characterization.
+    We study walking, balance and sports movements, to describe how they normally work and to recognise the changes that signal a problem. Two questions run through this line: how the nervous system uses visual, vestibular and proprioceptive information to control movement, and how it adapts when the body or the environment changes.
 
-    We also study how the nervous system controls movement: the role of visual, vestibular and proprioceptive information, and how muscle activity is coordinated and adapts.
+    On a split-belt treadmill, where each leg moves at a different speed, people gradually recalibrate their gait. We study what drives that recalibration, how well people perceive the speed difference, and how much of the adaptation carries over to ordinary walking. In balance, we study how people with vestibular or hearing loss, including cochlear implant users, stay upright and judge what is vertical.
+
+    We record muscle activity with electromyography (EMG), and movement with motion capture (MoCap) and portable inertial sensors (IMUs).
   body_es: |-
-    Estudiamos el movimiento humano, con foco en la locomoción y movimientos de relevancia deportiva, utilizando diversas herramientas para caracterizar comportamientos nominales o analizando patrones que puedan inferir anomalías funcionales. Empleamos electromiografía (EMG) para registrar la actividad muscular, sistemas portátiles basados en unidades de medición inercial (IMUs), y sistemas de captura de movimiento (MoCap) para la caracterización cinemática y dinámica.
+    Estudiamos la marcha, el equilibrio y los movimientos deportivos, para describir cómo funcionan normalmente y reconocer los cambios que indican un problema. Dos preguntas atraviesan esta línea: cómo usa el sistema nervioso la información visual, vestibular y propioceptiva para controlar el movimiento, y cómo se adapta cuando cambian el cuerpo o el entorno.
 
-    Buscamos también comprender aspectos del control del movimiento por parte del sistema nervioso, investigando el papel de la información sensorial (visual, vestibular, propioceptiva) y las características de la actividad muscular, su coordinación, y adaptación.
+    En una cinta dividida (split-belt), donde cada pierna se mueve a una velocidad distinta, las personas recalibran gradualmente su marcha. Estudiamos qué impulsa esa recalibración, qué tan bien se percibe la diferencia de velocidad, y cuánto de esa adaptación se traslada a la marcha habitual. En equilibrio, estudiamos cómo las personas con pérdida vestibular o auditiva, incluidos usuarios de implante coclear, se mantienen erguidas y perciben la vertical.
+
+    Registramos la actividad muscular con electromiografía (EMG), y el movimiento con sistemas de captura de movimiento (MoCap) y sensores inerciales portátiles (IMUs).
   collaborators: [hamlet-suarez]
   publications:
     - 10.1038/s41598-026-54948-5
@@ -43,24 +47,24 @@
     Tools for recovering movement after central nervous system injury such as stroke: biofeedback
     of patients’ own muscle activity, and actuated orthoses that support motor learning.
   short_es: >-
-    Herramientas para la recuperación del movimiento tras lesiones del sistema nervioso central,
-    incluyendo sistemas de biofeedback y dispositivos ortésicos.
+    Herramientas para recuperar el movimiento tras lesiones del sistema nervioso central como el ACV:
+    biofeedback de la propia actividad muscular y órtesis actuadas que apoyan el aprendizaje motor.
   methods_en: Biofeedback · Orthoses · Stroke
   methods_es: Biofeedback · Órtesis · ACV
   caption_en: "EMG by gait phase, with a biofeedback target on TA (schematic)"
   caption_es: "EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
   body_en: |-
-    We develop solutions for recovering movement impaired by central nervous system injuries such as stroke, through two complementary strategies.
+    This line applies what we learn about typical movement to people whose movement has been impaired by an injury to the central nervous system, such as a stroke. We work on two kinds of tools.
 
-    **Interactive tools** that induce plasticity in neuromuscular control by giving patients relevant feedback about their own muscle activity, and encourage the recruitment of non-normotypical coordination patterns.
+    **Biofeedback.** Interactive tools that show patients their own muscle activity as they move, so they can see and train how their muscles work together. The aim is lasting change in how the nervous system controls those muscles, not only during the session.
 
-    **Advanced orthotic devices** whose controlled actuation helps accelerate rehabilitation or supports learning coordinated movements.
+    **Actuated orthoses.** Orthoses with controlled actuation that assist movement during therapy, to speed up rehabilitation or to help patients learn coordinated movements.
   body_es: |-
-    Buscamos desarrollar soluciones para la recuperación del movimiento deteriorado a causa de lesiones en el sistema nervioso central, como los accidentes cerebro-vasculares (ACVs), mediante dos estrategias complementarias.
+    Esta línea aplica lo que aprendemos del movimiento típico a personas cuyo movimiento se vio afectado por una lesión del sistema nervioso central, como un ACV. Trabajamos en dos tipos de herramientas.
 
-    **Herramientas interactivas** para inducir plasticidad en el control neuromuscular proveyendo feedback relevante acerca de la actividad muscular propia a los pacientes, y fomentando el reclutamiento de patrones de coordinación muscular no normotípicos.
+    **Biofeedback.** Herramientas interactivas que muestran a los pacientes su propia actividad muscular mientras se mueven, para que puedan ver y entrenar cómo trabajan juntos sus músculos. El objetivo es un cambio duradero en cómo el sistema nervioso controla esos músculos, no solo durante la sesión.
 
-    **Dispositivos ortésicos avanzados** que, mediante sistemas de actuación controlada, ayudan a acelerar la rehabilitación o a facilitar el aprendizaje de movimientos coordinados.
+    **Órtesis actuadas.** Órtesis con actuación controlada que asisten el movimiento durante la terapia, para acelerar la rehabilitación o ayudar a los pacientes a aprender movimientos coordinados.
   collaborators: [fisioterapia]
   publications:
     - 10.1109/URUCON63440.2024.10850101
@@ -73,31 +77,31 @@
   title_en: Movement digitalization
   title_es: Digitalización del movimiento
   short_en: >-
-    Making movement capture accessible: vision-based motion capture with edge computing,
+    Measuring movement cheaply and outside the lab: vision-based motion capture with edge computing,
     purpose-built electronics, and Bayesian and time-frequency analysis of movement signals.
   short_es: >-
-    Tecnologías para la captura, registro y análisis del movimiento, incluyendo visión por
-    computadora, electrónica propia y procesamiento avanzado de señales.
+    Medir el movimiento a bajo costo y fuera del laboratorio: captura de movimiento por visión con
+    computación en el borde, electrónica propia y análisis bayesiano y en tiempo-frecuencia de señales.
   methods_en: Computer vision · Electronics · Signal processing
   methods_es: Visión por computadora · Electrónica · Procesamiento de señales
   caption_en: "Pose keypoints and shank gyroscope (schematic)"
   caption_es: "Puntos clave de pose y giroscopio de pierna (esquema)"
   body_en: |-
-    We develop technologies to capture, record and analyse movement, both to widen access and to improve what can be measured.
+    Measuring movement in detail usually means a specialised lab: optical motion capture, force plates, multi-channel EMG. We build alternatives that are cheap and portable enough to use outside the lab, and aim to extend what can be measured along the way.
 
-    **Vision-based motion capture** using automatic vision techniques and edge computing, with the Artificial Intelligence group.
+    **Vision-based motion capture.** Estimating movement from video, processed on small embedded computers at the point of capture (edge computing). With the Artificial Intelligence group.
 
-    **Electronic devices** with enhanced capabilities for movement digitalization, with the Microelectronics and IoT group.
+    **Portable electronics.** Sensors and acquisition systems built for recording movement, such as portable gait analysis systems for people with balance disorders. With the Microelectronics and IoT group.
 
-    **Signal processing** for multi-modal movement data: Bayesian models, time-frequency analysis and machine learning.
+    **Signal processing.** Methods for combining and interpreting movement signals from different sensors: Bayesian models, time-frequency analysis and machine learning.
   body_es: |-
-    Desarrollamos tecnologías para la captura, registro y análisis del movimiento, con el objetivo dual de facilitar el acceso a las mismas y mejorar sus capacidades.
+    Medir el movimiento en detalle suele requerir un laboratorio especializado: captura óptica de movimiento, plataformas de fuerza, EMG multicanal. Desarrollamos alternativas de bajo costo y lo bastante portátiles para usarse fuera del laboratorio, y buscamos a la vez ampliar lo que se puede medir.
 
-    **Captura de movimiento basada en visión por computadora**, empleando técnicas de visión automática y computación en el borde, junto al grupo de Inteligencia Artificial.
+    **Captura de movimiento por visión.** Estimación del movimiento a partir de video, procesado en computadoras embebidas en el punto de captura (computación en el borde). Junto al grupo de Inteligencia Artificial.
 
-    **Dispositivos electrónicos** con capacidades mejoradas para la digitalización del movimiento, junto al grupo de Microelectrónica e IoT.
+    **Electrónica portátil.** Sensores y sistemas de adquisición diseñados para registrar movimiento, como sistemas portátiles de análisis de marcha para personas con trastornos del equilibrio. Junto al grupo de Microelectrónica e IoT.
 
-    **Procesamiento avanzado de datos** de señales de movimiento de diversas modalidades mediante modelos bayesianos, análisis en tiempo y frecuencia, e inteligencia artificial.
+    **Procesamiento de señales.** Métodos para combinar e interpretar señales de movimiento de distintos sensores: modelos bayesianos, análisis en tiempo y frecuencia, y aprendizaje automático.
   collaborators: [informatica-ia, microelectronica]
   publications:
     - 10.1109/LASCAS.2015.7250474

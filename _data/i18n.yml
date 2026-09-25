@@ -75,11 +75,11 @@ en:
     student: "Student"
 
   home:
-    tagline: "We study human movement and build tools to measure and restore it."
+    tagline: "We study how movement is produced and controlled, and use what we learn to help people recover it."
     cta_research: "Our research"
     cta_join: "Work with us"
     about_title: "About the lab"
-    about_lede: "The Movement Engineering Lab does research in biomechanics, motor control, movement rehabilitation, and technologies for digitizing human movement."
+    about_lede: "We model the body and the nervous system, build low-cost instruments that measure movement outside the lab, and design rehabilitation tools for people recovering from neurological injury such as stroke."
     about_body: "We are part of the Facultad de Ingeniería y Tecnologías at Universidad Católica del Uruguay, and work with UCU’s microelectronics, artificial intelligence and physical therapy groups, and with Duke University."
     figure_label: "Frames of one walking gait cycle with motion-capture markers, above the knee and hip flexion angles across the cycle"
     figure_caption: "One gait cycle of the right leg in the sagittal plane, with knee and hip flexion angles (normative shape, schematic)."
@@ -91,10 +91,14 @@ en:
     team_card_title: "Students, alumni and collaborators"
     team_card_text: "GRAD graduate students, UGRAD undergraduate research interns, ALUMNI alumni, and COLLAB collaborators at UCU, Duke University and elsewhere."
     join_title: "Interested in joining or collaborating?"
-    join_text: "We welcome students, clinicians and researchers interested in biomechanics, motor control and rehabilitation technology."
+    join_text: "If you'd like to do a thesis with us, collaborate on a project, or bring us a clinical question about movement, write to either principal investigator with a few lines about your background and what you'd like to work on."
 
   research:
-    lede: "Three connected lines: how the nervous system controls movement, tools that help people recover it after injury, and technology that makes movement easier to capture and analyse."
+    lede: "Our goal is to understand how movement is produced and controlled, and to use that understanding to help people move better. That covers the mechanics of the body, how the nervous system coordinates muscles, and how it uses visual, vestibular and proprioceptive information to keep balance and to adapt when conditions change."
+    approach: |-
+      Much of our work studies typical movement in order to help when it goes wrong. Knowing how a healthy nervous system coordinates and recalibrates movement tells us what a rehabilitation tool should encourage after a stroke, and what to look for when balance or gait starts to fail.
+
+      We approach both as engineers. We build models of the sensorimotor system and test them against recordings of muscle activity and movement. We also build our own instruments, because the measurements we need are often expensive or tied to a specialised lab. Making them cheap and portable enough to use outside the lab is a goal in its own right.
 
   publications:
     lede: "Articles and preprints from the lab’s research lines, updated monthly from members’ ORCID records. Lab members in bold."
@@ -106,10 +110,10 @@ en:
     collaborators: "Collaborators"
     alumni: "Alumni"
     join_title: "Looking for a thesis or research project?"
-    join_text: "We are looking for students interested in movement science, biomedical engineering and rehabilitation technology."
+    join_text: "Write to us with a few lines about your background and what you'd like to work on. Projects range from walking and balance experiments to modelling, electronics and rehabilitation devices."
 
   contact:
-    lede: "For information about our research, collaboration, or joining the lab as a student or researcher, write to either principal investigator."
+    lede: "Write to either principal investigator about our research, a possible collaboration, or joining the lab."
     people_title: "Principal investigators"
     location_title: "Location"
 
@@ -186,11 +190,11 @@ es:
     student: "Estudiante"
 
   home:
-    tagline: "Estudiamos el movimiento humano y desarrollamos herramientas para medirlo y recuperarlo."
+    tagline: "Estudiamos cómo se produce y se controla el movimiento, y usamos lo que aprendemos para ayudar a las personas a recuperarlo."
     cta_research: "Nuestra investigación"
     cta_join: "Trabajar con nosotros"
     about_title: "Sobre el laboratorio"
-    about_lede: "El Laboratorio de Ingeniería del Movimiento investiga en biomecánica, control motor, rehabilitación del movimiento y tecnologías para la digitalización del movimiento humano."
+    about_lede: "Modelamos el cuerpo y el sistema nervioso, desarrollamos instrumentos de bajo costo para medir el movimiento fuera del laboratorio, y diseñamos herramientas de rehabilitación para personas que se recuperan de lesiones neurológicas como el ACV."
     about_body: "Somos parte de la Facultad de Ingeniería y Tecnologías de la Universidad Católica del Uruguay, y trabajamos con los grupos de microelectrónica, informática y fisioterapia de la UCU, y con Duke University."
     figure_label: "Fotogramas de un ciclo de marcha con marcadores de captura de movimiento, sobre los ángulos de flexión de rodilla y cadera"
     figure_caption: "Un ciclo de marcha de la pierna derecha en el plano sagital, con la flexión de rodilla y cadera (forma normativa, esquema)."
@@ -202,10 +206,14 @@ es:
     team_card_title: "Estudiantes, egresados y colaboradores"
     team_card_text: "GRAD estudiantes de posgrado, UGRAD estudiantes de grado en iniciación a la investigación, ALUMNI egresados y COLLAB colaboradores en la UCU, Duke University y otras instituciones."
     join_title: "¿Le interesa colaborar o sumarse al laboratorio?"
-    join_text: "Recibimos estudiantes, clínicos e investigadores interesados en biomecánica, control motor y tecnología para rehabilitación."
+    join_text: "Si le interesa hacer una tesis con nosotros, colaborar en un proyecto o plantearnos una pregunta clínica sobre el movimiento, escriba a cualquiera de los investigadores principales con unas líneas sobre su formación y sobre qué le gustaría trabajar."
 
   research:
-    lede: "Tres líneas conectadas: cómo el sistema nervioso controla el movimiento, herramientas para recuperarlo después de una lesión, y tecnología que facilita capturarlo y analizarlo."
+    lede: "Buscamos entender cómo se produce y se controla el movimiento, y usar ese conocimiento para ayudar a las personas a moverse mejor. Esto abarca la mecánica del cuerpo, cómo el sistema nervioso coordina los músculos, y cómo usa la información visual, vestibular y propioceptiva para mantener el equilibrio y adaptarse cuando cambian las condiciones."
+    approach: |-
+      Buena parte de nuestro trabajo estudia el movimiento típico para poder intervenir cuando algo falla. Saber cómo un sistema nervioso sano coordina y recalibra el movimiento nos indica qué debería promover una herramienta de rehabilitación después de un ACV, y qué buscar cuando el equilibrio o la marcha empiezan a deteriorarse.
+
+      Abordamos ambas cosas desde la ingeniería. Construimos modelos del sistema sensoriomotor y los contrastamos con registros de actividad muscular y de movimiento. También desarrollamos nuestros propios instrumentos, porque las mediciones que necesitamos suelen ser caras o requerir un laboratorio especializado. Que sean de bajo costo y lo bastante portátiles para usarse fuera del laboratorio es un objetivo en sí mismo.
 
   publications:
     lede: "Artículos y preprints de las líneas de investigación del laboratorio, actualizados mensualmente desde los perfiles ORCID de sus integrantes. Integrantes del laboratorio en negrita."
@@ -217,9 +225,9 @@ es:
     collaborators: "Colaboradores"
     alumni: "Egresados"
     join_title: "¿Busca un proyecto de tesis o de investigación?"
-    join_text: "Buscamos estudiantes interesados en ciencias del movimiento, ingeniería biomédica y tecnologías de rehabilitación."
+    join_text: "Escríbanos con unas líneas sobre su formación y sobre qué le gustaría trabajar. Los proyectos van desde experimentos de marcha y equilibrio hasta modelado, electrónica y dispositivos de rehabilitación."
 
   contact:
-    lede: "Para información sobre nuestra investigación, colaboraciones, o para sumarse al laboratorio como estudiante o investigador, escriba a cualquiera de los investigadores principales."
+    lede: "Escriba a cualquiera de los investigadores principales para consultar sobre nuestra investigación, una posible colaboración o cómo sumarse al laboratorio."
     people_title: "Investigadores principales"
     location_title: "Ubicación"

@@ -151,6 +151,7 @@ h3 { font-size: 23px; line-height: 30px; }
 /* ---------- page head ---------- */
 .page-head { padding: 72px 0 56px; }
 .page-head .container { display: flex; flex-direction: column; gap: 18px; }
+.page-head__more { max-width: 780px; }
 .pill-nav { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
 .pill-nav a { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: var(--white); border: 1px solid var(--rule); border-radius: 20px; font-size: 15px; font-weight: 500; }
 .pill-nav a:hover { border-color: var(--navy); text-decoration: none; }
