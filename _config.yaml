@@ -65,6 +65,7 @@ exclude:
   - "package.json"
   - "package-lock.json"
   - "TODO.md"
+  - "WEBSITE_IMPROVEMENTS.md"
   - "source_info"
   - "Gemfile"
   - "Gemfile.lock"
