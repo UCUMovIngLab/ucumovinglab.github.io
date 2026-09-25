@@ -1,5 +1,6 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
+#   partners: external institutions; `logo` is an SVG in images/collaborators/ (omit if none)
 #   people:   slugs of files in _members/, with role: director | co-director | student | researcher
 #   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
 #   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
@@ -28,6 +29,7 @@
       unit_en: Department of Psychiatry and Behavioral Sciences
       unit_es: Departamento de Psiquiatría y Ciencias del Comportamiento
       url: https://duke.edu
+      logo: images/collaborators/duke-logo.svg
   funding:
     - funder: National Institutes of Health (NIMH)
       program: R01
@@ -57,6 +59,7 @@
       unit_en: Department of Bioengineering
       unit_es: Departamento de Bioingeniería
       url: https://www.pitt.edu
+      logo: images/collaborators/pitt-logo.svg
   outputs:
     - doi:10.64898/2026.08.01.742204
     - doi:10.1038/s41598-026-54948-5
