@@ -1,5 +1,6 @@
 # Research lines. Order here is the order everywhere on the site.
-# `figure` names an SVG in _includes/figures/. `publications` lists DOIs shown on the research page.
+# `figure` names an SVG in _includes/figures/. The research page shows each line's most recent
+# publications automatically (tagged with `line:` in _data/sources.yaml).
 
 - id: motor-control
   tag_en: Motor control
@@ -31,10 +32,6 @@
 
     Registramos la actividad muscular con electromiografía (EMG), y el movimiento con sistemas de captura de movimiento (MoCap) y sensores inerciales portátiles (IMUs).
   collaborators: [hamlet-suarez]
-  publications:
-    - 10.1038/s41598-026-54948-5
-    - 10.1523/ENEURO.0343-23.2025
-    - 10.1523/ENEURO.0358-18.2019
 
 - id: rehabilitation
   tag_en: Rehabilitation
@@ -66,8 +63,6 @@
 
     **Órtesis actuadas.** Órtesis con actuación controlada que asisten el movimiento durante la terapia, para acelerar la rehabilitación o ayudar a los pacientes a aprender movimientos coordinados.
   collaborators: [fisioterapia]
-  publications:
-    - 10.1109/URUCON63440.2024.10850101
 
 - id: digitalization
   tag_en: Digitalization
@@ -103,7 +98,3 @@
 
     **Procesamiento de señales.** Métodos para combinar e interpretar señales de movimiento de distintos sensores: modelos bayesianos, análisis en tiempo y frecuencia, y aprendizaje automático.
   collaborators: [informatica-ia, microelectronica]
-  publications:
-    - 10.1109/LASCAS.2015.7250474
-    - 10.1109/I2MTC.2014.6860729
-    - 10.1109/URUCON.2017.8171879
