@@ -8,6 +8,16 @@
 #   hide: true   drops an item everywhere (e.g. a preprint superseded by its published version)
 #
 # Crossref metadata is fetched for each DOI; any field set here overrides it.
+#
+# Accepted papers without a DOI yet: give them in full with `accepted: true`, e.g.
+#   - id: urucon2026-knee
+#     title: Hybrid Control of a Knee Rehabilitation Device: Implementation and Evaluation
+#     authors: [First Last, ...]
+#     publisher: IEEE URUCON 2026
+#     date: "2026-11-01"
+#     accepted: true
+#     line: rehabilitation
+# Replace the entry with its doi: once published.
 
 # --- 01 Human movement and motor control ---
 # bioRxiv's new DOI prefix (10.64898) is not flagged as a preprint by _cite/cite.py, so set it here.

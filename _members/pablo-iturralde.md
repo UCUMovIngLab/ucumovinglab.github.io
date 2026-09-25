@@ -3,7 +3,7 @@ name: Pablo Iturralde
 image: images/team/pablo-iturralde.jpg
 role: pi
 status: current
-projects: [tms-neuronavigation, markerless-mocap, imu-ranging, imov-cattle-monitoring, emg-synergy-training]
+projects: [walking-perception, tms-neuronavigation, markerless-mocap, imu-ranging, imov-cattle-monitoring, emg-synergy-training]
 aliases:
   - Pablo Aparicio Iturralde Rodriguez
   - P. Iturralde

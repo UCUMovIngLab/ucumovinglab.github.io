@@ -1,7 +1,8 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
 #   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | researcher | student
-#   partners, funding: add country_en / country_es for any institution outside Uruguay
+#   partners, funding: add country_en / country_es for any institution outside Uruguay;
+#             partners may have a `logo` (SVG in images/collaborators/)
 #   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
 #   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
 
@@ -22,7 +23,6 @@
   start: 2022
   people:
     - { person: matias-di-martino, role: pi }
-    - { person: angel-peterchev, role: pi }
     - { person: pablo-iturralde, role: researcher }
     - { person: nicolas-rondan, role: student }
   partners:
@@ -32,6 +32,7 @@
       unit_en: Department of Psychiatry and Behavioral Sciences
       unit_es: Departamento de Psiquiatría y Ciencias del Comportamiento
       url: https://duke.edu
+      logo: images/collaborators/duke-logo.svg
   funding:
     - funder: NIH National Institute of Mental Health
       country_en: USA
@@ -41,6 +42,35 @@
   outputs:
     - arxiv:2602.07052
   # No figure: the arXiv preprint is under the arXiv non-exclusive licence, which does not allow reuse.
+
+- id: walking-perception
+  title_en: Perception of leg speed during walking
+  title_es: Percepción de la velocidad de las piernas durante la marcha
+  summary_en: >-
+    Psychophysics and computational models (drift-diffusion, Bayesian) of how people perceive
+    differences in leg speed on a split-belt treadmill, and how that perception adapts and shapes
+    motor memory during locomotor adaptation.
+  summary_es: >-
+    Psicofísica y modelos computacionales (difusión con deriva, bayesianos) de cómo las personas
+    perciben diferencias de velocidad entre las piernas en una cinta de doble banda, y de cómo esa
+    percepción se adapta e influye en la memoria motora durante la adaptación locomotora.
+  line: motor-control
+  status: active
+  start: 2019
+  people:
+    - { person: pablo-iturralde, role: pi }
+  partners:
+    - name: University of Pittsburgh
+      country_en: USA
+      country_es: EE. UU.
+      unit_en: Department of Bioengineering
+      unit_es: Departamento de Bioingeniería
+      url: https://www.pitt.edu
+      logo: images/collaborators/pitt-logo.svg
+  outputs:
+    - doi:10.64898/2026.08.01.742204
+    - doi:10.1038/s41598-026-54948-5
+    - doi:10.1523/ENEURO.0343-23.2025
 
 - id: knee-exoskeleton
   title_en: Knee exoskeleton for rehabilitation

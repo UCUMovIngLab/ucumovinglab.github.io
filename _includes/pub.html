@@ -12,7 +12,7 @@ Lab members (anyone whose name contains a member's author_match) are set in bold
 {%- if include.compact -%}
 <a class="pub-compact" href="{{ item.link }}">
   <span class="pub-compact__year">{{ year }}</span>
-  <span><strong>{{ item.title }}</strong>{% if item.publisher %}<em> — {{ item.publisher }}</em>{% endif %}{% if item.preprint %} <span class="badge badge--preprint">{{ t.ui.preprint }}</span>{% endif %}</span>
+  <span><strong>{{ item.title }}</strong>{% if item.publisher %}<em> — {{ item.publisher }}</em>{% endif %}{% if item.preprint %} <span class="badge badge--preprint">{{ t.ui.preprint }}</span>{% endif %}{% if item.accepted %} <span class="badge badge--status">{{ t.ui.accepted }}</span>{% endif %}</span>
 </a>
 {%- else -%}
 <article class="pub{% if include.year %} pub--year{% endif %}" data-line="{{ item.line }}"{% if item.line %} data-lab{% endif %}>
@@ -32,6 +32,7 @@ Lab members (anyone whose name contains a member's author_match) are set in bold
   </div>
   <div class="pub__tags">
     {%- if item.preprint %}<span class="badge badge--preprint">{{ t.ui.preprint }}</span>{% endif -%}
+    {%- if item.accepted %}<span class="badge badge--status">{{ t.ui.accepted }}</span>{% endif -%}
     {%- if line %}<span class="badge">{{ line[k_tag] }}</span>{% endif -%}
   </div>
 </article>

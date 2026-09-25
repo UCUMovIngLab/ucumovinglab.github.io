@@ -33,16 +33,11 @@ layout: default
         <span class="rule" aria-hidden="true"></span>
         <h2>{{ line[k_title] }}</h2>
         <div class="prose">{{ line[k_body] | markdownify }}</div>
-        {%- if line.publications %}
+        {%- assign line_pubs = site.data.citations | where: "line", line.id | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
+        {%- if line_pubs.size > 0 %}
         <div class="selected">
           <h3 class="small-head">{{ t.ui.selected_publications }}</h3>
-          {%- for doi in line.publications %}
-            {%- assign want = doi | downcase -%}
-            {%- for c in site.data.citations -%}
-              {%- assign have = c.id | remove_first: "doi:" | downcase -%}
-              {%- if have == want %}{% include pub.html item=c compact=true %}{% break %}{% endif -%}
-            {%- endfor -%}
-          {%- endfor %}
+          {%- for c in line_pubs limit: 4 %}{% include pub.html item=c compact=true %}{% endfor %}
         </div>
         {%- endif %}
       </div>
