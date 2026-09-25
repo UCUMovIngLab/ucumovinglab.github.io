@@ -7,6 +7,7 @@ layout: default
 {%- assign students = site.members | where: "status", "current" | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'undergrad' or m.role == 'postdoc'" -%}
 {%- assign phd = students | where: "role", "phd" -%}{%- assign ms = students | where: "role", "masters" -%}{%- assign ug = students | where: "role", "undergrad" -%}{%- assign pd = students | where: "role", "postdoc" -%}
 {%- assign students = pd | concat: phd | concat: ms | concat: ug -%}
+{%- assign staff = site.members | where: "role", "staff" | where: "status", "current" -%}
 {%- assign collaborators = site.members | where: "role", "collaborator" -%}
 {%- assign alumni = site.members | where: "role", "alum" -%}
 <section class="page-head band--light">
@@ -21,6 +22,12 @@ layout: default
     <h2>{{ t.team.pis }}</h2>
     <div class="person-grid">{% for m in pis %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
+  {%- if staff.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.staff }}</h2>
+    <div class="person-grid">{% for m in staff %}{% include person-card.html member=m %}{% endfor %}</div>
+  </section>
+  {%- endif %}
   {%- assign graduate = pd | concat: phd | concat: ms -%}
   {%- if graduate.size > 0 %}
   <section class="team-group">
