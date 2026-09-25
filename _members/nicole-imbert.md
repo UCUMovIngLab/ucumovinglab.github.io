@@ -1,6 +1,7 @@
 ---
 name: Nicole Imbert
 role: alum
+gender: f
 status: former
 program_en: BSc in Electronic Engineering, Universidad Católica del Uruguay
 program_es: Ingeniería en Electrónica, Universidad Católica del Uruguay

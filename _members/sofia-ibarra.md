@@ -1,6 +1,7 @@
 ---
 name: Sofía Ibarra
 role: undergrad
+gender: f
 status: current
 program_en: "TODO: undergraduate program, Universidad Católica del Uruguay"
 program_es: "TODO: carrera de grado, Universidad Católica del Uruguay"

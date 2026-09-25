@@ -31,7 +31,7 @@
     En una cinta dividida (split-belt), donde cada pierna se mueve a una velocidad distinta, las personas recalibran gradualmente su marcha. Estudiamos qué impulsa esa recalibración, qué tan bien se percibe la diferencia de velocidad, y cuánto de esa adaptación se traslada a la marcha habitual. En equilibrio, estudiamos cómo las personas con pérdida vestibular o auditiva, incluidos usuarios de implante coclear, se mantienen erguidas y perciben la vertical.
 
     Registramos la actividad muscular con electromiografía (EMG), y el movimiento con sistemas de captura de movimiento (MoCap) y sensores inerciales portátiles (IMUs).
-  collaborators: [hamlet-suarez]
+  collaborators: [hamlet-suarez, gelsy-torres-oviedo, marcela-gonzalez-rubio]
 
 - id: rehabilitation
   tag_en: Rehabilitation

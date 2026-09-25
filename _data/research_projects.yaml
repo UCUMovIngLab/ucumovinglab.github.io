@@ -1,6 +1,7 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
-#   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | researcher | student
+#   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | lead (lead researcher,
+#             not the grant holder) | researcher | student
 #   partners, funding: add country_en / country_es for any institution outside Uruguay;
 #             partners may have a `logo` (SVG in images/collaborators/)
 #   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
@@ -23,6 +24,7 @@
   start: 2022
   people:
     - { person: matias-di-martino, role: pi }
+    - { person: angel-peterchev, role: co-pi }
     - { person: pablo-iturralde, role: researcher }
     - { person: nicolas-rondan, role: student }
   partners:
@@ -58,7 +60,9 @@
   status: active
   start: 2019
   people:
-    - { person: pablo-iturralde, role: pi }
+    - { person: gelsy-torres-oviedo, role: pi }
+    - { person: pablo-iturralde, role: lead }
+    - { person: marcela-gonzalez-rubio, role: researcher }
   partners:
     - name: University of Pittsburgh
       country_en: USA
@@ -138,8 +142,8 @@
     - { person: diego-barboza, role: student }
     - { person: nicole-imbert, role: student }
     - { person: mathias-ferreira, role: student }
-  # outputs: poster at 3DAHM 2024 (no DOI); two papers at IEEE URUCON 2026 (#1571336082 accepted,
-  # #1571336230 pending). Add their DOIs once published.
+  # outputs: poster at 3DAHM 2024 (no DOI); two papers at IEEE URUCON 2026 (#1571336082 and
+  # #1571336230, both accepted). Add their DOIs once published.
 
 - id: imov-cattle-monitoring
   title_en: "iMov: cattle monitoring through sensors"

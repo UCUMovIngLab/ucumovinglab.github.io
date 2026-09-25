@@ -15,7 +15,7 @@
   <span class="person-card__initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
   {%- endif %}
   <span class="person-card__name">{{ m.name }}</span>
-  <span class="person-card__role">{{ m[k_pos] | default: t.roles[m.role] }}{% if m.years and m.role != "pi" %}{% unless m.years contains "TODO" %} · {{ m.years }}{% endunless %}{% endif %}</span>
+  <span class="person-card__role">{% if m.gender == "f" and t.roles_f[m.role] %}{% assign role_label = t.roles_f[m.role] %}{% else %}{% assign role_label = t.roles[m.role] %}{% endif %}{{ m[k_pos] | default: role_label }}{% if m.years and m.role != "pi" %}{% unless m.years contains "TODO" %} · {{ m.years }}{% endunless %}{% endif %}</span>
   {%- if m[k_aff] and m.role == "collaborator" %}{% unless m[k_aff] contains "TODO" %}<span class="person-card__aff">{{ m[k_aff] | split: ";" | first }}</span>{% endunless %}{% endif %}
   {%- if m.projects and m.role != "pi" %}
     {%- assign pid = m.projects | first -%}

@@ -25,7 +25,7 @@
       {%- if m -%}
         {%- assign named = true -%}{%- if entry.role == "student" -%}{%- assign named = false -%}{%- if m.role == "phd" or m.role == "masters" or m.role == "postdoc" or m.role == "staff" -%}{%- assign named = true -%}{%- endif -%}{%- endif -%}
         {%- if named -%}
-          {%- capture one %}{{ m.name }}{% if entry.role == "pi" or entry.role == "co-pi" %} <span class="muted">({{ t.project_roles[entry.role] }})</span>{% endif %}{% endcapture -%}
+          {%- capture one %}{{ m.name }}{% if entry.role == "pi" or entry.role == "co-pi" or entry.role == "lead" %} <span class="muted">({% if m.gender == "f" and t.project_roles_f[entry.role] %}{{ t.project_roles_f[entry.role] }}{% else %}{{ t.project_roles[entry.role] }}{% endif %})</span>{% endif %}{% endcapture -%}
           {%- if people_out == "" %}{% assign people_out = one %}{% else %}{% assign people_out = people_out | append: ", " | append: one %}{% endif -%}
         {%- endif -%}
       {%- endif -%}

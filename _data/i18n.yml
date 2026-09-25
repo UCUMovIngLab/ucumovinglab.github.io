@@ -74,6 +74,7 @@ en:
   project_roles:
     pi: "Principal Investigator"
     co-pi: "Co-Principal Investigator"
+    lead: "Lead researcher"
     researcher: "Researcher"
     student: "Student"
 
@@ -83,16 +84,16 @@ en:
     cta_join: "Work with us"
     about_title: "About the lab"
     about_lede: "We model the body and the nervous system, build low-cost instruments that measure movement outside the lab, and design rehabilitation tools for people recovering from neurological injury such as stroke."
-    about_body: "We are part of the Facultad de Ingeniería y Tecnologías at Universidad Católica del Uruguay, and work with UCU’s microelectronics, artificial intelligence and physical therapy groups, and with Duke University (USA)."
+    about_body: "We are part of the Facultad de Ingeniería y Tecnologías at Universidad Católica del Uruguay, and work with UCU’s microelectronics, artificial intelligence and physical therapy groups, and with Duke University (USA) and the University of Pittsburgh (USA)."
     figure_label: "Frames of one walking gait cycle with motion-capture markers, above the knee and hip flexion angles across the cycle"
     figure_caption: "One gait cycle of the right leg in the sagittal plane, with knee and hip flexion angles (normative shape, schematic)."
     lines_title: "Research lines"
     projects_title: "Current projects"
-    band: "We work with <strong>Duke University</strong> (USA), <strong>Universidad Iberoamericana</strong> (Mexico) and UCU’s <strong>μDIE microelectronics</strong>, <strong>informatics</strong> and <strong>physical therapy</strong> groups, on projects funded by <strong>ANII</strong> and the <strong>US National Institutes of Health</strong>."
+    band: "We work with <strong>Duke University</strong> (USA), the <strong>University of Pittsburgh</strong> (USA), <strong>Universidad Iberoamericana</strong> (Mexico) and UCU’s <strong>μDIE microelectronics</strong>, <strong>informatics</strong> and <strong>physical therapy</strong> groups, on projects funded by <strong>ANII</strong> and the <strong>US National Institutes of Health</strong>."
     pubs_title: "Recent publications and preprints"
     team_title: "Team"
     team_card_title: "Students, alumni and collaborators"
-    team_card_text: "GRAD graduate students, UGRAD undergraduate research interns, ALUMNI alumni, and COLLAB collaborators at UCU, Duke University (USA) and elsewhere."
+    team_card_text: "GRAD graduate students, UGRAD undergraduate research interns, ALUMNI alumni, and COLLAB collaborators at UCU, Duke University (USA), the University of Pittsburgh (USA) and elsewhere."
     join_title: "Interested in joining or collaborating?"
     join_text: "If you'd like to do a thesis with us, collaborate on a project, or bring us a clinical question about movement, write to either principal investigator with a few lines about your background and what you'd like to work on."
 
@@ -193,8 +194,20 @@ es:
   project_roles:
     pi: "Responsable"
     co-pi: "Corresponsable"
+    lead: "Investigador líder"
     researcher: "Investigador"
     student: "Estudiante"
+
+  # Feminine forms, used for members with gender: f. Missing keys fall back to the forms above.
+  roles_f:
+    pi: "Investigadora principal"
+    postdoc: "Investigadora posdoctoral"
+    alum: "Egresada"
+    collaborator: "Colaboradora"
+
+  project_roles_f:
+    lead: "Investigadora líder"
+    researcher: "Investigadora"
 
   home:
     tagline: "Estudiamos cómo se produce y se controla el movimiento, y usamos lo que aprendemos para ayudar a las personas a recuperarlo."
@@ -202,16 +215,16 @@ es:
     cta_join: "Trabajar con nosotros"
     about_title: "Sobre el laboratorio"
     about_lede: "Modelamos el cuerpo y el sistema nervioso, desarrollamos instrumentos de bajo costo para medir el movimiento fuera del laboratorio, y diseñamos herramientas de rehabilitación para personas que se recuperan de lesiones neurológicas como el ACV."
-    about_body: "Somos parte de la Facultad de Ingeniería y Tecnologías de la Universidad Católica del Uruguay, y trabajamos con los grupos de microelectrónica, informática y fisioterapia de la UCU, y con Duke University (EE. UU.)."
+    about_body: "Somos parte de la Facultad de Ingeniería y Tecnologías de la Universidad Católica del Uruguay, y trabajamos con los grupos de microelectrónica, informática y fisioterapia de la UCU, y con Duke University (EE. UU.) y la University of Pittsburgh (EE. UU.)."
     figure_label: "Fotogramas de un ciclo de marcha con marcadores de captura de movimiento, sobre los ángulos de flexión de rodilla y cadera"
     figure_caption: "Un ciclo de marcha de la pierna derecha en el plano sagital, con la flexión de rodilla y cadera (forma normativa, esquema)."
     lines_title: "Líneas de investigación"
     projects_title: "Proyectos en curso"
-    band: "Trabajamos con <strong>Duke University</strong> (EE. UU.), la <strong>Universidad Iberoamericana</strong> (México) y los grupos de <strong>microelectrónica (μDIE)</strong>, <strong>informática</strong> y <strong>fisioterapia</strong> de la UCU, en proyectos financiados por <strong>ANII</strong> y los <strong>Institutos Nacionales de Salud de EE. UU.</strong>"
+    band: "Trabajamos con <strong>Duke University</strong> (EE. UU.), la <strong>University of Pittsburgh</strong> (EE. UU.), la <strong>Universidad Iberoamericana</strong> (México) y los grupos de <strong>microelectrónica (μDIE)</strong>, <strong>informática</strong> y <strong>fisioterapia</strong> de la UCU, en proyectos financiados por <strong>ANII</strong> y los <strong>Institutos Nacionales de Salud de EE. UU.</strong>"
     pubs_title: "Publicaciones y preprints recientes"
     team_title: "Equipo"
     team_card_title: "Estudiantes, egresados y colaboradores"
-    team_card_text: "GRAD estudiantes de posgrado, UGRAD estudiantes de grado en iniciación a la investigación, ALUMNI egresados y COLLAB colaboradores en la UCU, Duke University (EE. UU.) y otras instituciones."
+    team_card_text: "GRAD estudiantes de posgrado, UGRAD estudiantes de grado en iniciación a la investigación, ALUMNI egresados y COLLAB colaboradores en la UCU, Duke University (EE. UU.), la University of Pittsburgh (EE. UU.) y otras instituciones."
     join_title: "¿Te interesa colaborar o sumarte al laboratorio?"
     join_text: "Si te interesa hacer una tesis con nosotros, colaborar en un proyecto o plantearnos una pregunta clínica sobre el movimiento, escribile a cualquiera de los investigadores principales con unas líneas sobre tu formación y sobre qué te gustaría trabajar."
 
