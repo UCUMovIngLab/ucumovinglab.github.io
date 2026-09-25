@@ -50,8 +50,8 @@ en:
 
   home:
     eyebrow: "Biomechanics · Motor control · Rehabilitation · Digitalization"
-    title: "We study human movement and build the tools to measure and restore it."
-    lede: "We combine biomechanics, control, rehabilitation, and digital technologies to understand and improve how people move. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
+    title: "We study how movement is produced and controlled, and use what we learn to help people recover it."
+    lede: "We model the body and the nervous system, build low-cost instruments that measure movement outside the lab, and design rehabilitation tools for people recovering from neurological injury such as stroke. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
     cta_research: "Our research"
     cta_join: "Work with us"
     figure_label: "Frames of one walking gait cycle with motion-capture markers, above the knee and hip flexion angles across the cycle"
@@ -67,10 +67,14 @@ en:
     alumni: "Alumni"
     join_label: "Join"
     join_title: "Students, clinicians and researchers: work with us."
-    join_text: "We welcome students, clinicians, and researchers interested in biomechanics, motor control, and rehabilitation technology. Write to either principal investigator with a short note on your background and interests."
+    join_text: "If you'd like to do a thesis with us, collaborate on a project, or bring us a clinical question about movement, write to either principal investigator with a few lines about your background and what you'd like to work on."
 
   research:
-    lede: "Three connected lines: how the nervous system controls movement, tools that help people recover it after injury, and technology that makes movement easier to capture and analyse."
+    lede: "Our goal is to understand how movement is produced and controlled, and to use that understanding to help people move better. That covers the mechanics of the body, how the nervous system coordinates muscles, and how it uses visual, vestibular and proprioceptive information to keep balance and to adapt when conditions change."
+    approach: |-
+      Much of our work studies typical movement in order to help when it goes wrong. Knowing how a healthy nervous system coordinates and recalibrates movement tells us what a rehabilitation tool should encourage after a stroke, and what to look for when balance or gait starts to fail.
+
+      We approach both as engineers. We build models of the sensorimotor system and test them against recordings of muscle activity and movement. We also build our own instruments, because the measurements we need are often expensive or tied to a specialised lab. Making them cheap and portable enough to use outside the lab is a goal in its own right.
 
   publications:
     lede: "Peer-reviewed work and preprints from the lab’s three research lines, updated monthly from members’ ORCID records. Lab members in bold."
@@ -86,10 +90,10 @@ en:
     network_label: "Network"
     network_title: "Collaborators"
     join_title: "Looking for a thesis or research project?"
-    join_text: "We are always looking for motivated students and researchers interested in movement science, biomedical engineering, and rehabilitation technologies."
+    join_text: "Write to us with a few lines about your background and what you'd like to work on. Projects range from walking and balance experiments to modelling, electronics and rehabilitation devices."
 
   contact:
-    lede: "For more information about our research, to explore collaboration opportunities, or to ask about joining the group as a student or researcher, write to either principal investigator."
+    lede: "Write to either principal investigator about our research, a possible collaboration, or joining the lab."
     people_title: "Principal investigators"
     location_title: "Location"
 
@@ -151,8 +155,8 @@ es:
 
   home:
     eyebrow: "Biomecánica · Control motor · Rehabilitación · Digitalización"
-    title: "Estudiamos el movimiento humano y desarrollamos tecnología para medirlo y recuperarlo."
-    lede: "Integramos biomecánica, control, rehabilitación y tecnologías digitales para comprender y mejorar cómo se mueve la gente. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
+    title: "Estudiamos cómo se produce y se controla el movimiento, y usamos lo que aprendemos para ayudar a las personas a recuperarlo."
+    lede: "Modelamos el cuerpo y el sistema nervioso, desarrollamos instrumentos de bajo costo para medir el movimiento fuera del laboratorio, y diseñamos herramientas de rehabilitación para personas que se recuperan de lesiones neurológicas como el ACV. Facultad de Ingeniería y Tecnologías, Universidad Católica del Uruguay."
     cta_research: "Nuestra investigación"
     cta_join: "Trabajar con nosotros"
     figure_label: "Fotogramas de un ciclo de marcha con marcadores de captura de movimiento, sobre los ángulos de flexión de rodilla y cadera a lo largo del ciclo"
@@ -168,10 +172,14 @@ es:
     alumni: "Egresados"
     join_label: "Sumarse"
     join_title: "¿Le interesa colaborar o sumarse al laboratorio?"
-    join_text: "Recibimos estudiantes, clínicos e investigadores interesados en biomecánica, control motor y tecnología para rehabilitación. Escriba a cualquiera de los investigadores principales con una breve nota sobre su formación e intereses."
+    join_text: "Si le interesa hacer una tesis con nosotros, colaborar en un proyecto o plantearnos una pregunta clínica sobre el movimiento, escriba a cualquiera de los investigadores principales con unas líneas sobre su formación y sobre qué le gustaría trabajar."
 
   research:
-    lede: "Tres líneas conectadas: cómo el sistema nervioso controla el movimiento, herramientas para recuperarlo después de una lesión, y tecnología que facilita capturarlo y analizarlo."
+    lede: "Buscamos entender cómo se produce y se controla el movimiento, y usar ese conocimiento para ayudar a las personas a moverse mejor. Esto abarca la mecánica del cuerpo, cómo el sistema nervioso coordina los músculos, y cómo usa la información visual, vestibular y propioceptiva para mantener el equilibrio y adaptarse cuando cambian las condiciones."
+    approach: |-
+      Buena parte de nuestro trabajo estudia el movimiento típico para poder intervenir cuando algo falla. Saber cómo un sistema nervioso sano coordina y recalibra el movimiento nos indica qué debería promover una herramienta de rehabilitación después de un ACV, y qué buscar cuando el equilibrio o la marcha empiezan a deteriorarse.
+
+      Abordamos ambas cosas desde la ingeniería. Construimos modelos del sistema sensoriomotor y los contrastamos con registros de actividad muscular y de movimiento. También desarrollamos nuestros propios instrumentos, porque las mediciones que necesitamos suelen ser caras o requerir un laboratorio especializado. Que sean de bajo costo y lo bastante portátiles para usarse fuera del laboratorio es un objetivo en sí mismo.
 
   publications:
     lede: "Artículos revisados por pares y preprints de las tres líneas de investigación del grupo, actualizados mensualmente desde los perfiles ORCID de sus integrantes. Integrantes del grupo en negrita."
@@ -187,10 +195,10 @@ es:
     network_label: "Red"
     network_title: "Colaboradores"
     join_title: "¿Busca un proyecto de tesis o de investigación?"
-    join_text: "Siempre estamos buscando estudiantes e investigadores motivados interesados en ciencias del movimiento, ingeniería biomédica y tecnologías de rehabilitación."
+    join_text: "Escríbanos con unas líneas sobre su formación y sobre qué le gustaría trabajar. Los proyectos van desde experimentos de marcha y equilibrio hasta modelado, electrónica y dispositivos de rehabilitación."
 
   contact:
-    lede: "Para más información sobre nuestra investigación, para explorar oportunidades de colaboración, o para consultar sobre cómo unirse al grupo como estudiante o investigador, escriba a cualquiera de los investigadores principales."
+    lede: "Escriba a cualquiera de los investigadores principales para consultar sobre nuestra investigación, una posible colaboración o cómo sumarse al laboratorio."
     people_title: "Investigadores principales"
     location_title: "Ubicación"
 

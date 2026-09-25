@@ -215,6 +215,7 @@ h3 { font-size: 25px; line-height: 32px; }
   gap: 24px;
 }
 .page-head--flush { padding-left: 0; padding-right: 0; }
+.page-head__more { max-width: 760px; }
 
 /* ---------- hero ---------- */
 .hero { padding-top: 88px; display: flex; flex-direction: column; gap: 64px; }

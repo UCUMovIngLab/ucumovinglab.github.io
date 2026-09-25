@@ -1,9 +1,8 @@
 # site properties and page defaults
 title: Movement Engineering Lab
 subtitle: Universidad Católica del Uruguay
-description: |-
-  El grupo de Ingeniería del Movimiento desarrolla investigación en biomecánica, control motor,
-  rehabilitación del movimiento, y tecnologías innovadoras para la digitalización del movimiento humano.
+description: >-
+  El grupo de Ingeniería del Movimiento estudia cómo se produce y se controla el movimiento humano, desarrolla instrumentos de bajo costo para medirlo fuera del laboratorio y diseña herramientas para su rehabilitación.
 proofer: false
 
 # site social media and other links
