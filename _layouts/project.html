@@ -1,0 +1,78 @@
+---
+layout: default
+nav_parent: research
+---
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign p = page.project -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign k_summary = "summary_" | append: lang -%}
+{%- assign k_tag = "tag_" | append: lang -%}
+{%- assign k_unit = "unit_" | append: lang -%}
+{%- assign k_caption = "caption_" | append: lang -%}
+{%- assign k_aff = "affiliation_" | append: lang -%}
+{%- assign line = site.data.projects | where: "id", p.line | first -%}
+{%- assign research_url = t.home_url | append: 'research/' | relative_url -%}
+<div class="container crumbs"><a href="{{ research_url }}">{{ t.ui.research }}</a><span aria-hidden="true">/</span>{% if line %}<a href="{{ research_url }}#{{ line.id }}">{{ line[k_title] }}</a>{% endif %}</div>
+
+<section class="container project">
+  <div class="project__main">
+    <div class="project-card__meta">
+      {%- if p.status == "active" %}<span class="badge badge--status">{{ t.ui.status_active }}</span>{% else %}<span class="badge badge--muted">{{ t.ui.status_finished }}</span>{% endif -%}
+      {%- if line %}<span class="badge">{{ line[k_tag] }}</span>{% endif -%}
+      {%- unless p.start contains "TODO" %}<span class="meta">{{ p.start }}–{{ p.end }}</span>{% endunless %}
+    </div>
+    <h1>{{ p[k_title] }}</h1>
+    <p class="lede">{{ p[k_summary] }}</p>
+    {%- if p.figure and p.figure.file %}
+    <figure class="project__figure">
+      <img src="{{ p.figure.file | relative_url }}" alt="{{ p.figure[k_caption] }}">
+      <figcaption class="caption">{{ p.figure[k_caption] }}{% if p.figure.credit %} {{ p.figure.credit }}{% endif %}{% if p.figure.license %}, {{ p.figure.license }}{% endif %}.</figcaption>
+    </figure>
+    {%- endif %}
+    {%- if p.outputs %}
+    <div class="project__outputs">
+      {% include sec-title.html title=t.ui.outputs tag="h2" %}
+      <div class="pub-list">
+      {%- for out in p.outputs %}
+        {%- assign want = out | downcase -%}
+        {%- for c in site.data.citations -%}
+          {%- assign have = c.id | downcase -%}
+          {%- if have == want %}{% include pub.html item=c year=true %}{% break %}{% endif -%}
+        {%- endfor -%}
+      {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+  <aside class="project__aside">
+    <div class="aside-block">
+      <h2 class="small-head">{{ t.ui.people }}</h2>
+      {%- for entry in p.people %}
+      {%- assign m = site.members | where_exp: "x", "x.slug == entry.person" | first -%}
+      {%- if m %}
+      <a class="person-row" href="{{ m.url | relative_url }}">
+        {%- if m.image %}<img src="{{ m.image | relative_url }}" alt="" loading="lazy">{% else %}{% assign parts = m.name | remove: "." | split: " " %}<span class="person-row__initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>{% endif %}
+        <span><strong>{{ m.name }}</strong><span class="meta">{{ t.roles[entry.role] }}{% if m.role == "collaborator" and m[k_aff] %} · {{ m[k_aff] | split: "," | first }}{% endif %}</span></span>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- if p.partners %}
+    <div class="aside-block">
+      <h2 class="small-head">{{ t.ui.partners }}</h2>
+      {%- for x in p.partners %}
+      <p>{% if x.url %}<a href="{{ x.url }}">{{ x.name }}</a>{% else %}{{ x.name }}{% endif %}{% if x[k_unit] %}{% unless x[k_unit] contains "TODO" %}<br><span class="meta">{{ x[k_unit] }}</span>{% endunless %}{% endif %}</p>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    {%- if p.funding %}
+    <div class="aside-block">
+      <h2 class="small-head">{{ t.ui.funding }}</h2>
+      {%- for f in p.funding %}
+      <p>{{ f.funder }}{% if f.program %} · {{ f.program }}{% endif %}{% if f.code %}<br><span class="meta">{{ f.code }}</span>{% endif %}</p>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </aside>
+</section>

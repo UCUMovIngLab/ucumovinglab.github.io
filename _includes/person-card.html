@@ -1,0 +1,24 @@
+{%- comment -%} Person card. include.member, include.note (optional override) {%- endcomment -%}
+{%- assign m = include.member -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign k_aff = "affiliation_" | append: lang -%}
+{%- assign k_prog = "program_" | append: lang -%}
+{%- assign k_interests = "interests_" | append: lang -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign parts = m.name | remove: "." | split: " " -%}
+<a class="person-card" href="{{ m.url | relative_url }}">
+  {%- if m.image %}
+  <img src="{{ m.image | relative_url }}" alt="{{ t.ui.portrait_of }} {{ m.name }}" loading="lazy">
+  {%- else %}
+  <span class="person-card__initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+  {%- endif %}
+  <span class="person-card__name">{{ m.name }}</span>
+  <span class="person-card__role">{{ t.roles[m.role] }}{% if m.years and m.role != "pi" %}{% unless m.years contains "TODO" %} · {{ m.years }}{% endunless %}{% endif %}</span>
+  {%- if m[k_aff] and m.role == "collaborator" %}{% unless m[k_aff] contains "TODO" %}<span class="person-card__aff">{{ m[k_aff] | split: ";" | first }}</span>{% endunless %}{% endif %}
+  {%- if m.projects and m.role != "pi" %}
+    {%- assign pid = m.projects | first -%}
+    {%- assign proj = site.data.research_projects | where: "id", pid | first -%}
+    {%- if proj %}<span class="person-card__note">{{ proj[k_title] }}</span>{% endif -%}
+  {%- elsif m[k_interests] %}<span class="person-card__note">{{ m[k_interests] }}</span>{% endif %}
+</a>

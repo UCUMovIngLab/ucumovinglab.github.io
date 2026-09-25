@@ -4,39 +4,31 @@
 <footer class="site-footer" id="contact-info">
   <div class="site-footer__grid">
     <div class="site-footer__about">
-      <a href="{{ t.home_url | relative_url }}" class="wordmark wordmark--inverse">
+      <div class="wordmark wordmark--inverse">
         {% include icons/mark.html %}
-        <span class="wordmark__name">{{ site.title }}</span>
-      </a>
-      <p>{{ t.ui.faculty }}</p>
-      <p class="mono">Av. 8 de Octubre 2738<br>Montevideo, Uruguay</p>
-      <a class="mono" href="mailto:{{ site.links.email }}">{{ site.links.email }}</a>
+        <span class="wordmark__text"><span class="wordmark__name">{{ t.name }}</span><span class="wordmark__alt">{{ t.other_name }}</span></span>
+      </div>
+      <p>{{ t.ui.faculty }}<br>{{ t.ui.address }}</p>
+      <a href="mailto:{{ site.links.email }}">{{ site.links.email }}</a>
     </div>
     <div class="site-footer__col">
-      <span class="label">{{ t.ui.lab }}</span>
+      <span class="site-footer__head">{{ t.ui.the_lab }}</span>
       {%- for p in nav_pages %}
       <a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a>
       {%- endfor %}
     </div>
     <div class="site-footer__col">
-      <span class="label">{{ t.ui.profiles }}</span>
-      {%- if site.links.github %}
-      <a href="https://github.com/{{ site.links.github }}">GitHub {% include icons/ext.html %}</a>
-      {%- endif %}
-      {%- assign pis = site.members | where: "role", "pi" -%}
-      {%- for m in pis %}{% if m.links.orcid %}
-      <a href="https://orcid.org/{{ m.links.orcid }}">ORCID · {{ m.name | split: " " | first | slice: 0 }}. {{ m.name | split: " " | last }} {% include icons/ext.html %}</a>
-      {%- endif %}{% endfor %}
-      {%- if site.links.google-scholar %}
-      <a href="https://scholar.google.com/citations?user={{ site.links.google-scholar }}">Google Scholar {% include icons/ext.html %}</a>
-      {%- endif %}
+      <span class="site-footer__head">{{ t.ui.institution }}</span>
+      <a href="https://ucu.edu.uy">Universidad Católica del Uruguay {% include icons/ext.html %}</a>
+      <a href="https://www.ucu.edu.uy/categoria/Facultad-de-Ingenieria-y-Tecnologias-15">{{ t.ui.faculty }} {% include icons/ext.html %}</a>
+      <a href="https://die.ucu.edu.uy/">μDIE {% include icons/ext.html %}</a>
     </div>
     <div class="site-footer__logo">
-      <img src="{{ '/images/ucu-logo-white.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="110" height="40">
+      <img src="{{ '/images/ucu-logo-white.svg' | relative_url }}" alt="Universidad Católica del Uruguay" width="99" height="36">
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} · Universidad Católica del Uruguay</span>
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ t.name }} · Universidad Católica del Uruguay</span>
     {% include lang-switcher.html %}
   </div>
 </footer>

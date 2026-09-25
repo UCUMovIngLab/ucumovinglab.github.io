@@ -16,8 +16,8 @@
     IMUs y sistemas de captura de movimiento, y de cómo el sistema nervioso lo controla y adapta.
   methods_en: EMG · IMU · Motion capture
   methods_es: EMG · IMU · Captura de movimiento
-  caption_en: "Fig. 2 — Split-belt adaptation: step-length asymmetry by stride (schematic)"
-  caption_es: "Fig. 2 — Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
+  caption_en: "Split-belt adaptation: step-length asymmetry by stride (schematic)"
+  caption_es: "Adaptación en cinta dividida: asimetría de paso por zancada (esquema)"
   body_en: |-
     We study human movement, focusing on locomotion and sports-relevant movements, to characterize nominal behaviour and to detect patterns that may indicate functional anomalies. We record muscle activity with electromyography (EMG), and use portable systems based on inertial measurement units (IMUs) and motion capture (MoCap) for kinematic and dynamic characterization.
 
@@ -47,8 +47,8 @@
     incluyendo sistemas de biofeedback y dispositivos ortésicos.
   methods_en: Biofeedback · Orthoses · Stroke
   methods_es: Biofeedback · Órtesis · ACV
-  caption_en: "Fig. 3 — EMG by gait phase, with a biofeedback target on TA (schematic)"
-  caption_es: "Fig. 3 — EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
+  caption_en: "EMG by gait phase, with a biofeedback target on TA (schematic)"
+  caption_es: "EMG por fase de la marcha, con objetivo de biofeedback en TA (esquema)"
   body_en: |-
     We develop solutions for recovering movement impaired by central nervous system injuries such as stroke, through two complementary strategies.
 
@@ -80,8 +80,8 @@
     computadora, electrónica propia y procesamiento avanzado de señales.
   methods_en: Computer vision · Electronics · Signal processing
   methods_es: Visión por computadora · Electrónica · Procesamiento de señales
-  caption_en: "Fig. 4 — Pose keypoints and shank gyroscope (schematic)"
-  caption_es: "Fig. 4 — Puntos clave de pose y giroscopio de pierna (esquema)"
+  caption_en: "Pose keypoints and shank gyroscope (schematic)"
+  caption_es: "Puntos clave de pose y giroscopio de pierna (esquema)"
   body_en: |-
     We develop technologies to capture, record and analyse movement, both to widen access and to improve what can be measured.
 
