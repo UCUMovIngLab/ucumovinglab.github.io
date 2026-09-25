@@ -19,9 +19,10 @@
   <p>{{ p[k_summary] }}</p>
   {%- if p.people %}
   <p class="project-card__people">
-    {%- assign people_out = "" -%}
+    {%- assign people_out = "" -%}{%- assign ext_out = "" -%}
     {%- for entry in p.people -%}
       {%- assign m = site.members | where_exp: "x", "x.slug == entry.person" | first -%}
+      {%- unless m -%}{%- assign c = site.data.collaborators | where: "id", entry.person | first -%}{%- if c -%}{%- if ext_out == "" %}{% assign ext_out = c.name %}{% else %}{% assign ext_out = ext_out | append: ", " | append: c.name %}{% endif -%}{%- endif -%}{%- endunless -%}
       {%- if m -%}
         {%- assign named = true -%}{%- if entry.role == "student" -%}{%- assign named = false -%}{%- if m.role == "phd" or m.role == "masters" or m.role == "postdoc" or m.role == "staff" -%}{%- assign named = true -%}{%- endif -%}{%- endif -%}
         {%- if named -%}
@@ -33,8 +34,9 @@
     {{ people_out }}
   </p>
   {%- endif %}
-  {%- if p.partners or p.funding %}
+  {%- if p.partners or p.funding or ext_out != "" %}
   <p class="project-card__extra">
+    {%- if ext_out != "" %}<span><span class="muted">{{ t.ui.collaborators }}</span> {{ ext_out }}</span>{% endif -%}
     {%- if p.partners %}<span><span class="muted">{{ t.ui.partners }}</span> {% for x in p.partners %}{{ x.name }}{% if x[k_country] %} ({{ x[k_country] }}){% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif -%}
     {%- if p.funding %}<span><span class="muted">{{ t.ui.funding }}</span> {% for f in p.funding %}{{ f.funder }}{% if f[k_country] %} ({{ f[k_country] }}){% endif %}{% if f.program %} · {{ f.program }}{% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}</span>{% endif -%}
   </p>

@@ -17,7 +17,7 @@ layout: default
 {%- assign n_grad = current | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'postdoc'" | size -%}
 {%- assign n_ugrad = current | where: "role", "undergrad" | size -%}
 {%- assign n_alumni = site.members | where: "role", "alum" | size -%}
-{%- assign n_collab = site.members | where: "role", "collaborator" | size -%}
+{%- assign n_collab = site.data.collaborators | size -%}
 
 <section class="hero{% if site.hero_image %} hero--photo{% endif %}"{% if site.hero_image %} style="--hero: url('{{ site.hero_image | relative_url }}')"{% endif %}>
   <div class="hero__inner">

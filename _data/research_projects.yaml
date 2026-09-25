@@ -1,6 +1,7 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
-#   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | lead (lead researcher,
+#   people:   slugs of lab members (_members/) or ids of external collaborators (_data/collaborators.yaml;
+#             shown by name only, under Collaborators), with role: pi (principal investigator) | co-pi | lead (lead researcher,
 #             not the grant holder) | researcher | student
 #   partners, funding: add country_en / country_es for any institution outside Uruguay;
 #             partners may have a `logo` (SVG in images/collaborators/)
