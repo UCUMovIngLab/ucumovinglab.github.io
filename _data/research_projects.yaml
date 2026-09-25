@@ -1,6 +1,7 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
 #   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | researcher | student
+#   partners, funding: add country_en / country_es for any institution outside Uruguay
 #   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
 #   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
 
@@ -26,11 +27,15 @@
     - { person: nicolas-rondan, role: student }
   partners:
     - name: Duke University
+      country_en: USA
+      country_es: EE. UU.
       unit_en: Department of Psychiatry and Behavioral Sciences
       unit_es: Departamento de Psiquiatría y Ciencias del Comportamiento
       url: https://duke.edu
   funding:
-    - funder: National Institutes of Health (NIMH)
+    - funder: NIH National Institute of Mental Health
+      country_en: USA
+      country_es: EE. UU.
       program: R01
       code: R01MH129733
   outputs:
@@ -54,6 +59,8 @@
     - { person: lucas-handalian, role: student }
   partners:
     - name: Universidad Iberoamericana
+      country_en: Mexico
+      country_es: México
       unit_en: "TODO: department (co-authors of the URUCON 2026 paper)"
       unit_es: "TODO: departamento (coautores del trabajo en URUCON 2026)"
       url: https://ibero.mx
@@ -97,6 +104,7 @@
   start: 2023
   people:
     - { person: pablo-iturralde, role: pi }
+    - { person: matias-miguez, role: researcher }
     - { person: diego-barboza, role: student }
     - { person: nicole-imbert, role: student }
     - { person: mathias-ferreira, role: student }
