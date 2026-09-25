@@ -13,7 +13,9 @@ layout: default
 {%- assign recent = site.data.citations | where_exp: "c", "c.line" | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
 {%- assign active = site.data.research_projects | where: "status", "active" -%}
 {%- assign pis = site.members | where: "role", "pi" -%}
-{%- assign n_students = site.members | where: "status", "current" | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'undergrad' or m.role == 'postdoc'" | size -%}
+{%- assign current = site.members | where: "status", "current" -%}
+{%- assign n_grad = current | where_exp: "m", "m.role == 'phd' or m.role == 'masters' or m.role == 'postdoc'" | size -%}
+{%- assign n_ugrad = current | where: "role", "undergrad" | size -%}
 {%- assign n_alumni = site.members | where: "role", "alum" | size -%}
 {%- assign n_collab = site.members | where: "role", "collaborator" | size -%}
 
@@ -96,7 +98,7 @@ layout: default
     {%- endfor %}
     <div class="home-team__more">
       <h3>{{ t.home.team_card_title }}</h3>
-      <p>{{ t.home.team_card_text | replace: "STUDENTS", n_students | replace: "ALUMNI", n_alumni | replace: "COLLAB", n_collab }}</p>
+      <p>{{ t.home.team_card_text | replace: "UGRAD", n_ugrad | replace: "GRAD", n_grad | replace: "ALUMNI", n_alumni | replace: "COLLAB", n_collab }}</p>
       <a class="text-link" href="{{ team_url }}">{{ t.ui.meet_team }} {% include icons/arrow.html %}</a>
     </div>
   </div>

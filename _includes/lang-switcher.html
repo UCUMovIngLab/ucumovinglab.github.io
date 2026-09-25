@@ -1,9 +1,16 @@
-{%- comment -%} Link to this page in the other language; nothing if there is no translation. {%- endcomment -%}
+{%- comment -%} EN / ES switch: current language in bold, the other links to this page's translation. {%- endcomment -%}
+{%- assign cur = page.lang | default: "en" -%}
+{%- assign other_url = nil -%}
 {%- if page.ref -%}
 {%- assign versions = site.pages | where: "ref", page.ref -%}
-{%- for p in versions -%}
-{%- if p.lang != page.lang -%}
-<a class="lang-link" href="{{ p.url | relative_url }}" lang="{{ p.lang }}" hreflang="{{ p.lang }}">{{ site.data.i18n[p.lang].lang_name }}</a>
+{%- for p in versions -%}{%- if p.lang != cur -%}{%- assign other_url = p.url -%}{%- assign other_lang = p.lang -%}{%- endif -%}{%- endfor -%}
 {%- endif -%}
-{%- endfor -%}
+{%- if other_url -%}
+<div class="lang-switch">
+  {%- if cur == "en" -%}
+  <span aria-current="true">EN</span><span class="lang-switch__sep" aria-hidden="true">/</span><a href="{{ other_url | relative_url }}" lang="es" hreflang="es" title="Español">ES</a>
+  {%- else -%}
+  <a href="{{ other_url | relative_url }}" lang="en" hreflang="en" title="English">EN</a><span class="lang-switch__sep" aria-hidden="true">/</span><span aria-current="true">ES</span>
+  {%- endif -%}
+</div>
 {%- endif -%}

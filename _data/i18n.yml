@@ -62,14 +62,17 @@ en:
     postdoc: "Postdoctoral researcher"
     phd: "PhD student"
     masters: "Master's student"
-    undergrad: "Undergraduate student"
+    undergrad: "Undergraduate research intern"
     staff: "Staff"
     alum: "Alumni"
     collaborator: "Collaborator"
-    director: "Director"
-    co-director: "Co-director"
-    student: "Student"
+
+  # Roles within a research project (_data/research_projects.yaml)
+  project_roles:
+    pi: "Principal Investigator"
+    co-pi: "Co-Principal Investigator"
     researcher: "Researcher"
+    student: "Student"
 
   home:
     tagline: "We study human movement and build tools to measure and restore it."
@@ -86,7 +89,7 @@ en:
     pubs_title: "Recent publications and preprints"
     team_title: "Team"
     team_card_title: "Students, alumni and collaborators"
-    team_card_text: "STUDENTS current students, ALUMNI alumni, and COLLAB collaborators at UCU, Duke University and elsewhere."
+    team_card_text: "GRAD graduate students, UGRAD undergraduate research interns, ALUMNI alumni, and COLLAB collaborators at UCU, Duke University and elsewhere."
     join_title: "Interested in joining or collaborating?"
     join_text: "We welcome students, clinicians and researchers interested in biomechanics, motor control and rehabilitation technology."
 
@@ -98,7 +101,8 @@ en:
 
   team:
     pis: "Principal investigators"
-    students: "Students"
+    graduate: "Graduate students"
+    undergrad: "Undergraduate research interns"
     collaborators: "Collaborators"
     alumni: "Alumni"
     join_title: "Looking for a thesis or research project?"
@@ -170,14 +174,16 @@ es:
     postdoc: "Investigador posdoctoral"
     phd: "Estudiante de doctorado"
     masters: "Estudiante de maestría"
-    undergrad: "Estudiante de grado"
+    undergrad: "Iniciación a la investigación"
     staff: "Personal"
     alum: "Egresado"
     collaborator: "Colaborador"
-    director: "Director"
-    co-director: "Codirector"
-    student: "Estudiante"
+
+  project_roles:
+    pi: "Responsable"
+    co-pi: "Corresponsable"
     researcher: "Investigador"
+    student: "Estudiante"
 
   home:
     tagline: "Estudiamos el movimiento humano y desarrollamos herramientas para medirlo y recuperarlo."
@@ -194,7 +200,7 @@ es:
     pubs_title: "Publicaciones y preprints recientes"
     team_title: "Equipo"
     team_card_title: "Estudiantes, egresados y colaboradores"
-    team_card_text: "STUDENTS estudiantes, ALUMNI egresados y COLLAB colaboradores en la UCU, Duke University y otras instituciones."
+    team_card_text: "GRAD estudiantes de posgrado, UGRAD estudiantes de grado en iniciación a la investigación, ALUMNI egresados y COLLAB colaboradores en la UCU, Duke University y otras instituciones."
     join_title: "¿Le interesa colaborar o sumarse al laboratorio?"
     join_text: "Recibimos estudiantes, clínicos e investigadores interesados en biomecánica, control motor y tecnología para rehabilitación."
 
@@ -206,7 +212,8 @@ es:
 
   team:
     pis: "Investigadores principales"
-    students: "Estudiantes"
+    graduate: "Estudiantes de posgrado"
+    undergrad: "Estudiantes de grado en iniciación a la investigación"
     collaborators: "Colaboradores"
     alumni: "Egresados"
     join_title: "¿Busca un proyecto de tesis o de investigación?"

@@ -1,6 +1,6 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
-#   people:   slugs of files in _members/, with role: director | co-director | student | researcher
+#   people:   slugs of files in _members/, with role: pi (principal investigator) | co-pi | researcher | student
 #   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
 #   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
 
@@ -20,9 +20,9 @@
   status: active
   start: 2022
   people:
-    - { person: matias-di-martino, role: director }
-    - { person: angel-peterchev, role: director }
-    - { person: pablo-iturralde, role: co-director }
+    - { person: matias-di-martino, role: pi }
+    - { person: angel-peterchev, role: pi }
+    - { person: pablo-iturralde, role: researcher }
     - { person: nicolas-rondan, role: student }
   partners:
     - name: Duke University
@@ -50,7 +50,7 @@
   status: active
   start: "TODO: start year of the knee exoskeleton project"
   people:
-    - { person: enrique-ferreira, role: director }
+    - { person: enrique-ferreira, role: pi }
     - { person: lucas-handalian, role: student }
   partners:
     - name: Universidad Iberoamericana
@@ -74,7 +74,7 @@
   status: active
   start: 2025
   people:
-    - { person: pablo-iturralde, role: director }
+    - { person: pablo-iturralde, role: pi }
     - { person: juan-ottonelli, role: student }
     - { person: sofia-ibarra, role: student }
     - { person: matihas-sastre, role: student }
@@ -96,7 +96,7 @@
   status: active
   start: 2023
   people:
-    - { person: pablo-iturralde, role: director }
+    - { person: pablo-iturralde, role: pi }
     - { person: diego-barboza, role: student }
     - { person: nicole-imbert, role: student }
     - { person: mathias-ferreira, role: student }
@@ -117,7 +117,7 @@
   status: active
   start: 2026
   people:
-    - { person: alfredo-arnaud, role: director }
+    - { person: alfredo-arnaud, role: pi }
     - { person: pablo-iturralde, role: researcher }
   funding:
     - funder: ANII
@@ -142,7 +142,7 @@
   start: 2022
   end: 2025
   people:
-    - { person: pablo-iturralde, role: director }
+    - { person: pablo-iturralde, role: pi }
     - { person: enrique-ferreira, role: researcher }
     - { person: juan-gandolfo, role: student }
     - { person: melissa-imbert, role: student }

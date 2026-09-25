@@ -21,10 +21,17 @@ layout: default
     <h2>{{ t.team.pis }}</h2>
     <div class="person-grid">{% for m in pis %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
-  {%- if students.size > 0 %}
+  {%- assign graduate = pd | concat: phd | concat: ms -%}
+  {%- if graduate.size > 0 %}
   <section class="team-group">
-    <h2>{{ t.team.students }}</h2>
-    <div class="person-grid">{% for m in students %}{% include person-card.html member=m %}{% endfor %}</div>
+    <h2>{{ t.team.graduate }}</h2>
+    <div class="person-grid">{% for m in graduate %}{% include person-card.html member=m %}{% endfor %}</div>
+  </section>
+  {%- endif %}
+  {%- if ug.size > 0 %}
+  <section class="team-group">
+    <h2>{{ t.team.undergrad }}</h2>
+    <div class="person-grid">{% for m in ug %}{% include person-card.html member=m %}{% endfor %}</div>
   </section>
   {%- endif %}
   {%- if collaborators.size > 0 %}
