@@ -7,7 +7,7 @@ position_es: Coordinador del laboratorio
 program_en: "TODO: master's program and institution"
 program_es: "TODO: programa de maestría e institución"
 projects: [knee-exoskeleton, markerless-mocap]
-author_match: Handalian
+author_match: Handali   # Crossref spells it Handalián on one paper
 interests_en: Rehabilitation devices, control, motion capture
 interests_es: Dispositivos de rehabilitación, control, captura de movimiento
 bio_en: >-

@@ -51,7 +51,8 @@ nav_parent: team
 {%- endif %}
 
 {%- if page.author_match %}
-{%- capture shown %}{% for item in pubs %}{% assign authors = item.authors | join: "|" %}{% if authors contains page.author_match %}x{% endif %}{% endfor %}{% endcapture -%}
+{%- comment -%} An author counts if their name contains author_match and not author_exclude (e.g. Enrique vs Mathias Ferreira). {%- endcomment -%}
+{%- capture shown %}{% for item in pubs %}{% for a in item.authors %}{% if a contains page.author_match %}{% unless page.author_exclude and a contains page.author_exclude %}x{% endunless %}{% endif %}{% endfor %}{% endfor %}{% endcapture -%}
 {%- if shown != "" %}
 <section class="section container">
   {%- if page.links.orcid %}{% capture orcid_url %}https://orcid.org/{{ page.links.orcid }}{% endcapture %}{% endif -%}
@@ -59,8 +60,9 @@ nav_parent: team
   <div class="pub-list">
     {%- assign n = 0 -%}
     {%- for item in pubs -%}
-      {%- assign authors = item.authors | join: "|" -%}
-      {%- if authors contains page.author_match and n < 8 %}
+      {%- assign is_author = false -%}
+      {%- for a in item.authors -%}{%- if a contains page.author_match -%}{%- unless page.author_exclude and a contains page.author_exclude -%}{%- assign is_author = true -%}{%- endunless -%}{%- endif -%}{%- endfor -%}
+      {%- if is_author and n < 8 %}
       {% include pub.html item=item year=true %}
       {%- assign n = n | plus: 1 -%}
       {%- endif -%}

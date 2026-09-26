@@ -9,15 +9,12 @@
 #
 # Crossref metadata is fetched for each DOI; any field set here overrides it.
 #
-# Accepted papers without a DOI yet: give them in full with `accepted: true`, e.g.
-#   - id: urucon2026-knee
-#     title: Hybrid Control of a Knee Rehabilitation Device: Implementation and Evaluation
-#     authors: [First Last, ...]
-#     publisher: IEEE URUCON 2026
-#     date: "2026-11-01"
-#     accepted: true
-#     line: rehabilitation
-# Replace the entry with its doi: once published.
+# Accepted papers without a DOI yet: give them in full with `accepted: true` (see the URUCON 2026
+# entries below). Replace the entry with its doi: once published, and update the project's outputs.
+#
+# Posters and undergraduate theses have no DOI either: give them in full with `type: poster` or
+# `type: thesis`. They are listed on project, member and publications pages, but not among the
+# recent publications on the homepage and research page. `link` is optional.
 
 # --- 01 Human movement and motor control ---
 # bioRxiv's new DOI prefix (10.64898) is not flagged as a preprint by _cite/cite.py, so set it here.
@@ -61,8 +58,31 @@
   line: motor-control
 
 # --- 02 Movement rehabilitation ---
+- id: urucon2026-handalian
+  title: "Hybrid Control of a Knee Rehabilitation Device: Implementation and Evaluation"
+  authors:
+    - Lucas Handalian
+    - Enrique D. Ferreira
+    - Eduardo G. Hernandez-Martinez
+    - Mario Ramírez-Neria
+  publisher: 2026 IEEE URUCON
+  date: "2026-11-16"
+  accepted: true
+  line: rehabilitation
+- id: doi:10.1109/CODIT66093.2025.11321529
+  line: rehabilitation
 - id: doi:10.1109/URUCON63440.2024.10850101
   line: rehabilitation
+- id: tfg-gandolfo-imbert
+  title: Desarrollo de una herramienta interactiva para la visualización y el entrenamiento de sinergias musculares
+  authors:
+    - Juan Gandolfo
+    - Melissa Imbert
+  publisher: Universidad Católica del Uruguay
+  date: "2024"
+  type: thesis
+  line: rehabilitation
+  # TODO: link to the thesis in Liberi (liberi.ucu.edu.uy) once located
 
 # --- 03 Movement digitalization ---
 # arXiv items are not resolved through Crossref; give them in full.
@@ -83,6 +103,60 @@
   date: "2026-02-04"
   link: https://arxiv.org/abs/2602.07052
   preprint: true
+  line: digitalization
+- id: urucon2026-imbert
+  title: Development of a Portable Device System for Relative Positioning and Movement Estimation in Gait Analysis
+  authors:
+    - Nicole Imbert
+    - Mathias Ferreira
+    - Bruno Moreira
+    - María Pilar Martínez
+    - Pablo Iturralde
+    - Matías Míguez
+  publisher: 2026 IEEE URUCON
+  date: "2026-11-16"
+  accepted: true
+  line: digitalization
+- id: urucon2026-barboza
+  title: Step Length and Step Width from Two Foot-Mounted Inertial Sensors and a Single Range Channel
+  authors:
+    - Diego Barboza
+    - Pablo Iturralde
+  publisher: 2026 IEEE URUCON
+  date: "2026-11-16"
+  accepted: true
+  line: digitalization
+- id: urucon2026-ottonelli
+  title: "Towards 100 FPS Real-Time Multi-Camera Markerless 3D Human Pose Estimation via Edge Devices: Accuracy as a Function of Camera Count and Geometry"
+  authors:
+    - Juan Ottonelli
+    - Pablo Iturralde
+  publisher: 2026 IEEE URUCON
+  date: "2026-11-16"
+  accepted: true
+  type: poster
+  line: digitalization
+- id: tfg-imbert-ferreira
+  title: Desarrollo de sistema de dispositivos portables para posicionamiento relativo
+  authors:
+    - Mathias Ferreira
+    - Nicole Imbert
+  publisher: Universidad Católica del Uruguay
+  date: "2025"
+  type: thesis
+  line: digitalization
+  # TODO: confirm the final title (this is the title of the approved proposal) and link to Liberi
+- id: 3dahm2024-ferreira
+  title: Development of a Portable Device System for Relative Positioning and Movement Estimation in Gait Analysis
+  authors:
+    - Mathias Ferreira
+    - Nicole Imbert
+    - Matías Míguez
+    - Pablo Iturralde
+  publisher: 18th International Symposium on 3D Analysis of Human Movement (3DAHM 2024), Montevideo, abstract book p. 45
+  date: "2024-12-03"
+  link: https://3dahm2024.com/wp-content/uploads/2025/03/3DAHM2024-AbstractBook.pdf#page=45
+  type: poster
   line: digitalization
 - id: doi:10.1109/URUCON.2017.8171879
   line: digitalization

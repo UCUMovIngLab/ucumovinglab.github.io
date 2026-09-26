@@ -1,6 +1,7 @@
 {%- comment -%}
 Publication entry. include.item (citation), include.year (show year column), include.compact.
 Lab members (anyone whose name contains a member's author_match) are set in bold.
+item.type (thesis, poster) adds a badge; items without a link show an unlinked title.
 {%- endcomment -%}
 {%- assign item = include.item -%}
 {%- assign lang = page.lang | default: "en" -%}
@@ -10,15 +11,15 @@ Lab members (anyone whose name contains a member's author_match) are set in bold
 {%- assign line = site.data.projects | where: "id", item.line | first -%}
 {%- if item.id contains "doi:" -%}{%- assign ident = item.id -%}{%- elsif item.id contains "arxiv:" -%}{%- assign ident = item.id | replace: "arxiv:", "arXiv:" -%}{%- else -%}{%- assign ident = "" -%}{%- endif -%}
 {%- if include.compact -%}
-<a class="pub-compact" href="{{ item.link }}">
+{% if item.link %}<a class="pub-compact" href="{{ item.link }}">{% else %}<div class="pub-compact">{% endif %}
   <span class="pub-compact__year">{{ year }}</span>
   <span><strong>{{ item.title }}</strong>{% if item.publisher %}<em> — {{ item.publisher }}</em>{% endif %}{% if item.preprint %} <span class="badge badge--preprint">{{ t.ui.preprint }}</span>{% endif %}{% if item.accepted %} <span class="badge badge--status">{{ t.ui.accepted }}</span>{% endif %}</span>
-</a>
+{% if item.link %}</a>{% else %}</div>{% endif %}
 {%- else -%}
 <article class="pub{% if include.year %} pub--year{% endif %}" data-line="{{ item.line }}"{% if item.line %} data-lab{% endif %}>
   {%- if include.year %}<span class="pub__year">{{ year }}</span>{% endif %}
   <div class="pub__body">
-    <a class="pub__title" href="{{ item.link }}">{{ item.title }}</a>
+    {% if item.link %}<a class="pub__title" href="{{ item.link }}">{{ item.title }}</a>{% else %}<span class="pub__title">{{ item.title }}</span>{% endif %}
     {%- if item.authors and item.authors.size > 0 %}
     <p class="pub__authors">
       {%- for author in item.authors -%}
@@ -33,6 +34,7 @@ Lab members (anyone whose name contains a member's author_match) are set in bold
   <div class="pub__tags">
     {%- if item.preprint %}<span class="badge badge--preprint">{{ t.ui.preprint }}</span>{% endif -%}
     {%- if item.accepted %}<span class="badge badge--status">{{ t.ui.accepted }}</span>{% endif -%}
+    {%- if item.type and t.pub_types[item.type] %}<span class="badge badge--muted">{{ t.pub_types[item.type] }}</span>{% endif -%}
     {%- if line %}<span class="badge">{{ line[k_tag] }}</span>{% endif -%}
   </div>
 </article>

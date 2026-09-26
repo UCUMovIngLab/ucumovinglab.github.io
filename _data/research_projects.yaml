@@ -1,25 +1,36 @@
 # Research projects. Each project belongs to one research line (ids from _data/projects.yaml).
 #
+#   summary:  one or two sentences, shown on project cards and as the lede of the project page
+#   body:     optional, markdown, shown on the project page under the lede: the problem, the approach,
+#             what has been found. One line per paragraph. Cite with inline links.
 #   people:   slugs of lab members (_members/) or ids of external collaborators (_data/collaborators.yaml;
 #             shown by name only, under Collaborators), with role: pi (principal investigator) | co-pi | lead (lead researcher,
 #             not the grant holder) | researcher | student
 #   partners, funding: add country_en / country_es for any institution outside Uruguay;
 #             partners may have a `logo` (SVG in images/collaborators/)
-#   outputs:  doi:<doi> or arxiv:<id> of papers, preprints and theses; also list them in _data/sources.yaml
+#   outputs:  ids of entries in _data/sources.yaml (doi:, arxiv:, or the id of an accepted paper, poster or
+#             thesis given in full there), newest first
 #   figure:   optional; only open-access (CC BY) figures or our own preprints whose licence allows reuse
 
 - id: tms-neuronavigation
   title_en: Markerless neuronavigation for transcranial magnetic stimulation
   title_es: Neuronavegación sin marcadores para estimulación magnética transcraneal
   summary_en: >-
-    Head and coil tracking for transcranial magnetic stimulation (TMS) with low-cost visible and
-    infrared cameras and a model of facial geometry, instead of markers fixed to the patient. The aim
-    is to lower the cost and setup time of neuronavigation and make it more comfortable for patients.
+    Tracking the head and the stimulation coil during transcranial magnetic stimulation (TMS) with low-cost visible and infrared cameras and a model of facial geometry, instead of markers attached to the patient, to make neuronavigation cheaper, quicker to set up and more comfortable.
   summary_es: >-
-    Seguimiento de la cabeza y la bobina durante la estimulación magnética transcraneal (EMT) con
-    cámaras de luz visible e infrarroja de bajo costo y un modelo de la geometría facial, sin marcadores
-    fijados al paciente. El objetivo es reducir el costo y el tiempo de preparación de la
-    neuronavegación, y hacerla más cómoda para el paciente.
+    Seguimiento de la cabeza y de la bobina durante la estimulación magnética transcraneal (EMT) con cámaras de luz visible e infrarroja de bajo costo y un modelo de la geometría facial, en lugar de marcadores fijados al paciente, para que la neuronavegación sea más barata, más rápida de preparar y más cómoda.
+  body_en: |-
+    Transcranial magnetic stimulation (TMS) induces electric currents in the brain with a coil held against the head. Its effect depends on where and how the coil is placed, so research and clinical protocols use neuronavigation: a tracking system follows the head and the coil, and shows the coil's position relative to a target defined on images of the patient's brain.
+
+    Conventional neuronavigation tracks markers with a dedicated optical camera. The markers worn on the head have to be registered by hand at the start of each session, can shift during the procedure and are uncomfortable, and the tracking hardware is expensive. These costs limit where neuronavigated TMS is available.
+
+    We replace them with low-cost visible and infrared cameras, with stereo and depth sensing, and algorithms that model the geometry of the face. In a validation with 50 participants, the best markerless method differed from a conventional marker-based system by a median of 2.32 mm and 2.01°, which indicates sufficient accuracy for TMS and improves substantially on earlier markerless results ([Xie et al., 2026](https://arxiv.org/abs/2602.07052)). The results also suggest that combining the data from the different camera sensors can improve accuracy further.
+  body_es: |-
+    La estimulación magnética transcraneal (EMT) induce corrientes eléctricas en el cerebro mediante una bobina apoyada sobre la cabeza. Su efecto depende de dónde y cómo se coloca la bobina, por eso los protocolos clínicos y de investigación usan neuronavegación: un sistema de seguimiento sigue la cabeza y la bobina, y muestra la posición de la bobina respecto de un objetivo definido en imágenes del cerebro del paciente.
+
+    La neuronavegación convencional sigue marcadores con una cámara óptica específica. Los marcadores que se colocan en la cabeza requieren un registro manual al inicio de cada sesión, pueden desplazarse durante el procedimiento y resultan incómodos, y el equipo de seguimiento es caro. Estos costos limitan dónde se puede ofrecer EMT neuronavegada.
+
+    Los reemplazamos por cámaras de luz visible e infrarroja de bajo costo, con visión estéreo y sensado de profundidad, y algoritmos que modelan la geometría del rostro. En una validación con 50 participantes, el mejor método sin marcadores difirió de un sistema convencional con marcadores en una mediana de 2,32 mm y 2,01°, una exactitud suficiente para EMT y una mejora sustancial respecto de resultados previos sin marcadores ([Xie et al., 2026](https://arxiv.org/abs/2602.07052)). Los resultados sugieren además que combinar los datos de los distintos sensores de las cámaras puede mejorar aún más la exactitud.
   line: digitalization
   status: active
   start: 2022
@@ -47,16 +58,24 @@
   # No figure: the arXiv preprint is under the arXiv non-exclusive licence, which does not allow reuse.
 
 - id: walking-perception
-  title_en: Perception of leg speed during walking
-  title_es: Percepción de la velocidad de las piernas durante la marcha
+  title_en: Perception of leg speed and locomotor adaptation
+  title_es: Percepción de la velocidad de las piernas y adaptación locomotora
   summary_en: >-
-    Psychophysics and computational models (drift-diffusion, Bayesian) of how people perceive
-    differences in leg speed on a split-belt treadmill, and how that perception adapts and shapes
-    motor memory during locomotor adaptation.
+    How accurately people perceive differences in speed between their legs while walking, and how that perception shapes the way they adapt their gait. We combine psychophysics on a split-belt treadmill with computational models of perceptual decisions (drift-diffusion, Bayesian).
   summary_es: >-
-    Psicofísica y modelos computacionales (difusión con deriva, bayesianos) de cómo las personas
-    perciben diferencias de velocidad entre las piernas en una cinta de doble banda, y de cómo esa
-    percepción se adapta e influye en la memoria motora durante la adaptación locomotora.
+    Qué tan bien perciben las personas las diferencias de velocidad entre sus piernas al caminar, y cómo esa percepción influye en la forma en que adaptan su marcha. Combinamos psicofísica en una cinta de doble banda con modelos computacionales de decisiones perceptuales (difusión con deriva, bayesianos).
+  body_en: |-
+    On a split-belt treadmill each leg is driven at a different speed. People adapt within a few minutes, and when the belts return to the same speed they walk asymmetrically for a while, an aftereffect that shows the nervous system has recalibrated its motor commands. Sensory information drives this recalibration, but in these paradigms perception has been measured far less than movement, because it is internal and harder to observe.
+
+    We measure it with two-alternative forced-choice tasks: participants walk and report which leg feels faster, over many repetitions of different speed differences. Walking at 1.05 m/s, people correctly identified a difference of about 50 mm/s in 75% of trials (a Weber fraction of 4.7%), smaller than previously reported. A drift-diffusion model, which treats each decision as noisy evidence accumulating over time, predicted their choices from their reaction times alone ([Gonzalez-Rubio et al., 2025](https://doi.org/10.1523/ENEURO.0343-23.2025)).
+
+    Sensitivity changes with walking speed: it scales as Weber's law predicts at slow and fast speeds, but not near comfortable speed ([Gonzalez-Rubio et al., 2026](https://doi.org/10.1038/s41598-026-54948-5)). During adaptation, perceptual sensitivity predicted the early motor corrections, and perceptual errors, the mismatch between perceived and actual leg speed, predicted the size of the aftereffects ([Gonzalez-Rubio et al., 2026, preprint](https://doi.org/10.64898/2026.08.01.742204)). This identifies perceived limb motion as a behavioural proxy for the prediction errors that error-based learning assumes drive adaptation.
+  body_es: |-
+    En una cinta de doble banda cada pierna se mueve a una velocidad distinta. Las personas se adaptan en pocos minutos, y cuando las bandas vuelven a la misma velocidad caminan de forma asimétrica durante un tiempo, un efecto residual que muestra que el sistema nervioso recalibró sus comandos motores. La información sensorial impulsa esa recalibración, pero en estos paradigmas la percepción se ha medido mucho menos que el movimiento, porque es interna y más difícil de observar.
+
+    La medimos con tareas de elección forzada entre dos alternativas: los participantes caminan e indican qué pierna sienten más rápida, en muchas repeticiones de distintas diferencias de velocidad. Caminando a 1,05 m/s, las personas identificaron correctamente una diferencia de unos 50 mm/s en el 75 % de los ensayos (una fracción de Weber de 4,7 %), menor que la reportada hasta entonces. Un modelo de difusión con deriva, que trata cada decisión como la acumulación ruidosa de evidencia en el tiempo, predijo sus respuestas solo a partir de los tiempos de reacción ([Gonzalez-Rubio et al., 2025](https://doi.org/10.1523/ENEURO.0343-23.2025)).
+
+    La sensibilidad cambia con la velocidad de marcha: escala como predice la ley de Weber a velocidades lentas y rápidas, pero no cerca de la velocidad cómoda ([Gonzalez-Rubio et al., 2026](https://doi.org/10.1038/s41598-026-54948-5)). Durante la adaptación, la sensibilidad perceptual predijo las correcciones motoras tempranas, y los errores perceptuales, es decir, la diferencia entre la velocidad percibida y la real, predijeron la magnitud de los efectos residuales ([Gonzalez-Rubio et al., 2026, preprint](https://doi.org/10.64898/2026.08.01.742204)). Esto identifica al movimiento percibido de las piernas como un indicador conductual de los errores de predicción que, según el aprendizaje basado en errores, impulsan la adaptación.
   line: motor-control
   status: active
   start: 2019
@@ -78,14 +97,24 @@
     - doi:10.1523/ENEURO.0343-23.2025
 
 - id: knee-exoskeleton
-  title_en: Knee exoskeleton for rehabilitation
-  title_es: Exoesqueleto de rodilla para rehabilitación
+  title_en: Powered knee orthosis for gait rehabilitation
+  title_es: Órtesis de rodilla actuada para rehabilitación de la marcha
   summary_en: >-
-    An actuated knee orthosis for rehabilitation and the design and evaluation of its control,
-    including a hybrid control scheme.
+    A motor-driven knee orthosis that moves the knee along a walking trajectory, and the robust control it needs to follow that trajectory when the dynamics of the leg and the device are uncertain.
   summary_es: >-
-    Una órtesis de rodilla actuada para rehabilitación, y el diseño y la evaluación de su control,
-    incluido un esquema de control híbrido.
+    Una órtesis de rodilla accionada por motor que mueve la rodilla siguiendo una trayectoria de marcha, y el control robusto que necesita para seguir esa trayectoria cuando la dinámica de la pierna y del dispositivo es incierta.
+  body_en: |-
+    Recovering walking after a stroke or other neurological injury relies on intensive, repetitive practice. A powered orthosis can assist the knee through that practice consistently and over long sessions.
+
+    Control is the hard part. The orthosis has to follow a physiological knee-angle trajectory while the load on the joint changes over the gait cycle and from one person to the next, and while friction, unmodelled dynamics and the interaction with the leg act as disturbances. A controller tuned for one condition can track poorly in another.
+
+    We described the first version of the device in [Handalian et al. (2025)](https://doi.org/10.1109/CODIT66093.2025.11321529). The current version runs its control loop on an embedded microcontroller at 1 kHz, with a hybrid controller: sliding-mode control combined with an extended state observer that estimates the lumped disturbance in real time so that it can be cancelled. In bench tests with the orthosis unloaded, following a knee-angle trajectory recorded during walking, it tracked with lower error, less undershoot and lower control effort than a conventional PI-D controller (Handalian et al., IEEE URUCON 2026, accepted).
+  body_es: |-
+    Recuperar la marcha después de un ACV u otra lesión neurológica depende de una práctica intensiva y repetitiva. Una órtesis actuada puede asistir la rodilla durante esa práctica de forma consistente y en sesiones largas.
+
+    La dificultad está en el control. La órtesis tiene que seguir una trayectoria fisiológica del ángulo de rodilla mientras la carga sobre la articulación cambia a lo largo del ciclo de marcha y de una persona a otra, y mientras la fricción, la dinámica no modelada y la interacción con la pierna actúan como perturbaciones. Un controlador ajustado para una condición puede seguir mal la trayectoria en otra.
+
+    Describimos la primera versión del dispositivo en [Handalian et al. (2025)](https://doi.org/10.1109/CODIT66093.2025.11321529). La versión actual ejecuta el lazo de control en un microcontrolador embebido a 1 kHz, con un controlador híbrido: control por modos deslizantes combinado con un observador de estado extendido que estima en tiempo real la perturbación total para poder compensarla. En ensayos de banco con la órtesis sin carga, siguiendo una trayectoria del ángulo de rodilla registrada durante la marcha, tuvo menor error de seguimiento, menos subimpulso y menor esfuerzo de control que un controlador PI-D convencional (Handalian et al., IEEE URUCON 2026, aceptado).
   line: rehabilitation
   status: active
   start: "TODO: start year of the knee exoskeleton project"
@@ -96,22 +125,32 @@
     - name: Universidad Iberoamericana
       country_en: Mexico
       country_es: México
-      unit_en: "TODO: department (co-authors of the URUCON 2026 paper)"
-      unit_es: "TODO: departamento (coautores del trabajo en URUCON 2026)"
+      unit_en: "TODO: department of E. G. Hernandez-Martinez and M. Ramírez-Neria"
+      unit_es: "TODO: departamento de E. G. Hernandez-Martinez y M. Ramírez-Neria"
       url: https://ibero.mx
-  # outputs: "Hybrid Control of a Knee Rehabilitation Device: Implementation and Evaluation", accepted at
-  # IEEE URUCON 2026 (EDAS #1571335340). Add its DOI once published.
+  outputs:
+    - urucon2026-handalian
+    - doi:10.1109/CODIT66093.2025.11321529
 
 - id: markerless-mocap
-  title_en: Real-time markerless motion capture
-  title_es: Captura de movimiento sin marcadores en tiempo real
+  title_en: Real-time markerless motion capture on edge devices
+  title_es: Captura de movimiento sin marcadores en tiempo real en dispositivos de borde
   summary_en: >-
-    Pose estimation from video with computer vision, run in real time on edge devices, as an
-    accessible alternative to marker-based motion capture for movement analysis.
+    3D pose estimation from several synchronised cameras, processed in real time on small embedded computers, as a low-cost alternative to marker-based motion capture for gait and movement analysis.
   summary_es: >-
-    Estimación de pose a partir de video mediante visión por computadora, ejecutada en tiempo real en
-    dispositivos de borde, como alternativa accesible a la captura de movimiento con marcadores para el
-    análisis del movimiento.
+    Estimación de la pose en 3D a partir de varias cámaras sincronizadas, procesada en tiempo real en computadoras embebidas pequeñas, como alternativa de bajo costo a la captura de movimiento con marcadores para el análisis de la marcha y del movimiento.
+  body_en: |-
+    Optical motion capture with reflective markers is the reference method for measuring movement in 3D, but it is expensive and needs a dedicated lab. Each session also takes time: markers have to be placed on anatomical landmarks, and the results depend on where they are placed. This limits how often, and where, movement can be measured.
+
+    Markerless methods estimate the positions of body keypoints directly from video, with neural networks trained for pose estimation. With two or more calibrated cameras, the 2D keypoints can be triangulated into 3D. Two questions decide whether this is useful for movement analysis: accuracy, which depends on how many cameras are used and where they are placed, and speed, since uses such as real-time feedback need results while the person moves, not after offline processing.
+
+    We are building a multi-camera system that runs pose estimation on edge devices, small embedded computers at the point of capture, aiming at 100 frames per second, and measuring how its accuracy changes with the number and geometry of the cameras (Ottonelli and Iturralde, IEEE URUCON 2026, poster).
+  body_es: |-
+    La captura óptica de movimiento con marcadores reflectivos es el método de referencia para medir el movimiento en 3D, pero es cara y requiere un laboratorio dedicado. Cada sesión además lleva tiempo: hay que colocar los marcadores sobre referencias anatómicas, y los resultados dependen de dónde se coloquen. Esto limita con qué frecuencia, y dónde, se puede medir el movimiento.
+
+    Los métodos sin marcadores estiman la posición de puntos clave del cuerpo directamente a partir de video, con redes neuronales entrenadas para estimar la pose. Con dos o más cámaras calibradas, los puntos clave en 2D se pueden triangular en 3D. Dos cuestiones determinan si esto sirve para el análisis del movimiento: la exactitud, que depende de cuántas cámaras se usan y dónde se ubican, y la velocidad, ya que usos como la retroalimentación en tiempo real necesitan resultados mientras la persona se mueve y no después de un procesamiento diferido.
+
+    Estamos desarrollando un sistema de múltiples cámaras que ejecuta la estimación de pose en dispositivos de borde, computadoras embebidas pequeñas en el punto de captura, con el objetivo de llegar a 100 cuadros por segundo, y estamos midiendo cómo cambia su exactitud con el número y la geometría de las cámaras (Ottonelli e Iturralde, IEEE URUCON 2026, póster).
   line: digitalization
   status: active
   start: 2025
@@ -122,18 +161,32 @@
     - { person: matihas-sastre, role: student }
     - { person: facundo-diaz, role: student }
     - { person: lucas-handalian, role: researcher }
-  # outputs: poster at IEEE URUCON 2026 (J. Ottonelli), not indexed.
+  outputs:
+    - urucon2026-ottonelli
 
 - id: imu-ranging
-  title_en: Wearable inertial and ultrasonic ranging sensors for gait analysis
-  title_es: Sensores vestibles inerciales y de distancia por ultrasonido para análisis de la marcha
+  title_en: Wearable inertial sensors with ranging for relative positioning
+  title_es: Sensores inerciales vestibles con medición de distancia para posicionamiento relativo
   summary_en: >-
-    Ankle-worn devices that combine inertial measurement units (IMUs) with ultrasonic time-of-flight
-    ranging between the legs, to estimate step length and step width outside the laboratory.
+    Position integrated from inertial measurement units (IMUs) drifts within seconds, so IMUs alone cannot tell where one limb is relative to another. We add a direct distance measurement between wearable sensors to constrain that drift. Gait analysis outside the laboratory is the first application.
   summary_es: >-
-    Dispositivos colocados en los tobillos que combinan unidades de medición inercial (IMU) con
-    medición de distancia entre las piernas por tiempo de vuelo de ultrasonido, para estimar el largo y
-    el ancho del paso fuera del laboratorio.
+    La posición que se obtiene integrando las señales de unidades de medición inercial (IMU) deriva en pocos segundos, por lo que las IMU por sí solas no pueden decir dónde está un miembro respecto de otro. Agregamos una medición directa de distancia entre sensores vestibles para acotar esa deriva. La primera aplicación es el análisis de la marcha fuera del laboratorio.
+  body_en: |-
+    An IMU measures acceleration and angular velocity, not position. To get position, the gyroscope signal is integrated to track orientation, the orientation is used to subtract gravity from the accelerometer signal, and the result is integrated twice. Sensor bias and noise are integrated along with the signal, so the error grows quickly: a constant accelerometer bias produces a position error that grows with the square of time, and a constant gyroscope bias tilts the orientation estimate, leaks gravity into the horizontal acceleration and produces an error that grows with the cube of time ([Woodman, 2007](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-696.html)). With the low-cost sensors used in wearables, position integrated this way is usable for only a few seconds before drift dominates.
+
+    For sensors on the feet, the usual remedy is to reset the velocity to zero whenever the foot is flat on the ground ([Foxlin, 2005](https://doi.org/10.1109/MCG.2005.140)). That keeps each foot's trajectory usable over a stride, but each sensor still accumulates its own heading error, and nothing links one foot's estimate to the other's. Quantities that depend on where the limbs are relative to each other, such as step width or the distance between the feet through the gait cycle, cannot be estimated reliably from IMUs alone.
+
+    We add a direct measurement of the distance between sensors. A range measurement does not accumulate error, so fusing it with the inertial data constrains the error in the relative position between them. Our prototype is a pair of wireless, battery-powered nodes worn on the ankles, each with a 9-axis IMU and 40 kHz ultrasonic transducers; the distance between nodes comes from the round-trip time of flight of ultrasonic pulses. The nodes are designed to record for at least 16 hours per charge. Ultrasonic ranging between the feet has been combined with inertial sensing before ([Weenk et al., 2015](https://doi.org/10.1109/TNSRE.2014.2357686)), and ultra-wideband radio is a common alternative for ranging between wearable sensors ([Armani et al., 2024](https://doi.org/10.1145/3641519.3657465)).
+
+    The first application is gait analysis outside the laboratory: step length and step width over hours of everyday walking, rather than a few strides on a walkway, for clinical uses such as diagnosis and tracking the effects of rehabilitation. The same principle applies to other pairs of body segments whose relative position matters. Current work characterises the ranging hardware against optical motion capture, and estimates step length and step width from two foot-mounted IMUs and a single range channel.
+  body_es: |-
+    Una IMU mide aceleración y velocidad angular, no posición. Para obtener la posición, se integra la señal del giróscopo para seguir la orientación, se usa esa orientación para restar la gravedad de la señal del acelerómetro, y el resultado se integra dos veces. El sesgo y el ruido de los sensores se integran junto con la señal, por lo que el error crece rápido: un sesgo constante del acelerómetro produce un error de posición que crece con el cuadrado del tiempo, y un sesgo constante del giróscopo inclina la estimación de la orientación, filtra parte de la gravedad a la aceleración horizontal y produce un error que crece con el cubo del tiempo ([Woodman, 2007](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-696.html)). Con los sensores de bajo costo que se usan en dispositivos vestibles, la posición integrada de esta forma sirve apenas unos segundos antes de que domine la deriva.
+
+    Para sensores en los pies, la solución habitual es llevar la velocidad a cero cada vez que el pie está apoyado en el piso ([Foxlin, 2005](https://doi.org/10.1109/MCG.2005.140)). Así la trayectoria de cada pie se mantiene utilizable a lo largo de una zancada, pero cada sensor sigue acumulando su propio error de rumbo, y nada vincula la estimación de un pie con la del otro. Las magnitudes que dependen de la posición de un miembro respecto de otro, como el ancho del paso o la distancia entre los pies a lo largo del ciclo de marcha, no se pueden estimar de forma confiable solo con IMU.
+
+    Agregamos una medición directa de la distancia entre sensores. Una medición de distancia no acumula error, así que al fusionarla con los datos inerciales se acota el error en la posición relativa entre ellos. Nuestro prototipo es un par de nodos inalámbricos a batería que se colocan en los tobillos, cada uno con una IMU de 9 ejes y transductores de ultrasonido de 40 kHz; la distancia entre nodos se obtiene del tiempo de vuelo de ida y vuelta de pulsos de ultrasonido. Los nodos están diseñados para registrar al menos 16 horas con una carga. La medición de distancia por ultrasonido entre los pies ya se combinó antes con sensores inerciales ([Weenk et al., 2015](https://doi.org/10.1109/TNSRE.2014.2357686)), y la medición por radio de banda ultraancha (UWB) es una alternativa frecuente para medir distancias entre sensores vestibles ([Armani et al., 2024](https://doi.org/10.1145/3641519.3657465)).
+
+    La primera aplicación es el análisis de la marcha fuera del laboratorio: el largo y el ancho del paso durante horas de marcha cotidiana, y no solo en unos pocos pasos sobre una pasarela, con usos clínicos como el diagnóstico y el seguimiento de los efectos de la rehabilitación. El mismo principio se aplica a otros pares de segmentos corporales cuya posición relativa interesa. El trabajo actual caracteriza el hardware de medición de distancia frente a captura óptica de movimiento, y estima el largo y el ancho del paso a partir de dos IMU en los pies y un único canal de distancia.
   line: digitalization
   status: active
   start: 2023
@@ -143,19 +196,27 @@
     - { person: diego-barboza, role: student }
     - { person: nicole-imbert, role: student }
     - { person: mathias-ferreira, role: student }
-  # outputs: poster at 3DAHM 2024 (no DOI); two papers at IEEE URUCON 2026 (#1571336082 and
-  # #1571336230, both accepted). Add their DOIs once published.
+  outputs:
+    - urucon2026-barboza
+    - urucon2026-imbert
+    - tfg-imbert-ferreira
+    - 3dahm2024-ferreira
 
 - id: imov-cattle-monitoring
-  title_en: "iMov: cattle monitoring through sensors"
+  title_en: "iMov: monitoring cattle using sensors"
   title_es: "iMov: monitoreo de ganado vacuno mediante sensores"
   summary_en: >-
-    A multidisciplinary project, led by the μDIE microelectronics group at UCU, on monitoring cattle
-    with sensors. The lab contributes experience in movement measurement and analysis.
+    Ear tags with accelerometers, tested in long-term field trials, to monitor the health and productive condition of cattle in grazing, dairy and feedlot systems. A multidisciplinary project led by UCU's μDIE microelectronics group, to which the lab contributes its experience in measuring and analysing movement.
   summary_es: >-
-    Proyecto multidisciplinario, liderado por el grupo de microelectrónica μDIE de la UCU, sobre el
-    monitoreo de ganado vacuno mediante sensores. El laboratorio aporta su experiencia en la medición y
-    el análisis del movimiento.
+    Caravanas con acelerómetro, evaluadas en pruebas de campo de largo plazo, para monitorear la condición sanitaria y productiva del ganado vacuno en sistemas pastoriles, de lechería y de feedlot. Proyecto multidisciplinario liderado por el grupo de microelectrónica μDIE de la UCU, al que el laboratorio aporta su experiencia en la medición y el análisis del movimiento.
+  body_en: |-
+    Electronic ear tags already identify each animal in Uruguay's national cattle traceability system. Adding an accelerometer turns the tag into a behaviour sensor: how much an animal rests, moves, feeds and ruminates, and how those patterns change with its health or when it is in heat. The electronics exist and can be made cheaply, but producers still lack open, field-tested tools that link these signals to the conditions they care about.
+
+    The project will develop a miniaturised, low-power ear tag with an accelerometer and on-device processing, build labelled datasets of basic behaviours (resting, moving, feeding, ruminating), and run field trials over its five years in the three main cattle production systems in Uruguay: grazing, dairy and feedlot. It brings together electronics, data science and artificial intelligence with veterinary and agricultural sciences.
+  body_es: |-
+    Las caravanas electrónicas ya identifican a cada animal en el sistema nacional de trazabilidad del ganado vacuno del Uruguay. Si se les agrega un acelerómetro, se convierten en un sensor de comportamiento: cuánto descansa, se desplaza, come y rumia un animal, y cómo cambian esos patrones con su estado sanitario o cuando está en celo. La electrónica existe y puede ser de bajo costo, pero el productor todavía no cuenta con herramientas abiertas y probadas en campo que relacionen estas señales con las condiciones que le interesan.
+
+    El proyecto desarrollará una caravana miniaturizada de bajo consumo, con acelerómetro y procesamiento en el propio dispositivo, construirá conjuntos de datos etiquetados de comportamientos básicos (reposo, desplazamiento, ingesta y rumia), y hará pruebas de campo a lo largo de sus cinco años en los tres sistemas de producción ganadera principales del Uruguay: pastoril, lechería y feedlot. Combina electrónica, ciencia de datos e inteligencia artificial con las ciencias veterinarias y agronómicas.
   line: digitalization
   status: active
   start: 2026
@@ -174,12 +235,17 @@
   title_en: Interactive tool for the visualization and training of muscle synergies
   title_es: Herramienta interactiva para la visualización y el entrenamiento de sinergias musculares
   summary_en: >-
-    A human-computer interface in which surface EMG controls an on-screen cursor only when the muscles
-    are recruited in a specific coordination pattern, to train muscle synergies for motor rehabilitation.
+    A human-computer interface in which surface EMG moves an on-screen cursor only when the muscles are recruited in a specific coordination pattern, to train muscle synergies for motor rehabilitation.
   summary_es: >-
-    Una interfaz humano-computadora en la que la EMG de superficie controla un cursor en pantalla solo
-    cuando los músculos se reclutan con un patrón de coordinación específico, para entrenar sinergias
-    musculares con fines de rehabilitación motora.
+    Una interfaz humano-computadora en la que la EMG de superficie mueve un cursor en pantalla solo cuando los músculos se reclutan con un patrón de coordinación específico, para entrenar sinergias musculares con fines de rehabilitación motora.
+  body_en: |-
+    The nervous system does not control each muscle independently. Muscle activity during a movement can be described as the combination of a few muscle synergies, groups of muscles activated together ([d'Avella et al., 2003](https://doi.org/10.1038/nn1010)). After a stroke these synergies often change: in many patients some of them merge, and muscle coordination becomes less complex ([Clark et al., 2010](https://doi.org/10.1152/jn.00825.2009); [Cheung et al., 2012](https://doi.org/10.1073/pnas.1212056109)).
+
+    We built an interface in which the activity of several muscles, recorded with surface EMG, controls a cursor on a screen, but only when the muscles are recruited in a given coordination pattern. Moving the cursor therefore requires producing that pattern, which can be chosen to differ from the user's habitual one. The goal is a rehabilitation tool that trains muscle coordination and leaves a lasting change in how the nervous system controls those muscles, not only during the session.
+  body_es: |-
+    El sistema nervioso no controla cada músculo por separado. La actividad muscular durante un movimiento puede describirse como la combinación de unas pocas sinergias musculares, grupos de músculos que se activan en conjunto ([d'Avella et al., 2003](https://doi.org/10.1038/nn1010)). Después de un ACV estas sinergias suelen cambiar: en muchos pacientes algunas se fusionan, y la coordinación muscular se vuelve menos compleja ([Clark et al., 2010](https://doi.org/10.1152/jn.00825.2009); [Cheung et al., 2012](https://doi.org/10.1073/pnas.1212056109)).
+
+    Desarrollamos una interfaz en la que la actividad de varios músculos, registrada con EMG de superficie, controla un cursor en pantalla, pero solo cuando los músculos se reclutan con un patrón de coordinación determinado. Para mover el cursor hay que producir ese patrón, que puede elegirse distinto del habitual de la persona. El objetivo es una herramienta de rehabilitación que entrene la coordinación muscular y deje un cambio duradero en cómo el sistema nervioso controla esos músculos, no solo durante la sesión.
   line: rehabilitation
   status: finished
   start: 2022
@@ -196,3 +262,4 @@
       url: https://www.anii.org.uy
   outputs:
     - doi:10.1109/URUCON63440.2024.10850101
+    - tfg-gandolfo-imbert

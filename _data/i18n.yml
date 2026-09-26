@@ -33,7 +33,7 @@ en:
     partners: "Partners"
     collaborators: "Collaborators"
     funding: "Funding"
-    outputs: "Publications and preprints"
+    outputs: "Publications"
     status_active: "Active"
     status_finished: "Finished"
     preprint: "Preprint"
@@ -71,6 +71,11 @@ en:
     alum: "Alumni"
     collaborator: "Collaborator"
 
+  # Badges for publication entries with a `type` in _data/sources.yaml
+  pub_types:
+    thesis: "Undergraduate thesis"
+    poster: "Poster"
+
   # Roles within a research project (_data/research_projects.yaml)
   project_roles:
     pi: "Principal Investigator"
@@ -106,7 +111,7 @@ en:
       We approach both as engineers. We build models of the sensorimotor system and test them against recordings of muscle activity and movement. We also build our own instruments, because the measurements we need are often expensive or tied to a specialised lab. Making them cheap and portable enough to use outside the lab is a goal in its own right.
 
   publications:
-    lede: "Articles and preprints from the lab’s research lines, updated monthly from members’ ORCID records. Lab members in bold."
+    lede: "Articles, preprints, posters and theses from the lab’s research lines. Articles are updated monthly from members’ ORCID records. Lab members in bold."
 
   team:
     pis: "Principal investigators"
@@ -155,7 +160,7 @@ es:
     partners: "Socios"
     collaborators: "Colaboradores"
     funding: "Financiación"
-    outputs: "Publicaciones y preprints"
+    outputs: "Publicaciones"
     status_active: "En curso"
     status_finished: "Finalizado"
     preprint: "Preprint"
@@ -192,6 +197,10 @@ es:
     staff: "Personal"
     alum: "Egresado"
     collaborator: "Colaborador"
+
+  pub_types:
+    thesis: "Proyecto de grado"
+    poster: "Póster"
 
   project_roles:
     pi: "Responsable"
@@ -238,7 +247,7 @@ es:
       Abordamos ambas cosas desde la ingeniería. Construimos modelos del sistema sensoriomotor y los contrastamos con registros de actividad muscular y de movimiento. También desarrollamos nuestros propios instrumentos, porque las mediciones que necesitamos suelen ser caras o requerir un laboratorio especializado. Que sean de bajo costo y lo bastante portátiles para usarse fuera del laboratorio es un objetivo en sí mismo.
 
   publications:
-    lede: "Artículos y preprints de las líneas de investigación del laboratorio, actualizados mensualmente desde los perfiles ORCID de sus integrantes. Integrantes del laboratorio en negrita."
+    lede: "Artículos, preprints, pósteres y proyectos de grado de las líneas de investigación del laboratorio. Los artículos se actualizan mensualmente desde los perfiles ORCID de sus integrantes. Integrantes del laboratorio en negrita."
 
   team:
     pis: "Investigadores principales"
