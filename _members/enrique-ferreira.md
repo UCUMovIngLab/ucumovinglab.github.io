@@ -12,6 +12,7 @@ links:
   email: enrique.ferreira@ucu.edu.uy
   home-page: https://investigadores.ucu.edu.uy/es/persons/enrique-d-ferreira/
 author_match: Ferreira
+author_exclude: Mathias
 lines: [motor-control, digitalization]
 interests_en: Postural control, signal processing, devices
 interests_es: Control postural, procesamiento de señales, dispositivos

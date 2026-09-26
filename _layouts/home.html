@@ -10,7 +10,8 @@ layout: default
 {%- assign research_url = t.home_url | append: 'research/' | relative_url -%}
 {%- assign pubs_url = t.home_url | append: 'publications/' | relative_url -%}
 {%- assign team_url = t.home_url | append: 'team/' | relative_url -%}
-{%- assign recent = site.data.citations | where_exp: "c", "c.line" | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
+{%- comment -%} Articles only: theses and posters stay on project, member and publications pages. {%- endcomment -%}
+{%- assign recent = site.data.citations | where_exp: "c", "c.line" | where_exp: "c", "c.hide != true" | where_exp: "c", "c.type != 'thesis'" | where_exp: "c", "c.type != 'poster'" | sort: "date" | reverse -%}
 {%- assign active = site.data.research_projects | where: "status", "active" -%}
 {%- assign pis = site.members | where: "role", "pi" -%}
 {%- assign current = site.members | where: "status", "current" -%}

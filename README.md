@@ -72,6 +72,7 @@ name: Full Name
 image: images/team/firstname-lastname.jpg   # portrait, 4:5, at least 800×1000
 role: phd   # pi, phd, masters, undergrad, postdoc, staff
 author_match: Lastname   # used to bold the name in author lists and build the profile's publication list
+author_exclude: Firstname   # optional: skip authors that also contain this (e.g. another member with the same surname)
 lines: [motor-control]
 interests_en: ...
 interests_es: ...
@@ -90,6 +91,12 @@ The Students section of the Team page appears automatically once a student exist
 ### Publications
 
 The ORCID sync lists everything the members have published. To make a paper part of the lab's own list (the default view, the homepage and member profiles), add its DOI to `_data/sources.yaml` with a `line:`. Use `hide: true` for preprints that have since been published.
+
+Accepted papers without a DOI yet, posters and undergraduate theses go in `_data/sources.yaml` in full (title, authors, publisher, date, optional link), with `accepted: true`, `type: poster` or `type: thesis`. List them under a project's `outputs` by their `id`.
+
+### Research projects
+
+Each project in `_data/research_projects.yaml` has a short `summary_en`/`summary_es` (project cards and the lede of the project page) and an optional `body_en`/`body_es` in Markdown for the project page: the problem, the approach and what has been found, with inline links to the papers cited.
 
 ### Figures
 

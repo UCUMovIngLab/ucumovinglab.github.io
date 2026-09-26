@@ -33,7 +33,7 @@ layout: default
         <span class="rule" aria-hidden="true"></span>
         <h2>{{ line[k_title] }}</h2>
         <div class="prose">{{ line[k_body] | markdownify }}</div>
-        {%- assign line_pubs = site.data.citations | where: "line", line.id | where_exp: "c", "c.hide != true" | sort: "date" | reverse -%}
+        {%- assign line_pubs = site.data.citations | where: "line", line.id | where_exp: "c", "c.hide != true" | where_exp: "c", "c.type != 'thesis'" | where_exp: "c", "c.type != 'poster'" | sort: "date" | reverse -%}
         {%- if line_pubs.size > 0 %}
         <div class="selected">
           <h3 class="small-head">{{ t.ui.selected_publications }}</h3>

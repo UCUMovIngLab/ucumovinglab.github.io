@@ -276,6 +276,7 @@ h3 { font-size: 23px; line-height: 30px; }
 /* ---------- project page ---------- */
 .project { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); padding-top: 32px; padding-bottom: 96px; }
 .project__main { grid-column: 1 / 9; display: flex; flex-direction: column; gap: 18px; }
+.project__body { max-width: 780px; margin-top: 8px; }
 .project__figure { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
 .project__figure img { width: 100%; border-radius: 8px; }
 .project__outputs { margin-top: 48px; }
